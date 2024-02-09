@@ -1,0 +1,55 @@
+/* src/App.css */
+
+/* Scrollleisten-Container */
+body {
+    margin: 0;
+    overflow: hidden; /* Verhindert die Standard-Scrollbar des Browsers */
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Hintergrund der Scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Scrollbalken selbst */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+  }
+  
+  /* Scrollbalken bei Hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Füge dein Bild als Hintergrund zum Scrollbalken hinzu */
+  ::-webkit-scrollbar-thumb {
+    background: url('path/to/your/image.jpg') center no-repeat;
+    background-size: cover;
+    border: 2px solid #ddd; /* optional: füge eine Umrandung hinzu */
+    border-radius: 6px;
+  }
+  
+  /* Füge eine einfache Animation hinzu */
+  @keyframes scrollbar-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Wende die Animation auf die Scrollbar an */
+  ::-webkit-scrollbar-thumb {
+    animation: scrollbar-animation 2s infinite;
+  }
+  
