@@ -19,12 +19,12 @@ app = FastAPI()
 async def serve_root(file_path: str):
     if file_path == "":
         file_path = "index.html"
-    fp = f"./Src/Frontend/build/{file_path}"
+    fp = f"./src/frontend/build/{file_path}"
     return FileResponse(fp)
 
 @app.get("/static/{file_path:path}")
 async def serve_static(file_path: str):
-    fp = f"./Src/Frontend/build/static/{file_path}"
+    fp = f"./src/frontend/build/static/{file_path}"
     return FileResponse(fp)
 
     
