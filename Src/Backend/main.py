@@ -6,53 +6,26 @@ from classes import Event
 
 import os
 
-# project_folder/
-#   src/
-#    backend/
-#       main.py <- we are here
+# project_folder/src/backend/main.py
 
 #choose project_folder as working dir
+os.chdir(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+print(os.getcwd())
 
 app = FastAPI()
 
-@app.get("/static/{file_path:path}")
-async def read_file(file_path: str):
-    # serve file from static folder
-    
-    file_ending = file_path.split(".")[-1]
-    
-    file_types = {
-        "image": ["png", "jpg", "jpeg", "gif", "svg", "webp"],
-        "audio": ["mp3", "wav", "ogg"],
-        "video": ["mp4", "webm", "ogg"],
-        "text": ["html", "txt", "csv", "json", "xml", "css", "js", "md"],
-        "font": ["ttf", "otf", "woff", "woff2"],
-        "archive": ["zip", "tar", "gz", "bz2", "7z", "rar"],
-        "document": ["pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx"]
-    }
-    
-    file_type = "text"
-    for category, endings in file_types.items():
-        if file_ending in endings:
-            file_type = category
-            break
-    
-    MIME = f"{file_type}/{file_ending}"
-    
-    # sanitize file path
-    # check if file exists
-    if file_path.count("..") > 0 or os.path.exists(f"./static/{file_path}") is False:
-        path = "./html/404.html"
-        code = 404
-    else:
-        path = f"./static/{file_path}"
-        code = 200
-    
-    return FileResponse(path, media_type=MIME, status_code=code)
 
-@app.get("/")
-async def index():
-    file_path = ""
+@app.get("/{file_path:path}")
+async def serve_root(file_path: str):
+    if file_path == "":
+        file_path = "index.html"
+    fp = f"./Src/Frontend/build/{file_path}"
+    return FileResponse(fp)
+
+@app.get("/static/{file_path:path}")
+async def serve_static(file_path: str):
+    fp = f"./Src/Frontend/build/static/{file_path}"
+    return FileResponse(fp)
 
     
 
