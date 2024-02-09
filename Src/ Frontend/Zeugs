@@ -24,3 +24,13 @@
 <small>Hier ist die Schrift kleiner.</small>
 
 <mark>Dieser Text ist markiert.</mark>
+
+<a href="Link-Ziel">Link-Text</a>
+<a href="https://www.youtube.com/shorts/SZ29z7cC0qE"> Link mit wichtiger Info </a>
+
+<h1 style="color: blue;">Meine HTML-Webseite</h1>
+
+<style>
+        body {background-color: silver;}
+</style>
+
