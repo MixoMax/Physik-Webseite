@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 import uvicorn
 
+from Src.Backend.classes import Event
+
 import os
 
 app = FastAPI()
