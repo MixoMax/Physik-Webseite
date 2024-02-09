@@ -2,9 +2,16 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 import uvicorn
 
-from Src.Backend.classes import Event
+from classes import Event
 
 import os
+
+# project_folder/
+#   src/
+#    backend/
+#       main.py <- we are here
+
+#choose project_folder as working dir
 
 app = FastAPI()
 
@@ -43,19 +50,10 @@ async def read_file(file_path: str):
     
     return FileResponse(path, media_type=MIME, status_code=code)
 
-@app.get("/{file_path:path}")
-async def read_html(file_path: str):
-    # serve html file from html folder
-    # sanitize file path
-    
-    path = f"./html/{file_path}"
-    if file_path.count("..") > 0 or os.path.exists(path) is False:
-        path = "./html/404.html"
-        error_code = 404
-    else:
-        error_code = 200
-    
-    return FileResponse(path, media_type="text/html", status_code=error_code)
+@app.get("/")
+async def index():
+    file_path = ""
+
     
 
 uvicorn.run(app, host="0.0.0.0", port=8000)
