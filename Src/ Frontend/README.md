@@ -1,1 +1,37 @@
+ICh muss diesen wichs schreiben um zu committen
+!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <h1>Meine HTML-Webseite</h1>
+        <h2>Überschrift 2</h2>
+        <p>XXX</p>
+</body>
+</html>
+
+
+
+
+
+
+<i>Dies ist ein kursiver Text.</i>
+
+<strong>Dieser Text ist hervorgehoben.</strong>
+
+<small>Hier ist die Schrift kleiner.</small>
+
+<mark>Dieser Text ist markiert.</mark>
+
+<a href="Link-Ziel">Link-Text</a>
+<a href="https://www.youtube.com/shorts/SZ29z7cC0qE"> Link mit wichtiger Info </a>
+
+<h1 style="color: blue;">Meine HTML-Webseite</h1>
+
+<style>
+        body {background-color: silver;}
+</style>
 
