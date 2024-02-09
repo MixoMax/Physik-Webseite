@@ -4,6 +4,10 @@
   background-color: #4CAF50;
 }
 
+h1 {
+  margin: 0;
+}
+
 .page-button {
   position: sticky;
   background-color: #4CAF50;
