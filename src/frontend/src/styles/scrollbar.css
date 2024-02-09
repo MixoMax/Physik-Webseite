@@ -3,7 +3,7 @@
 /* Scrollleisten-Container */
 body {
     margin: 0;
-    overflow: hidden; /* Verhindert die Standard-Scrollbar des Browsers */
+    overflow: scroll; /* Verhindert die Standard-Scrollbar des Browsers */
   }
   
   /* Scrollbar */
@@ -29,7 +29,7 @@ body {
   
   /* Füge dein Bild als Hintergrund zum Scrollbalken hinzu */
   ::-webkit-scrollbar-thumb {
-    background: url('path/to/your/image.jpg') center no-repeat;
+    background: url('https://cdn-icons-png.flaticon.com/512/1323/1323780.png') center no-repeat;
     background-size: cover;
     border: 2px solid #ddd; /* optional: füge eine Umrandung hinzu */
     border-radius: 6px;
