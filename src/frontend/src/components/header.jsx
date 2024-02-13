@@ -1,19 +1,52 @@
 import React from 'react'
 import './css/header.css'
 
+import { useEffect } from 'react';
+
 function Header() {
+  const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
+  const [lastScrollDirection, setLastScrollDirection] = React.useState("up");
+  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollDirection = window.scrollY < lastScrollPosition ? "up" : "down";
+      if (scrollDirection === "up") {
+          document.getElementById("wrapper").style.position = "sticky";
+          document.getElementById("wrapper").style.top = "0px";
+      }
+      
+      if (scrollDirection === "down" && window.scrollY > document.getElementById("wrapper").offsetHeight * 1.2) {
+          document.getElementById("wrapper").style.top = "-100px";
+      }
+
+      if (window.scrollY === 0) {
+          document.getElementById("wrapper").style.position = "static";
+      }
+
+      setLastScrollPosition(window.scrollY);
+      setLastScrollDirection(scrollDirection);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollPosition, lastScrollDirection]);
+
   return (
-    <header id="wrapper">
+    <div id="wrapper">
       <h1>Planetarium Hamburg</h1>
       <div id="page-button-wrapper">
-        <button class="page-button">Home</button>
-        <button class="page-button">Events</button>
-        <button class="page-button">History</button>
-        <button class="page-button">Alte Irgendwas</button>
-        <button class="page-button">Weltall</button>
+        <button className="page-button">Home</button>
+        <button className="page-button">Events</button>
+        <button className="page-button">History</button>
+        <button className="page-button">Alte Irgendwas</button>
+        <button className="page-button">Weltall</button>
       </div>
-    </header>
-  )
+    </div>
+  );
 }
 
-export default Header
+export default Header;

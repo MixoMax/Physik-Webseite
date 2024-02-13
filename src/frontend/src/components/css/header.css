@@ -1,8 +1,9 @@
 #wrapper {
-  position: sticky;
+  position: static;
   top: 0;
   background-color: #4CAF50;
   z-index: 1;
+  transition: ease-out 0.3s; 
 }
 
 h1 {
