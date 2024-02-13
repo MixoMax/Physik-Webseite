@@ -4,3 +4,4 @@ some_NASE_data.zip
 .vscode/settings.json
 node_modules/
 src/frontend/build/
+__pycache__/
