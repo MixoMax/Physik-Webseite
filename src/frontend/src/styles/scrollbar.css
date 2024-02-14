@@ -4,12 +4,14 @@
 
 ::-webkit-scrollbar-thumb {
     background-image: url("../../assets/images/rocket.png");
-    /*background: rgb(140, 49, 182);*/
+    border-radius: 2vb;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(81, 27, 106);
+    border-radius: 2vb;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(129, 129, 129, 0.641);
+    background: rgb(110, 110, 110);
+    border-radius: 2vb;
 }
