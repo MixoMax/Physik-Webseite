@@ -1,9 +1,10 @@
 ::-webkit-scrollbar {
-    width: 2em;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(140, 49, 182);
+    background-image: url("../../assets/images/rocket.png");
+    /*background: rgb(140, 49, 182);*/
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(81, 27, 106);
