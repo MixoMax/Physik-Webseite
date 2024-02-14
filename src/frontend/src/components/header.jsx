@@ -2,6 +2,7 @@ import React from 'react'
 import './css/header.css'
 
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
@@ -39,11 +40,11 @@ function Header() {
     <div id="wrapper">
       <h1>Planetarium Hamburg</h1>
       <div id="page-button-wrapper">
-        <button className="page-button" onClick={() => window.location.href="/"}>Home</button>
-        <button className="page-button" onClick={() => window.location.href="/events"}>Events</button>
-        <button className="page-button" onClick={() => window.location.href="/history"}>History</button>
-        <button className="page-button" onClick={() => window.location.href="/about"}>About</button>
-        <button className="page-button" onClick={() => window.location.href="/weltall"}>Weltall</button>
+        <Link className="page-button" to="/">Home</Link>
+        <Link className="page-button" to="/events">Events</Link>
+        <Link className="page-button" to="/history">History</Link>
+        <Link className="page-button" to="/about">About</Link>
+        <Link className="page-button" to="/weltall">Weltall</Link>
       </div>
     </div>
   );
