@@ -1,17 +1,25 @@
 ::-webkit-scrollbar {
-    width: 10px;
+    background: transparent;
+    width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-image: url("../../assets/images/rocket.png");
     border-radius: 2vb;
+    size:50%;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(81, 27, 106);
-    border-radius: 2vb;
+    size:110%;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(110, 110, 110);
+    background: transparent;
+    border-radius: 2vb;
+}
+
+::-webkit-scrollbar-button {
+    background-color: rgb(110, 110, 110);
+    height: 15px;
+    width: 15px;
     border-radius: 2vb;
 }
