@@ -1,6 +1,11 @@
 import Header from './components/header';
 import Footer from './components/footer';
 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+
 import './styles/App.css';
 import './styles/scrollbar.css';
 
@@ -8,19 +13,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+        
       <Footer />
     </div>
   );

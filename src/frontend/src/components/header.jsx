@@ -39,11 +39,11 @@ function Header() {
     <div id="wrapper">
       <h1>Planetarium Hamburg</h1>
       <div id="page-button-wrapper">
-        <button className="page-button">Home</button>
-        <button className="page-button">Events</button>
-        <button className="page-button">History</button>
-        <button className="page-button">Alte Irgendwas</button>
-        <button className="page-button">Weltall</button>
+        <button className="page-button" onClick={() => window.location.href="/"}>Home</button>
+        <button className="page-button" onClick={() => window.location.href="/events"}>Events</button>
+        <button className="page-button" onClick={() => window.location.href="/history"}>History</button>
+        <button className="page-button" onClick={() => window.location.href="/about"}>About</button>
+        <button className="page-button" onClick={() => window.location.href="/weltall"}>Weltall</button>
       </div>
     </div>
   );
