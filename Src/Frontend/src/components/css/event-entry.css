@@ -1,0 +1,14 @@
+#event-component-wrapper {
+    position: relative;
+    height: 400px;
+    aspect-ratio: 16/9;
+    background: rgb(170, 170, 170);
+    
+}
+
+#event-image {
+    position: absolute;
+    left: 0px;
+    height: 400px;
+    aspect-ratio: 9/16;
+}
