@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/events.css'
+import './css/events.css'
 
 import EventEntry from '../components/event-entry'
 
