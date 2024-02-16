@@ -20,12 +20,34 @@ async def serve_root(file_path: str):
     if file_path == "":
         file_path = "index.html"
     fp = f"./src/frontend/build/{file_path}"
+    
+    if not os.path.exists(fp):
+        fp = get_error_file_path(404)
+
     return FileResponse(fp)
 
 @app.get("/static/{file_path:path}")
 async def serve_static(file_path: str):
     fp = f"./src/frontend/build/static/{file_path}"
+    
+    if not os.path.exists(fp):
+        fp = get_error_file_path(404)
+
     return FileResponse(fp)
+
+@app.get("/error/{status_code}")
+async def error(status_code: int):
+    file_path = get_error_file_path(status_code)
+    return FileResponse(file_path)
+
+def get_error_file_path(error_code: int):
+    file_path = "./src/frontend/html/"
+    if os.path.exists(f"{file_path}{error_code}.html"):
+        return f"{file_path}{error_code}.html"
+    else:
+        return f"{file_path}404.html"
+    
+
 
     
 
