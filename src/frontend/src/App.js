@@ -1,7 +1,7 @@
 import Header from './components/header';
 import Footer from './components/footer';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -12,19 +12,14 @@ import './styles/scrollbar.css';
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
-        
+      <Header />
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route exact path="/" element={<Home />} />
+        </Routes>
       <Footer />
+      </Router>  
     </div>
   );
 }

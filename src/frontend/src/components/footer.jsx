@@ -1,13 +1,15 @@
 import React from 'react'
 import './css/footer.css'
 
+import { Link } from 'react-router-dom';
+
 function Footer() {
   return (
     <div>
       <div id="footer-button-wrapper">
-        <button class="footer-button">Impressum</button>
-        <button class="footer-button">Contact us</button>
-        <button class="footer-button">Info</button>
+        <Link class="footer-button" to="/impressum">Impressum</Link>
+        <Link class="footer-button" to="/contact">Contact us</Link>
+        <Link class="footer-button" to="/info">Info</Link>
       </div>
     </div>
   )
