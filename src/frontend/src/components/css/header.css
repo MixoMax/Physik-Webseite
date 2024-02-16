@@ -1,20 +1,22 @@
 #wrapper {
   position: static;
   top: 0;
+
   background-color: #4CAF50;
   z-index: 1;
-  transition: ease-out 0.3s; 
+
+  align-items: center;
+
+  transition: ease-out 0.3s;
 }
 
 h1 {
   margin: 0;
 }
 
-.logo {
-  width: 10%;
-  height: 10%;
-  background-image: url(../../../assets/images/planetariumicons/logoplanetariumweiß.svg);
-  background-size: cover;
+#logo {
+  max-width: 10%;
+  max-height: 10%;
 }
 
 .page-button {

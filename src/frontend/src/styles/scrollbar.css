@@ -5,7 +5,7 @@
 
 ::-webkit-scrollbar-thumb:vertical
 {
-    background:transparent url("../../assets/images/Rakete/Raketeanderherum.svg") no-repeat;
+    background:transparent url("../assets/images/Rakete/Raketeanderherum.svg") no-repeat;
     background-size: 2em 2em;  
     display: block;
 }
