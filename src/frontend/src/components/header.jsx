@@ -36,11 +36,11 @@ function Header() {
     };
   }, [lastScrollPosition, lastScrollDirection]);
 
-  const logo_path = "../assets/images/planetariumicons/";
+  const logo_path = require("../assets/images/planetariumicons/logoplanetariumweiß.svg");
 
   return (
     <div id="wrapper">
-      <img src={logo_path} alt ></img>
+      <img src={logo_path} alt="Logo"></img>
       <div class="page-button-wrapper">
         <Link className="page-button" to="/">Home</Link>
         <Link className="page-button" to="/events">Events</Link>

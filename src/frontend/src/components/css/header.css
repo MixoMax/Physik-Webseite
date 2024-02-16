@@ -14,14 +14,6 @@ h1 {
   margin: 0;
 }
 
-#logo {
-  width: 10%;
-  height: 10%;
-  background: rgb(85, 57, 145);
-  /*background-image: url(../../../assets/images/planetariumicons/logoplanetariumweiß.svg);*/
-  background-size: cover;
-}
-
 .page-button {
   position: sticky;
   background-color: #4CAF50;
