@@ -36,10 +36,12 @@ function Header() {
     };
   }, [lastScrollPosition, lastScrollDirection]);
 
+  const logo_path = require("../assets/images/Planetarium_irl/planetarium-bild.jpg");
+
   return (
     <div id="wrapper">
-      <div id="logo"></div>
-      <div id="page-button-wrapper">
+      <img id="logo" src={logo_path} alt="Logo"></img>
+      <div class="page-button-wrapper">
         <Link className="page-button" to="/">Home</Link>
         <Link className="page-button" to="/events">Events</Link>
         <Link className="page-button" to="/history">History</Link>
