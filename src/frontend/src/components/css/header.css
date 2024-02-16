@@ -14,6 +14,11 @@ h1 {
   margin: 0;
 }
 
+#logo {
+  max-width: 10%;
+  max-height: 10%;
+}
+
 .page-button {
   position: sticky;
   background-color: #4CAF50;
