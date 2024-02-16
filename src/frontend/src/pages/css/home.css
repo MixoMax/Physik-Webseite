@@ -1,0 +1,80 @@
+/* src/App.css */
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  .header-image {
+    margin: 0px;
+    padding: 100px;
+
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Press Start 2P', bold;
+
+    background-image: url(../../../assets/images/Planetarium_irl/planetarium_nacht.png.jpg);
+    background-size: cover;
+
+    width: auto;
+    height:auto;
+  }
+
+  .header-text {
+    margin: 0px;
+    padding: 100px;
+
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .header-text {
+    text-align: center;
+    margin: 100px;
+  }
+  
+  .opening-hours,
+  .ticket-hotline {
+    margin: 20px 0;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card {
+    width: 48%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 2vb;
+  }
+  
+  .bottom-section {
+    text-align: center;
+  }
+  
+  .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .social-media {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  

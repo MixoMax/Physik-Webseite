@@ -38,7 +38,7 @@ function Header() {
 
   return (
     <div id="wrapper">
-      <h1>Planetarium Hamburg</h1>
+      <div id="logo"></div>
       <div id="page-button-wrapper">
         <Link className="page-button" to="/">Home</Link>
         <Link className="page-button" to="/events">Events</Link>
