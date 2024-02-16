@@ -1,11 +1,13 @@
-#wrapper {
+
+.wrapper {
   position: static;
   top: 0;
 
-  background-color: #4CAF50;
+  background-color: #46464d;
   z-index: 1;
 
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
 
   transition: ease-out 0.3s;
 }
@@ -15,13 +17,14 @@ h1 {
 }
 
 #logo {
-  max-width: 10%;
-  max-height: 10%;
+  max-width: 20%;
+  max-height: 20%;
+  margin: 10px;
 }
 
 .page-button {
   position: sticky;
-  background-color: #4CAF50;
+  background-color: #46464d;
   border: none;
   color: white;
   padding: 15px 32px;
