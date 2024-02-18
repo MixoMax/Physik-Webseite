@@ -2,26 +2,25 @@
   position: static;
   top: 0;
 
-  background-color: #4CAF50;
+  background-color: hsl(0, 0%, 19%);
   z-index: 1;
 
-  align-items: center;
-
   transition: ease-out 0.3s;
+  margin-top: 0px;
 }
-
+/*get rid of the margin at the top of the page*/
 h1 {
   margin: 0;
 }
 
 #logo {
-  max-width: 10%;
-  max-height: 10%;
+  max-height: 50px;
+  padding: 15px;
 }
 
 .page-button {
   position: sticky;
-  background-color: #4CAF50;
+  background-color: hsl(0, 0%, 19%);
   border: none;
   color: white;
   padding: 15px 32px;

@@ -1,13 +1,15 @@
 import React from 'react'
 import './css/header.css'
 
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import logo from '../assets/images/planetariumicons/logoplanetariumweiß_outline.png';
+
+
+import {useEffect} from 'react';
+import {Link} from 'react-router-dom';
 
 function Header() {
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
   const [lastScrollDirection, setLastScrollDirection] = React.useState("up");
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,11 +38,9 @@ function Header() {
     };
   }, [lastScrollPosition, lastScrollDirection]);
 
-  const logo_path = require("../assets/images/Planetarium_irl/planetarium-bild.jpg");
-
   return (
     <div id="wrapper">
-      <img id="logo" src={logo_path} alt="Logo"></img>
+      <img id="logo" src={logo} alt="logo"></img>
       <div class="page-button-wrapper">
         <Link className="page-button" to="/">Home</Link>
         <Link className="page-button" to="/events">Events</Link>
