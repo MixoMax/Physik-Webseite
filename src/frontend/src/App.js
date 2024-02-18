@@ -9,7 +9,7 @@ import Events from './pages/Events.jsx';
 import Contact from './pages/Contact.jsx';
 
 import './styles/App.css';
-import './styles/scrollbar.css';
+//import './styles/scrollbar.css';
 
 function App() {
   return (
