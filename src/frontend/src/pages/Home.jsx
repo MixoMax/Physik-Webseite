@@ -1,12 +1,27 @@
 import React from 'react'
 import './css/home.css'
 
+import cloud1 from '../assets/images/clouds/cloud_1.png';
+import cloud2 from '../assets/images/clouds/cloud_2.png';
+import cloud3 from '../assets/images/clouds/cloud_3.png';
+import cloud4 from '../assets/images/clouds/cloud_4.png';
+import cloud5 from '../assets/images/clouds/cloud_5.png';
+
 const Homepage = () => {
   return (
     <div className="homepage">
       <div className="header-image">
-        <h1 className="headline">Das Planetarium Hamburg</h1>
-        <p className="header-text">Ein kurzer Text über unser Unternehmen.</p>
+        <div className="header-wrapper">
+          <h1 className="headline">Das Planetarium Hamburg</h1>
+          <p className="header-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolores, facere, ullam voluptatum asperiores laborum, adipisci sequi magni reprehenderit atque harum soluta officia. Tenetur necessitatibus at ratione eaque ipsam pariatur ab, recusandae, vitae atque sunt repellat incidunt? Veniam dolores delectus ex, voluptatibus cumque, rem exercitationem consectetur laudantium dolore facilis necessitatibus!</p>
+        </div>
+        <div className="clouds">
+          <img className="cloud-1" src={cloud1} alt="cloud1"></img>
+          <img className="cloud-2" src={cloud2} alt="cloud2"></img>
+          <img className="cloud-3" src={cloud3} alt="cloud3"></img>
+          <img className="cloud-4" src={cloud4} alt="cloud4"></img>
+          <img className="cloud-5" src={cloud5} alt="cloud5"></img>
+        </div>
       </div>
 
       <div className="opening-hours">

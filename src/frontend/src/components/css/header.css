@@ -7,39 +7,47 @@ h1 {
 .wrapper {
   width: 100%;
   top: 0;
+  position: sticky;
 
-  background-color: hsl(0, 0%, 19%);
+  background-color: rgb(30, 30, 30);
   overflow: hidden;
 
   align-items: last baseline;
 
   display: flex;
+  transition: 1s ease-in-out;
 }
 
 .logo {
-  max-width: 250px;
-  padding: 20px;
+  max-width: 15%;
+  padding: 1% 5% 1% 0%;
+  margin-left: 10%;
 }
 
 /* Style the links inside the navigation bar */
-.wrapper .page-button {
+
+.page-button-wrapper .page-button {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 24px;
+  padding: 20px 16px 20px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 2vh;
+  font-weight: bold;
 }
 
 /* Change the color of links on hover */
-.wrapper .page-button:hover {
-  background-color: hsl(0, 0%, 15%);
+.wrapper .page-button:hover,
+.wrapper .active {
+  background-color: #e1d15a;
+  color: black;
   transition: ease-out 0.7s;
-  border-radius: 15px 15px 0 0;
+  border-top-right-radius: 10vb;
+  border-top-left-radius: 10vb;
 }
 
 .down {
-  background-color: #e1d15a;
+  background-color: #e1d15a;/*linear-gradient(rgba(225, 209, 90, 1) 80%, rgba(225, 209, 90, 0.1));*/
   height:10px;
   width: 100%;
 }
