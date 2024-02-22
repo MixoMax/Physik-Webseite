@@ -2,9 +2,9 @@ import React from 'react'
 import './css/header.css'
 
 import logo from '../assets/images/planetariumicons/logoplanetariumweiß_outline.png';
+import user_icon from '../assets/images/icons/user-icon.png';
+import ufo from '../assets/images/icons/user-icon.png';
 
-
-import {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
 function Header() {
@@ -59,13 +59,20 @@ function Header() {
   return (
     <div>
       <div className="wrapper">
-        <img className="logo" src={logo} alt="logo"></img>
-        <div className="page-button-wrapper">
-          <Link className="page-button active" to="/">Home</Link>
-          <Link className="page-button" to="/events">Events</Link>
-          <Link className="page-button" to="/history">History</Link>
-          <Link className="page-button" to="/about">About</Link>
-          <Link className="page-button" to="/weltall">Weltall</Link>
+        <div className="left-stuff">
+          <img className="logo" src={logo} alt="logo"></img>
+          <div className="page-button-wrapper">
+            <Link className="page-button" to="/">Home</Link>
+            <Link className="page-button" to="/events">Events</Link>
+            <Link className="page-button" to="/history">History</Link>
+            <Link className="page-button" to="/about">About</Link>
+            <Link className="page-button active" to="/weltall">Weltall</Link>
+          </div>
+        </div>
+        <div className="user-actions">
+          <Link className="login-btn" to="/login">Login</Link>
+          <Link className="signup-btn" to="/sign-up">Sign Up</Link>
+          <img className="account-icon" src={user_icon} alt="account"></img>
         </div>
       </div>
       <div class="down"></div>

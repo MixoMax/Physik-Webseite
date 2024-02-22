@@ -22,7 +22,7 @@ body {
 
   .header-wrapper {
     padding: 5% 15% 25% 10%;
-    width: 30%;
+    width: 35%;
 
     background: linear-gradient(0.25turn, rgba(10, 10, 10, 0.75) 80%, rgba(30, 30, 30, 0));
   }
@@ -31,12 +31,16 @@ body {
     color: white;
     text-align: left;
     font-size: 6vh;
+    line-height: 90%;
+    margin: 0 0 3vb 0;
   }
 
   .header-text {
     color: white;
     text-align: left;
     font-size: 2vh;
+    padding: 0;
+    margin: 1vb 0 0 0;
   }
 
   /* Deco */

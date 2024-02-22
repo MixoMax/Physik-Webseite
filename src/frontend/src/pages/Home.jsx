@@ -13,7 +13,9 @@ const Homepage = () => {
       <div className="header-image">
         <div className="header-wrapper">
           <h1 className="headline">Das Planetarium Hamburg</h1>
-          <p className="header-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolores, facere, ullam voluptatum asperiores laborum, adipisci sequi magni reprehenderit atque harum soluta officia. Tenetur necessitatibus at ratione eaque ipsam pariatur ab, recusandae, vitae atque sunt repellat incidunt? Veniam dolores delectus ex, voluptatibus cumque, rem exercitationem consectetur laudantium dolore facilis necessitatibus!</p>
+          <p className="header-text">Willkommen im Planetarium Hamburg!</p>
+          <p className="header-text">Tauchen Sie ein in die faszinierende Welt des Universums und erleben Sie unvergessliche Sternenabenteuer im Herzen der Hansestadt durch den beeindruckenden Kuppelsaal. Atemberaubende 360-Grad-Projektionen nehmen Sie mit auf eine Reise durch Raum und Zeit. Das Planetarium Hamburg, eines der größten und modernsten Planetarien Europas, erwartet Sie mit einem vielfältigen Programm für Groß und Klein.</p>
+          <p className="header-text">Besuchen Sie das Planetarium Hamburg und erleben Sie eine Reise zu den Sternen, die Sie so schnell nicht vergessen werden. Wir freuen uns auf Ihren Besuch!</p>
         </div>
         <div className="clouds">
           <img className="cloud-1" src={cloud1} alt="cloud1"></img>

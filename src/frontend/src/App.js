@@ -7,9 +7,10 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Events from './pages/Events.jsx';
 import Contact from './pages/Contact.jsx';
+import ComingSoon from './pages/ComingSoon';
 
 import './styles/App.css';
-//import './styles/scrollbar.css';
+import './styles/scrollbar.css';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route exact path="/" element={<Home />} />
-          <Route path="*" element={<Home />} />
+          <Route path="/sign-up" element={<ComingSoon />} />
+          <Route path="/login" element={<ComingSoon />} />
         </Routes>
       <Footer />
       </Router>  
