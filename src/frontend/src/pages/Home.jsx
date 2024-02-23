@@ -58,13 +58,6 @@ const Homepage = () => {
           Button-Link
         </a>
       </div>
-
-      <div className="social-media">
-        {/* Hier deine Social-Media-Links einfügen */}
-        <a href="https://youtube.com/kompetenzghg">Facebook</a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygULbmV2ZXIgZ29ubmE%3D">Twitter</a>
-        <a href="https://twitch.tv/bastighg">Instagram</a>
-      </div>
     </div>
   );
 };
