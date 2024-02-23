@@ -10,7 +10,7 @@ function ComingSoon() {
     return (
         <div className="coming-soon">
             <img src={himmelsgestein} alt="Himmelsgestein" id="himmelsgestein" />
-            <h1 id="comingSoonText">Coming Soon</h1>
+            <h1 id="comingSoonText">Coming Soon<sup>TM</sup></h1>
         </div>
     )
 }
