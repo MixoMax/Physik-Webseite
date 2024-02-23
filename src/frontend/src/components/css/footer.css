@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     
-    padding-bottom: 200px;
+    padding-bottom: 125px;
 
     background: url(../../assets/images/Himmelssteine/moon-surface.png);
     background-size: cover;
@@ -26,7 +26,7 @@
     align-items: center;
     justify-content: center;
     gap: 150px;
-    margin-top: 75px;
+    margin-top: 125px;
 }
 
 /* elements */
@@ -38,6 +38,12 @@
         transform: rotate(-10deg);
     }
 }
+.footer-line {
+    max-width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .follow {
     color: #fff;
     margin-top: 0;
@@ -73,9 +79,10 @@
 .footer-button {
     background: rgba(0, 0, 0, 0.5);
     color:#fff;
+    font-size: 24px;
     font-weight: bold;
-    width:100px;
-    padding: 10px;
+    width:150px;
+    padding: 25px;
     margin: 10px;
     text-decoration: None;
 }
