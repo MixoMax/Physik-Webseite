@@ -10,7 +10,7 @@ import Contact from './pages/Contact.jsx';
 import ComingSoon from './pages/ComingSoon';
 
 import './styles/App.css';
-import './styles/scrollbar.css';
+//import './styles/scrollbar.css';
 
 function App() {
   return (

@@ -1,8 +1,17 @@
 /* Add a black background color to the top navigation */
+
+#wrapper-wrapper {
+  position: static;
+  top: 0px;
+  z-index: 10;
+
+  transition: 0.5s ease-in-out;
+}
+
 .wrapper {
   width: 100%;
-  top: 0;
-  position: sticky;
+  top: 0px;
+  position: static;
 
   background-color: rgb(30, 30, 30);
   overflow: hidden;
@@ -44,12 +53,13 @@
   border-width: 2px;
   border-radius: 5px;
 }
+
+
+
 .page-button-wrapper .page-button:hover {
   background-color: #404040;
 }
-.page-button-wrapper .page-button:active {
-  background-color: #686868;
-}
+
 /* Change the color of links on hover
 .page-button-wrapper .marker {
   size: 10px 10px;
@@ -93,4 +103,19 @@
   background-color: #e1d15a;
   height:10px;
   width: 100%;
+}
+
+.page-button-wrapper .page-button.active {
+  color: #e1d15a;
+}
+
+#test {
+  position: static;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100px;
+  height: 10%;
+
+  background-color: aqua;
 }
