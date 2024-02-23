@@ -7,13 +7,10 @@ import himmelsgestein from '../assets/images/Himmelssteine/Himmelsgestein-remove
 function ComingSoon() {
     // This page is a placeholder for future pages
 
-    // spinning moon in the middle
-    // "Coming Soon" text under the moon
-
     return (
         <div className="coming-soon">
-            <img src={himmelsgestein} alt="Himmelsgestein" className="himmelsgestein" />
-            <h1>Coming Soon</h1>
+            <img src={himmelsgestein} alt="Himmelsgestein" id="himmelsgestein" />
+            <h1 id="comingSoonText">Coming Soon</h1>
         </div>
     )
 }
