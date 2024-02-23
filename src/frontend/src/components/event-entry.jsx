@@ -1,4 +1,4 @@
-import { Button } from 'react'
+import React from 'react'
 import './css/event-entry.css'
 
 function EventEntry({ event }) {
@@ -9,7 +9,7 @@ function EventEntry({ event }) {
         <p id="event-title">{event.title}</p>
         <p id="event-description">{event.description}</p>
         <p id="event-date">{event.date}</p>
-        <button id="buy-ticket"><img id="ticket-icon" src='https://cdn-icons-png.flaticon.com/512/785/785581.png'/><p1 id="buy-text">Ticket Kaufen</p1></button>
+        <button id="buy-ticket"><img alt="" id="ticket-icon" src='https://cdn-icons-png.flaticon.com/512/785/785581.png'/><p1 id="buy-text">Ticket Kaufen</p1></button>
       </div>
     </div>
   )

@@ -5,40 +5,73 @@
 
 body {
     margin: 0;
-    overflow-x: hidden;
+    background: rgb(30, 30, 30);
   }
-  
+ 
+  /* first section */
   .header-image {
-    margin: 0px;
-    padding: 100px;
-
     color: white;
-    text-align: center;
-    font-size: 45px;
-    font-family: 'Press Start 2P', bold;
+    text-align: left;
 
-    background-image: url(../../assets/images/Planetarium_irl/planetarium_nacht.png.jpg);
-    background-size: cover;
+    background-image: url(../../assets/images/Planetarium_irl/planetarium_nacht.png);
+    background-size: 140%;
 
     width: auto;
     height:auto;
   }
 
-  .header-text {
-    margin: 0px;
-    padding: 100px;
+  .header-wrapper {
+    padding: 5% 15% 25% 10%;
+    width: 35%;
 
+    background: linear-gradient(0.25turn, rgba(10, 10, 10, 0.75) 80%, rgba(30, 30, 30, 0));
+  }
+
+  .headline {
     color: white;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Press Start 2P', cursive;
+    text-align: left;
+    font-size: 6vh;
+    line-height: 90%;
+    margin: 0 0 3vb 0;
   }
-  
+
   .header-text {
-    text-align: center;
-    margin: 100px;
+    color: white;
+    text-align: left;
+    font-size: 2vh;
+    padding: 0;
+    margin: 1vb 0 0 0;
+  }
+
+  /* Deco */
+  .clouds {position: absolute;}
+  .cloud-1 {
+    position: absolute;
+    transform: translate(-5%, -135%) scale(175%);
+    z-index: 0;
+  }
+  .cloud-2 {
+    position: absolute;
+    transform: translate(67%, -115%) scale(200%);
+    z-index: 2;
+  }
+  .cloud-3 {
+    position: absolute;
+    transform: translate(-15%, -105%) scale(175%);
+    z-index: 1;
+  }
+  .cloud-4 {
+    position: absolute;
+    transform: translate(150%, -135%) scale(175%);
+    z-index: 0;
+  }
+  .cloud-5 {
+    position: absolute;
+    transform: translate(125%, -110%) scale(200%);
+    z-index: 0;
   }
   
+  /* second section */
   .opening-hours,
   .ticket-hotline {
     margin: 20px 0;

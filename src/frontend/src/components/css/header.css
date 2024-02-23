@@ -1,37 +1,96 @@
-
+/* Add a black background color to the top navigation */
 .wrapper {
-  position: static;
+  width: 100%;
   top: 0;
-
-  background-color: #46464d;
-  z-index: 1;
-
-  display: flex;
-  align-items: flex-start;
-
-  transition: ease-out 0.3s;
-}
-
-h1 {
-  margin: 0;
-}
-
-#logo {
-  max-width: 20%;
-  max-height: 20%;
-  margin: 10px;
-}
-
-.page-button {
   position: sticky;
-  background-color: #46464d;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+
+  background-color: rgb(30, 30, 30);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+
+  transition: 1s ease-in-out;
+}
+.wrapper .left-stuff {
+  display: flex;
+  align-items: end;
+  width:66.667%;
+}
+.wrapper .user-actions {
+  display:flex;
+  align-items: center;
+  justify-content: right;
+  width: 33.333%;
+}
+
+.logo {
+  max-width: 20%;
+  padding: 1.5% 5% 1.5% 0%;
+  margin-left: 15%;
+}
+
+/* Style the links inside the navigation bar */
+
+.page-button-wrapper .page-button {
+  float: left;
+  color: #f2f2f2;
   text-align: center;
+  margin: 15px 6px 13.5px 6px;
+  padding: 5px 10px 7.5px 10px;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 0px;
+  font-size: 2vh;
+  font-weight: bold;
+  z-index: 1;
+  border-width: 2px;
+  border-radius: 5px;
+}
+.page-button-wrapper .page-button:hover {
+  background-color: #404040;
+}
+.page-button-wrapper .page-button:active {
+  background-color: #686868;
+}
+/* Change the color of links on hover
+.page-button-wrapper .marker {
+  size: 10px 10px;
+  position: absolute;
+  top: -10px;
+  z-index: 0;
+}*/
+
+/* Account */
+.account-icon {
+  margin-right: 30%;
+  max-width: 7.5%;
+  padding: 2.5%;
+}
+
+.login-btn,
+.signup-btn {
+  background-color: rgb(50);
+
+  border-style: inset;
+  border-color: #f2f2f2;
+  border-width: 2px;
+  border-radius: 5px;
+
+  color:#f2f2f2;
+  padding: 0.75vb 3vb 1.125vb 3vb;
+  margin-left: 2.5%;
   cursor: pointer;
+  text-decoration: none;
+}
+.login-btn:link:hover,
+.signup-btn:hover {
+  background-color: #404040;
+}
+.login-btn:link:active,
+.signup-btn:active {
+  background-color: #686868;
+}
+
+.down {
+  background-color: #e1d15a;
+  height:10px;
+  width: 100%;
 }
