@@ -67,7 +67,7 @@
 
 .login-btn,
 .signup-btn {
-  background-color: rgb(50);
+  background: linear-gradient(rgb(30, 30, 30), rgb(40, 40, 40));
 
   border-style: inset;
   border-color: #f2f2f2;
