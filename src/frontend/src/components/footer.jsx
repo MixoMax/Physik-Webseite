@@ -4,12 +4,14 @@ import './css/footer.css'
 import youtube from "../assets/images/Socialmedias/YouTube_full-color_icon_(2017).svg.png"
 import instagram from "../assets/images/Socialmedias/Instagram_logo.webp";
 import facebook from "../assets/images/Socialmedias/Facebook_icon.svg.png";
+import line from "../assets/images/comp/line.png";
 
 import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <div className="footer-wrapper">
+      <img className="footer-line" src={line} alt="line"></img>
       <div className="social-media-wrapper">
         <div className="planet">
           <a className="social-link" href="https://www.youtube.com/user/PlanetariumHamburg">
