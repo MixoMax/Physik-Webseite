@@ -1,14 +1,39 @@
 /* src/App.css */
 
-
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 body {
     margin: 0;
     background: rgb(30, 30, 30);
+    overflow-x: hidden;
+    color: #fff;
   }
  
   /* first section */
+  .homepage-button-left,
+  .homepage-button-right {
+    background: lightgray;
+    color: rgb(30, 30, 30);
+    
+    text-align: center;
+    text-transform: translate(-25, 0);
+    font-size: 50px;
+    font-weight: 900;
+    
+    width:30px;
+    height:30px;
+    padding: 25px;
+    margin: 25px;
+    border-radius: 100%;
+
+    position: absolute;
+    transform: translateY(400%);
+  }
+  .homepage-button-right {
+    transform: translateX(1950%);
+  }
+
   .header-image {
     color: white;
     text-align: left;
@@ -72,11 +97,27 @@ body {
   }
   
   /* second section */
-  .opening-hours,
-  .ticket-hotline {
-    margin: 20px 0;
+  .opening-hours {
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: right;
+
+    margin: 50px 0;
+    color:#fff;
+  }
+
+  .time-table {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 2vb;
   }
   
+  /* third section */
   .cards {
     display: flex;
     justify-content: space-between;
@@ -88,29 +129,5 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 2vb;
-  }
-  
-  .bottom-section {
-    text-align: center;
-  }
-  
-  .button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .social-media {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .social-media a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
   }
   

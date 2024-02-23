@@ -1,3 +1,19 @@
-::-webkit-scrollbar-track {
-    background: rgb(30, 30, 30);
+/*
+::-webkit-scrollbar {
+    background: transparent;
+    width: 2em;
 }
+
+::-webkit-scrollbar-thumb:vertical
+{
+    background:transparent url("../assets/images/Rakete/Raketeanderherum.svg") no-repeat;
+    background-size: 2em 2em;  
+    display: block;
+}
+::-webkit-scrollbar-thumb:hover {
+    size:110%;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}*/

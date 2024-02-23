@@ -1,17 +1,89 @@
-#footer-button-wrapper {
-    background-color: lightslategray;
+/* wrappers */
+.footer-wrapper {
+    background-color: rgb(30, 30, 30);
+    font-display: flex;
+    flex-direction: column;
+}
+.social-media-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin: 20px;
+}
+.footer-moon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding-bottom: 125px;
+
+    background: url(../../assets/images/Himmelssteine/moon-surface.png);
+    background-size: cover;
+}
+.footer-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 125px;
+}
+
+/* elements */
+@keyframes spin {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+.footer-line {
+    max-width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.follow {
+    color: #fff;
+    margin-top: 0;
+}
+.planet {
+    background-image: url(../../assets/images/Himmelssteine/Himmelgestein8.png);
+    background-size: cover;
+    /*animation: spin 10s linear infinite;*/
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    width:50px;
+    height:50px;
+    padding:20px;
+}
+.social-link {
+    height:50px;
+    width: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+.social-logo {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .footer-button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+    background: rgba(0, 0, 0, 0.5);
+    color:#fff;
+    font-size: 24px;
+    font-weight: bold;
+    width:150px;
+    padding: 25px;
+    margin: 10px;
+    text-decoration: None;
+}
   

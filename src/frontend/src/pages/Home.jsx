@@ -1,4 +1,6 @@
 import React from 'react'
+import { useTable } from 'react-table';
+
 import './css/home.css'
 
 import cloud1 from '../assets/images/clouds/cloud_1.png';
@@ -11,6 +13,8 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <div className="header-image">
+        <div className="homepage-button-left">&lt;</div>
+        <div className="homepage-button-right">&gt;</div>
         <div className="header-wrapper">
           <h1 className="headline">Das Planetarium Hamburg</h1>
           <p className="header-text">Willkommen im Planetarium Hamburg!</p>
@@ -28,8 +32,27 @@ const Homepage = () => {
 
       <div className="opening-hours">
         <h2>Öffnungszeiten</h2>
-        <table>
-          {/* Hier deine Öffnungszeiten einfügen */}
+        <table className="time-table">
+          <tr>
+            <th>Tag</th>
+            <th>Montag</th>
+            <th>Dienstag</th>
+            <th>Mittwoch</th>
+            <th>Donnerstag</th>
+            <th>Freitag</th>
+            <th>Samstag</th>
+          </tr>
+          <tr>
+            <th>Zeiten</th>
+            <th>geschlossen</th>
+            <th>9:00 - 19:00 Uhr</th>
+            <th>9:00 - 17:00 Uhr</th>
+            <th>9:00 - 21:00 Uhr</th>
+            <th>12:00 - 22:30 Uhr</th>
+            <th>9:00 - 19:00 Uhr</th>
+            <th>10:00 - 19:00 Uhr</th>
+            <th>10:00 - 19:00 Uhr</th>
+          </tr>
         </table>
       </div>
 
@@ -57,13 +80,6 @@ const Homepage = () => {
         <a href="#" className="button-link">
           Button-Link
         </a>
-      </div>
-
-      <div className="social-media">
-        {/* Hier deine Social-Media-Links einfügen */}
-        <a href="https://youtube.com/kompetenzghg">Facebook</a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygULbmV2ZXIgZ29ubmE%3D">Twitter</a>
-        <a href="https://twitch.tv/bastighg">Instagram</a>
       </div>
     </div>
   );

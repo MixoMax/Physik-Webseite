@@ -1,19 +1,47 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './css/header.css'
 
 import logo from '../assets/images/planetariumicons/logoplanetariumweiß_outline.png';
 import user_icon from '../assets/images/icons/user-icon.png';
 import ufo from '../assets/images/icons/user-icon.png';
 
-import {Link} from 'react-router-dom';
+import {Link, NavLink, useLocation} from 'react-router-dom';
 
 function Header() {
-  /*
+  
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
   const [lastScrollDirection, setLastScrollDirection] = React.useState("up");
-  const bar = document.getElementsByClassName("wrapper")
+
+  /* let location = useLocation();
+
+  React.useEffect(() => {
+    const ufo = document.getElementById('ufo');
+    switch (location.pathname) {
+      case '/':
+        ufo.style.left = "256px";
+        ufo.style.backgroundColor = "red";
+        break;
+      case '/events':
+        ufo.style.backgroundColor = "blue";
+        break;
+      case '/history':
+        ufo.style.backgroundColor = "green";
+        break;
+      case '/about':
+        ufo.style.backgroundColor = "yellow";
+        break;
+      case '/weltall':
+        ufo.style.backgroundColor = "purple";
+        break;
+      default:
+        ufo.style.backgroundColor = "white";
+        break;
+    }
+  }, [location]); */
 
   useEffect(() => {
+    const bar = document.getElementById("wrapper-wrapper");
+
     const handleScroll = () => {
       const scrollDirection = window.scrollY < lastScrollPosition ? "up" : "down";
       if (scrollDirection === "up") {
@@ -21,8 +49,8 @@ function Header() {
         bar.style.top = "0px";
       }
       
-      if (scrollDirection === "down" && window.scrollY > document.getElementById("wrapper").offsetHeight * 1.2) {
-        console.log(bar.style.top);
+      if (scrollDirection === "down" && window.scrollY > bar.offsetHeight * 1.2) {
+        bar.style.top = -bar.offsetHeight + "px";
       }
 
       if (window.scrollY === 0) {
@@ -41,32 +69,17 @@ function Header() {
   }, [lastScrollPosition, lastScrollDirection]);
 
 
-  const marker = document.querySelector("marker");
-  const item = document.querySelectorAll("page-button");
-
-  function indicator(e) {
-    marker.style.left = e.offsetLeft+"px";
-    marker.style.width = e.offsetWidth+"px";
-  }
-
-  item.forEach(link => {
-    link.addEventListener('click', (e) => {
-      indicator(e.traget);
-    })
-  })*/
-        
-
   return (
-    <div>
+    <div id="wrapper-wrapper">
       <div className="wrapper">
         <div className="left-stuff">
           <img className="logo" src={logo} alt="logo"></img>
           <div className="page-button-wrapper">
-            <Link className="page-button" to="/">Home</Link>
-            <Link className="page-button" to="/events">Events</Link>
-            <Link className="page-button" to="/history">History</Link>
-            <Link className="page-button" to="/about">About</Link>
-            <Link className="page-button active" to="/weltall">Weltall</Link>
+            <NavLink className="page-button" activeClassName="active" to="/">Home</NavLink>
+            <NavLink className="page-button" activeClassName="active" to="/events">Events</NavLink>
+            <NavLink className="page-button" activeClassName="active" to="/history">History</NavLink>
+            <NavLink className="page-button" activeClassName="active" to="/about">About</NavLink>
+            <NavLink className="page-button" activeClassName="active" to="/weltall">Weltall</NavLink>
           </div>
         </div>
         <div className="user-actions">
