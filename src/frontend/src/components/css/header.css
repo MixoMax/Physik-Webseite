@@ -23,7 +23,7 @@
 .wrapper .left-stuff {
   display: flex;
   align-items: end;
-  width:66.667%;
+  width: 66.667%;
 }
 .wrapper .user-actions {
   display:flex;
