@@ -13,17 +13,17 @@ function Footer() {
       <div className="social-media-wrapper">
         <div className="planet">
           <a className="social-link" href="https://www.youtube.com/user/PlanetariumHamburg">
-            <img className="logo" src={youtube} alt="YouTube"></img>
+            <img className="social-logo" src={youtube} alt="YouTube"></img>
           </a>
         </div>
         <div className="planet">
           <a className="social-link" href="https://www.facebook.com/planetarium/">
-            <img className="logo" src={facebook} alt="Facebook"></img>
+            <img className="social-logo" src={facebook} alt="Facebook"></img>
           </a>
         </div>
         <div className="planet">
           <a className="social-link" href="https://www.instagram.com/planetariumhamburg/">
-            <img className="logo" src={instagram} alt="YouTube"></img>
+            <img className="social-logo" src={instagram} alt="YouTube"></img>
           </a>
         </div>
       </div>
