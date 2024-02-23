@@ -50,11 +50,8 @@
   font-size: 2vh;
   font-weight: bold;
   z-index: 1;
-  border-width: 2px;
-  border-radius: 5px;
+  border-radius: 2vb;
 }
-
-
 
 .page-button-wrapper .page-button:hover {
   background-color: #404040;
@@ -106,7 +103,14 @@
 }
 
 .page-button-wrapper .page-button.active {
-  color: #e1d15a;
+  color: black;
+  border-radius: 10vb 10vb 0 0;
+  background-color: #e1d15a;
+  margin: 0;
+  gap: 0;
+  padding: 20px 16px 22px 16px;
+  border-color: #e1d15a;
+  transition: 0.3s ease-out;
 }
 
 #test {

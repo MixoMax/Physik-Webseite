@@ -51,7 +51,7 @@
 .planet {
     background-image: url(../../assets/images/Himmelssteine/Himmelgestein8.png);
     background-size: cover;
-    animation: spin 10s linear infinite;
+    /*animation: spin 10s linear infinite;*/
 
     display:flex;
     align-items: center;
