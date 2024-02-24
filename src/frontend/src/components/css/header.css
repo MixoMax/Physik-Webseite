@@ -18,6 +18,8 @@
   display: flex;
   justify-content: space-between;
 
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.15), inset 5px 5px 15px rgba(0, 0, 0, 0.45);
+
   transition: 1s ease-in-out;
 }
 .wrapper .left-stuff {
@@ -108,7 +110,7 @@
   height:10px;
   width: 100%;
 
-  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.2), 5px 5px 15px rgba(0, 0, 0, 0.55);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);
 }
 
 .page-button-wrapper .page-button.active {

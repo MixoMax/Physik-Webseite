@@ -1,6 +1,8 @@
 import React from "react";
 import './css/space.css';
 
+import solar_system from '../assets/images/comp/SolarSystem.svg';
+
 const Space = () => {
 
     return (
@@ -15,6 +17,7 @@ const Space = () => {
             <h2>Unser Sonnensystem </h2>
             <p>Unser Sonnensystem ist ein System, das die Sonne, acht Planeten, zahlreiche Zwergplaneten, Monde und andere Himmelskörper umfasst. Die Sonne ist der Mittelpunkt des Sonnensystems und übt eine gravitative Anziehungskraft auf die um sie umkreisenden Objekte aus. Jeder Planet hat seine eigenen einzigartigen Eigenschaften, Umlaufbahnen und Monde. Um sich die Planeten unseres Sonnensystems zu merken, hilft folgender Spruch: “<b>M</b>ein <b>V</b>ater <b>E</b>rklärt <b>M</b>ir <b>J</b>eden <b>S</b>onntag <b>U</b>nseren <b>N</b>achthimmel”</p>
             <div className="solar-system">
+                <img className="solar-system-img" src={solar_system} alt="MilkyWay" />
                 <p><b>M</b>erkur: Der innerste und kleinste Planet in unserem Sonnensystem heißt Merkur. Er hat keinen Mond und umkreist die Sonne in nur 88 Tagen. Aufgrund seiner Nähe zur Sonne erreicht Merkur extrem hohe Temperaturen von bis zu 430°C tagsüber und kann nachts auf -180°C abkühlen. Merkur hat eine felsige Oberfläche mit Kratern, Schluchten und ebenen Flächen. Seine Atmosphäre ist dünn und besteht hauptsächlich aus Helium und Spuren von Sauerstoff und Natrium.</p>
                 <p><b>V</b>enus: Die Venus, benannt nach der römischen Göttin der Liebe und Schönheit, ist der zweite Planet in unserem Sonnensystem und der hellste am Nachthimmel. Mit einer durchschnittlichen Oberflächentemperatur von etwa 465°C ist sie der heißeste Planet im Sonnensystem, obwohl Merkur näher an der Sonne liegt. Die Venus ist von einer dicken Wolkendecke aus Schwefelsäure umgeben, die das Sonnenlicht reflektiert und den Planeten in einem intensiven Gelb erstrahlen lässt. Aufgrund der extremen Temperaturen und des starken atmosphärischen Drucks ist die Oberfläche der Venus eine lebensfeindliche Umgebung</p>
                 <p><b>E</b>rde: Er ist der dritte Planet in unserem Sonnensystem und der einzige bekannte Planet, auf dem Leben existiert und flüssiges Wasser vorkommt. Sie hat einen durchschnittlichen Abstand von etwa 150 Mio. Kilometern zur Sonne und eine Umlaufzeit von etwa 365 Tagen. Die Erde besitzt viele komplexe Ökosysteme und eine dichte Atmosphäre. Diese enthält Sauerstoff und andere lebenswichtige Gase. </p>
@@ -40,7 +43,43 @@ const Space = () => {
             <p>Ferne Galaxien, die sich weit außerhalb unserer Milchstraße befinden, faszinieren Wissenschaftler und Amateurastronomen gleichermaßen. Besonders interessant für Wissenschaftler ist die Andromedagalaxie. Ihre Nähe zur Milchstraße ermöglicht ihnen die umfangreiche Erforschung, die auch Rückschlüsse über die Geschichte der Milchstraße ermöglicht. Mit einer Entfernung von 2,5 Mio. Lichtjahren ist sie das entfernteste Objekt, das mit bloßem Auge am Nachthimmel beobachtet werden kann. Ihre Masse wird auf 0,7 bis 2,5 Billionen Sonnenmassen geschätzt und damit etwas so massereich wie die Milchstraße, während der Durchmesser der Andromedagalaxie doppelt so groß ist.</p>
         
             <h2>Ferne Sterne(nsysteme)</h2>
-            <p></p>
+            <p>Ferne Sterne und Sternensysteme: Eine Reise durch die Weiten des Universums</p>
+            <p>Im unendlichen Kosmos, der &uuml;ber uns ausgebreitet ist, existiert eine unvorstellbare Vielfalt an Sternen und Sternensystemen, die uns faszinieren und zum Staunen bringen. Diese fernen Himmelsk&ouml;rper sind nicht nur Gegenstand astronomischer Beobachtungen, sondern auch wichtige Bausteine f&uuml;r unser Verst&auml;ndnis des Universums und seiner Entwicklung. In diesem wissenschaftlichen Text werden wir eine Reise durch die Welt der fernen Sterne und Sternensysteme unternehmen, um ihre Eigenschaften, ihre Entstehung und ihre Bedeutung zu erkunden.</p>
+            <p>Sterne: Die leuchtenden Grundbausteine des Universums</p>
+            <p>Sterne sind riesige, leuchtende Himmelsk&ouml;rper, die aus hei&szlig;em Gas bestehen und ihr Licht und ihre Energie durch Kernfusion erzeugen. Diese fusionierenden Prozesse wandeln Wasserstoff in Helium um und setzen dabei enorme Mengen an Energie frei, die in Form von Licht und W&auml;rme in den Weltraum abgestrahlt werden. Sterne variieren in Gr&ouml;&szlig;e, Masse, Temperatur und Leuchtkraft, was zu einer Vielzahl von Sterntypen f&uuml;hrt, darunter Zwergsterne, Riesensterne, Neutronensterne und sogar Schwarze L&ouml;cher.</p>
+            <p>Sternensysteme: Gemeinsame Reisen im Weltraum</p>
+            <p>Sternensysteme bestehen aus mehreren Sternen, die durch Gravitationskr&auml;fte aneinander gebunden sind. Das bekannteste Beispiel eines Sternensystems ist unser eigenes Sonnensystem, das die Sonne und ihre begleitenden Planeten, Monde, Asteroiden und Kometen umfasst. Es gibt jedoch auch Doppelsternsysteme, Mehrfachsternsysteme und sogar komplexere Systeme mit einer Vielzahl von Sternen.</p>
+            <p>Entstehung von Sternen und Sternsystemen: Ein Blick in die kosmische Geburtsst&auml;tte</p>
+            <p>Die Entstehung von Sternen und Sternensystemen ist ein faszinierender Prozess, der in riesigen Gas- und Staubwolken, den sogenannten Molek&uuml;lwolken, stattfindet. Durch die Schwerkraft beginnen diese Wolken allm&auml;hlich zu kollabieren und verdichten sich zu dichten Kernregionen, in denen sich schlie&szlig;lich Sterne bilden. In einigen F&auml;llen k&ouml;nnen sich aus denselben Wolken mehrere Sterne bilden, die dann ein Sternensystem bilden.</p>
+            <p>Bedeutung von fernen Sternen und Sternensystemen f&uuml;r die Astronomie und Kosmologie</p>
+            <p>Die Erforschung ferner Sterne und Sternensysteme ist von entscheidender Bedeutung f&uuml;r unser Verst&auml;ndnis des Universums und seine Entwicklung. Durch die Untersuchung ihrer Eigenschaften k&ouml;nnen Astronomen Einblicke in die Physik von Sternen, die Entstehung von Planeten und sogar die Entwicklung von Galaxien gewinnen. Dar&uuml;ber hinaus helfen uns ferne Sterne und Sternensysteme, die fundamentale Frage nach unserer kosmischen Herkunft und unserem Platz im Universum zu beantworten.</p>
+            <p>Insgesamt sind ferne Sterne und Sternensysteme faszinierende Objekte, die uns einen Einblick in die Sch&ouml;nheit und Komplexit&auml;t des Universums bieten. Ihre Erforschung treibt die Grenzen unseres Wissens immer weiter voran und inspiriert Generationen von Wissenschaftlern und Weltraumbegeisterten, sich weiterhin den Geheimnissen des Kosmos zu widmen.</p>
+            <h1>Das Universum:</h1>
+            <p>Das Universum beschreibt die G&auml;nze von Raum, Zeit und aller aller Materie und Energie darin.&nbsp; Das beobachtbare Universum beschreibt dahingehend den Teil des Universums der von der Erde durch Beobachtungen erschlossen werden kann. Das Universum ist eines der gro&szlig;en Mysterien, die wir Menschen versuchen zu entschl&uuml;sseln und zu studieren. Aufgrund dessen erschufen wir das physikalische Teilgebiet der Kosmologie.</p>
+            <p>Zur Beschreibung der gro&szlig;r&auml;umigen Struktur des Universums nutzt man das Standardmodell der Kosmologie. Dieses sogenannte Lambda-CDM-Modell, beschreibt anhand weniger (in seiner Grundform sechs) Parameter die Entwicklung des Universums seit dem Urknall. Bei den sechs Parametern handelt es sich um:&nbsp;</p>
+            <ol>
+                <li>
+                    <p>Die Hubble-Konstante - beschreibt, wie schnell sich Himmelsk&ouml;rper in Bezug auf den Betrachter bewegen.</p>
+                </li>
+                <li>
+                    <p>Den Anteil an baryonischen Materie (der aus Atomen aufgebauten Materie) an der Gesamtenergiedichte</p>
+                </li>
+                <li>
+                    <p>Gesamtanteil der Materie an der Gesamt-Energiedichte</p>
+                </li>
+                <li>
+                    <p>Optische Dicke bis zum Zeitalter der Reionisierung</p>
+                </li>
+                <li>
+                    <p>Kr&uuml;mmungsfluktuationsamplitude der skalaren Komponente der urspr&uuml;nglichen Schwankungen</p>
+                </li>
+                <li>
+                    <p>spektraler Index der skalaren Komponente der urspr&uuml;nglichen Schwankungen</p>
+                </li>
+            </ol>
+            <p>Das Lambda-CDM-Modell stimmt gut mit den drei wichtigsten Klassen von Beobachtungen ein, die uns Aufschluss &uuml;ber das fr&uuml;he Universum geben. So der Vermessung der Anisotropie (Richtungsabh&auml;ngigkeit) der Hintergrundstrahlung, der Bestimmung der Ausdehnungsgeschwindigkeit und ihrer zeitlichen Ver&auml;nderung durch Beobachtungen von Supernovae in fernen Galaxien, sowie den Daten &uuml;ber Superstrukturen im Kosmos.&nbsp;</p>
+            <p>Urknalltheorie:</p>
+            <p>Die Urknalltheorie beschreibt den heutzutage weithin anerkannten Sachverhalt, dass das Universum in einem Augenblick, dem Urknall, aus einer Singularit&auml;t entstanden ist und sich seitdem stetig ausdehnt. Aus dem wird geschlossen, dass Zeit, Raum und Materie mit dem Urknall entstanden sind.&nbsp; Zeit, Raum vor dem Urknall und Raum au&szlig;erhalb des Universums sind laut dieser Theorie physikalisch nicht definierbar.</p>
         </div>
     </div>
     );

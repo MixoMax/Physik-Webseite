@@ -75,7 +75,7 @@ const Homepage = () => {
 
       <div className="ticket-hotline">
         <h1>Tickethotline</h1>
-        <div class="zb-ce zb-ce-text  ce-linklist  linklist   column col-md-6 col-lg-4 ">
+        <div>
           <h4 class="h4">Service</h4><ul class="list-unstyled">
             <li>
               <a href="de/presse" class="">
@@ -113,7 +113,7 @@ const Homepage = () => {
           <hr></hr>
           <p>Erleben Sie im Planetarium Hamburg eine faszinierende Reise zurück in die Vergangenheit, zu den Anfängen unseres Sonnensystems und entdecken Sie die unglaubliche Entstehungsgeschichte unseres Sonnensystems</p>
           <p>Aktuell: Erstmals in der Geschichte der Raumfahrt ist einer kommerziellen Mission die Landung auf dem Mond geglückt. Der Lander «Nova-C» des US-Unternehmens Intuitive Machines setzte in der Nacht in der südlichen Region des Erdtrabanten auf, wie die US-Raumfahrtbehörde Nasa mitteilte. Es ist die erste - wenn auch unbemannte - US-Mondlandung seit den legendären Apollo-Missionen vor mehr als 50 Jahren.</p>
-          <button type="button">WEITERLESEN</button>
+          <a href="#/events" type="button">WEITERLESEN</a>
         </div>
         <div className="card">
           <img className='card-img' src="" alt="event"></img>
@@ -121,7 +121,7 @@ const Homepage = () => {
           <hr></hr>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsum numquam deserunt, accusantium praesentium minima iste veniam vel beatae adipisci!</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laborum tempore cum doloremque. Odit exercitationem soluta animi magnam ipsum recusandae, obcaecati laboriosam quae perferendis accusantium rerum? Quam voluptate molestias at, ad iste voluptates sequi harum ratione nam a odit? Nemo asperiores aperiam consequatur rerum a iste! Tempora aliquid officia deleniti.</p>
-          <button type="button">WEITERLESEN</button>
+          <a href="#/horoskop" type="button">PROBIER ES!</a>
         </div>
       </div>
     </div>

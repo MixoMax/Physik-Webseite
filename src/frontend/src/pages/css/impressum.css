@@ -1,0 +1,18 @@
+.impressum-wrapper {
+    display: felx;
+    align-items: center;
+    justify-content: center;
+}
+
+.impressum-card {
+    background-color: rgb(30, 30, 30);
+    width: 40%;
+
+    margin: 5%;
+    
+    border-radius: 25px;
+    border: 8px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
