@@ -1,0 +1,87 @@
+import React from 'react';
+
+const AGB = () => {
+return (
+        <div class="zb-i">
+            <div class="zb-nmg-wrapper row zm-fl">
+                <div class="zb-ce zb-ce-text  ce-headline  zm-section-bottom-md   column ">
+                    <h1 class="h1">Allgemeine Geschäftsbedingungen (AGB) des Planetarium Hamburg</h1>
+                </div>
+            <div class="zb-ce zb-ce-text  ce-text  zm-section-bottom-md   column ">
+            <p style="font-weight: 400;"><strong>INHALT </strong></p>
+            <p><strong>1. Geltungsbereich 2. </strong><strong>Vertragsschluss und Rückgabe von Eintrittskarten</strong><strong>3. Widerrufsrecht des Verbrauchers<br>4. </strong><strong>Veranstaltungen<br>5. E</strong><strong>intrittspreise und Zahlungsmöglichkeiten<br></strong><strong>6. Gutscheine<br></strong><strong>7. Preise und Lieferung von anderen Waren<br></strong><strong>8. Eigentumsvorbehalt<br></strong><strong>9. Haftung<br></strong><strong>10. Bild- und Tonaufnahmen<br></strong><strong>11. Anwendbares Recht<br></strong><strong>12. Salvatorische Klausel</strong></p>
+<p style="font-weight: 400;">&nbsp;</p>
+<p style="font-weight: 400;"><strong>ALLGEMEINE GESCHÄFTSBEDINGUNGEN</strong></p>
+<p><strong>1. Geltungsbereich</strong></p>
+<p style="font-weight: 400;">Die rechtlichen Beziehungen zwischen dem Landesbetrieb Planetarium Hamburg („Planetarium Hamburg“, „Planetarium“) und ihren Kundinnen und Kunden („Kunden“) werden in den nachfolgenden Allgemeinen Geschäftsbedingungen (AGB) bestimmt. Diese Bedingungen gelten mit Kenntnisnahme des Kunden und Vertragsschluss als vereinbart. Es werden keine abweichenden Vereinbarungen anerkannt, außer das Planetarium Hamburg stimmt ihrer Geltung ausdrücklich zu. Die AGB gelten über den Verlauf der gesamten Geschäftsbeziehung.</p>
+<p style="font-weight: 400;">Somit gelten sie auch ohne erneute Vereinbarung für zukünftige Leistungen.</p>
+<p><strong>2. Vertragsschluss und Rückgabe von Eintrittskarten</strong></p>
+<p>Die Darstellung der Produkte im Webshop stellt kein rechtlich bindendes Angebot, sondern nur eine Aufforderung zur Bestellung dar. Durch Anklicken des Buttons „Jetzt kaufen“ gibt der Kunde eine verbindliche Bestellung der auf der Bestellseite aufgelisteten Waren ab. Der Kaufvertrag kommt zustande, wenn das Planetarium die Bestellung durch eine Auftragsbestätigung per E-Mail unmittelbar nach dem Erhalt der Bestellung annimmt. Beim Erwerb von Eintrittskarten für Veranstaltungen des Planetarium Hamburg („Eintrittskarten“) erfolgt der Vertragsschluss zwischen dem Kunden und dem Planetarium Hamburg nach Vollendung des Kaufvorganges durch die Übermittlung der Eintrittskarte. Das Planetarium behält sich eine Ablehnung der Bestellung vor, sollten die bestellten Waren nicht mehr vorrätig bzw. verfügbar sein; in diesem Fall wird der Kunde per E-Mail über die Ablehnung informiert.</p>
+<p>Die Entwertung von Eintrittskarten geschieht durch die erstmalige Nutzung des QR-Codes am Tag der Veranstaltung. Nach erfolgtem Einlass ist es nicht möglich die Veranstaltung ein weiteres Mal zu betreten. In der Regel können die Eintrittskarten bis kurz vor Beginn der Veranstaltung gekauft werden.</p>
+<p>Der Kunde kann<strong> </strong>gekaufte Eintrittskarten auf schriftliche Anfrage bis zu 24 Stunden vor Veranstaltungsbeginn an das Planetarium zurückgeben (Rückgabe). In diesem Fall stellt das Planetarium dem Kunden einen Gutschein über den Kaufpreis aus. Es wird eine Gebühr in Höhe von 10 Prozent auf den Kaufpreis (netto), jedoch mindestens 5 Euro pro Buchungsvorgang berechnet.</p>
+<p>Eintrittskarten werden lediglich in lesbarem Zustand ausgedruckt oder auf dem Bildschirm eines mobilen Endgerätes akzeptiert. Eine Bestell- oder Kaufbestätigung reicht nicht aus, um Einlass zu erhalten. Jede Form von Weiterverbreitung oder Veränderung der Eintrittskarten ist verboten. Das Planetarium erkennt solche weiterverarbeiteten oder veränderten Eintrittskarten nicht an.</p>
+<p>Bei Verlust und/oder missbräuchlicher Nutzung der Eintrittskarten übernimmt das Planetarium Hamburg keine Haftung.</p>
+<p>Die Kontaktaufnahme und Bestellvorgänge werden in der Regel per E-Mail und automatisierter Bestellvorgänge vollzogen. Es liegt in der Pflicht des Kunden, sicherzustellen, dass die angegebene E-Mail-Adresse vollständig und richtig ist, damit die vom Planetarium Hamburg verschickten E-Mails empfangen werden können. Auch bei Spam-Filtern muss vom Kunden gewährleistet werden, dass alle E-Mails vom Planetarium Hamburg und beauftragten Dritten zugestellt werden.</p>
+<p><strong>3. Widerrufsrecht des Verbrauchers</strong></p>
+<p>Verbraucher haben bei Abschluss eines Fernabsatzgeschäfts ein gesetzliches Widerrufsrecht, über das das Planetarium nach Maßgabe des gesetzlichen Musters nachfolgend informiert. Der Kunde ist Verbraucher, soweit der Zweck der georderten Lieferungen und Leistungen nicht überwiegend seiner gewerblichen oder selbständigen beruflichen Tätigkeit zugerechnet werden kann. Ausnahmen vom Widerrufsrecht sind in Absatz 3 geregelt.</p>
+<p>Es gilt folgende Widerrufsbelehrung:</p>
+<p style="font-weight: 400;"><strong>Widerrufsbelehrung</strong></p>
+<p style="font-weight: 400;">Steht Ihnen ein Widerrufsrecht gemäß Absatz 1 dieser Bestimmungen zu, haben Sie das Recht, binnen vierzehn Tagen ohne Angaben von Gründen diesen Vertrag zu widerrufen.</p>
+<p style="font-weight: 400;">Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht Beförderer ist, die Waren in Besitz genommen haben bzw. hat.</p>
+<p style="font-weight: 400;">Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Landesbetrieb Planetarium Hamburg, Linnering 1, 22299 Hamburg / E-Mail: info(at)planetarium-hamburg.de) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief, Telefax oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.</p>
+<p style="font-weight: 400;">Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
+<p style="font-weight: 400;"><strong>Folgen des Widerrufs</strong></p>
+<p style="font-weight: 400;">Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstige Standardlieferung gewählt haben), unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrages bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet.</p>
+<p style="font-weight: 400;">Wir können die Rückzahlung verweigern, bis wir die Ware wieder zurückerhalten haben oder bis Sie den Nachweis erbracht haben, dass Sie die Waren zurückgesandt haben, je nachdem, welches der frühere Zeitpunkt ist.</p>
+<p style="font-weight: 400;">Sie haben die Waren unverzüglich und in jedem Fall spätestens binnen vierzehn Tagen ab dem Tag, an dem Sie uns über den Widerruf dieses Vertrages unterrichten, an uns zurückzusenden oder zu übergeben. Die Frist ist gewahrt, wenn Sie die Waren vor Ablauf der Frist von vierzehn Tagen absenden.</p>
+<p style="font-weight: 400;">Sie tragen die unmittelbaren Kosten der Rücksendung der Waren.</p>
+<p style="font-weight: 400;">Sie müssen für einen etwaigen Wertverlust der Waren nur aufkommen, wenn dieser Wertverlust auf einen zur Prüfung der Beschaffenheit, Eigenschaften und Funktionsweise der Waren nicht notwendigen Umgang mit ihnen zurückzuführen ist.</p>
+<p style="font-weight: 400;">Das Widerrufsrecht besteht nicht bei Verträgen zur Lieferung von Ton- oder Videoaufnahmen oder Computersoftware in einer versiegelten Packung, wenn die Versiegelung nach der Lieferung entfernt wurde.</p>
+<p style="font-weight: 400;"><strong>– Ende der Widerrufsbelehrung –</strong></p>
+<p style="font-weight: 400;">Für den Kauf von Eintrittskarten ist das Widerrufsrecht aufgrund § 312g Absatz 2 Nummer 9. BGB ausgeschlossen, da es sich um Dienstleistungen im Bereich der Freizeitgestaltung handelt.</p>
+<p><strong>4. Veranstaltungen</strong></p>
+<p>Die Zeiten und Themen der Veranstaltungen werden online, durch Aushänge und/oder durch das Programmheft veröffentlicht. Bei Änderung oder Ausfall des Programms wird ein Umtausch- oder Rückgaberecht der Eintrittskarten begründet. Für Fremdankündigungen (z. B. durch die Presse oder Vorverkaufsstellen) wird vom Planetarium Hamburg keine Gewähr übernommen. Alle Formen von Schadensersatzansprüchen sind ausgeschlossen.</p>
+<p>Wenn der Kunde zu spät zu Veranstaltungen erscheint, kann kein Zutritt gewährleistet werden. Es besteht kein Anspruch auf Entschädigung.</p>
+<p>Für 3D-Vorstellungen wird bei Einlass in den Saal eine 3D-Brille zur Verfügung gestellt; diese wird lediglich vermietet und muss am Ende der Veranstaltung wieder abgegeben werden. Die Mietgebühr wird zusammen mit dem Preis der Eintrittskarte erhoben.</p>
+<p><strong>5. Eintrittspreise und Zahlungsmöglichkeiten</strong></p>
+<p>Die veröffentlichten Eintrittspreise und Ermäßigungen in der aktuellen Benutzungs- und Entgeltregelung für das Planetarium Hamburg finden Anwendung. Die gesetzliche Mehrwertsteuer ist in den angegebenen Preisen enthalten.</p>
+<p>Die Eintrittskarten können im Webshop, über die Ticket-Hotline, vor Ort an der Kasse oder anderen Ticketstellen bestellt werden. Werden Eintrittskarten in unserem Webshop gekauft, können diese als mobile Tickets direkt per E-Mail an eine gültige E-Mailadresse des Kunden versandt werden. Alternativ ist eine Lieferung oder eine Selbstabholung (Abholung) auswählbar, für die das Planetarium eine Gebühr erheben kann. Die Höhe dieser Gebühr wird während des Bestellvorgangs und im Warenkorb angezeigt.</p>
+<p>Ermäßigungen erfolgen nur, wenn der Grund bereits beim Kauf oder der Reservierung mitgeteilt wird. Nach Abschluss des Buchungsvorgangs erfolgen keine nachträglichen Ermäßigungen mehr. Beim Einlass muss neben der ermäßigten Karte ein Nachweis über die Ermäßigungsberechtigung in Form eines Ausweises erfolgen. Sofern dieser kein Lichtbild aufweist, muss zusätzlich ein Lichtbildausweis (z. B. Personalausweis oder Führerschein) vorgelegt werden.</p>
+<p>Die Zahlung des Kaufpreises kann lediglich mit den angebotenen Zahlungsarten vorgenommen werden. Die Abwicklung erfolgt über den jeweilig angebundenen Zahlungsdienstleister und die vom Kunden gewählte Zahlungsart. Es gelten die jeweiligen Nutzungs- und Datenschutzbedingungen des Zahlungsdienstleisters.</p>
+<p><strong>6. Gutscheine</strong></p>
+<p>Gutscheine des Planetarium Hamburg können für den Erwerb von Eintrittskarten für Veranstaltungen des Planetariums genutzt werden. Außer auf dem Gutschein ist etwas anders vermerkt, können die Gutscheine im Webshop des Planetariums, vor Ort, bei der Ticket-Hotline und bei teilnehmenden Ticketstellen genutzt werden<strong>. </strong>Werden Gutscheine im Webshop gekauft, kann das Planetarium dafür eine zusätzliche Gebühr erheben.</p>
+<p>Gutscheine des Planetarium Hamburg sind grundsätzlich von Umtausch oder Rückgabe ausgeschlossen. Für Gutscheine, die im Webshop erworben wurden, gilt die Widerrufsbelehrung aus Ziffer 3.</p>
+<p>Die Einlösung von Gutscheinen und Restguthaben muss innerhalb der gesetzlichen Frist nach dem Kaufdatum erfolgen. Restguthaben werden dem Kunden bis zum Ablaufdatum gutgeschrieben. Sie werden nicht in bar ausgezahlt oder verzinst.</p>
+<p>Gutscheine müssen vor Abschluss des Bestellprozesses eingelöst werden. Danach ist eine Verrechnung nicht mehr möglich.</p>
+<p>Sofern der Gutschein den Wert der Bestellung nicht deckt, kann für die Bezahlung des Restbetrages einer der angebotenen Zahlungsmethoden genutzt werden.</p>
+<p>Für Gutscheine, die das Planetarium Hamburg im Rahmen einer Sonderaktion oder Schenkung überlässt, gelten abweichend die Bedingungen der jeweiligen Sonderaktion bzw. das bei der Schenkung Vereinbarte. Sind keine solchen abweichenden Bedingungen festgelegt, finden die Bestimmungen der Ziffer 6 trotzdem Anwendung.</p>
+<p><strong>7. Preise und Lieferung von anderen Waren</strong></p>
+<p>Dieser Abschnitt gilt für den Kauf von Waren, die nicht Eintrittskarten oder Gutscheine sind („andere Waren“).</p>
+<p>Die angegebenen Preise enthalten die gesetzliche Mehrwertsteuer. Bei einer Bestellung im Webshop berechnet das Planetarium zusätzlich zu den angegebenen Preisen die Versandkosten für die Lieferung. Die Höhe der Versandkosten wird während des Bestellvorgangs und im Warenkorb angezeigt.</p>
+<p>Für die Bezahlung des Kaufpreises gilt Ziffer 5 Absatz 4 entsprechend.</p>
+<p>Vor Ort an der Kasse gekaufte Waren im Sinne dieses Abschnitts sind vom Umtausch ausgeschlossen, wenn kein Mangel an der Kaufsache besteht.</p>
+<p><strong>8. Eigentumsvorbehalt</strong></p>
+<p style="font-weight: 400;">Bis der Kaufpreis und alle dazugehörigen Kosten vollständig bezahlt werden, behält sich das Planetarium das Eigentum an der gelieferten Ware vor.</p>
+<p><strong>9. Haftung</strong></p>
+<p>Schadensersatzansprüche von Seiten des Kunden sind ausgeschlossen. Ausgenommen sind Ansprüche aus der Verletzung des Lebens, des Körpers, der Gesundheit oder aus der Verletzung wesentlicher Vertragspflichten (Kardinalpflichten) sowie die Haftung für sonstige Schäden, die auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung des Planetarium Hamburg, seiner gesetzlichen Vertreter oder Erfüllungsgehilfen beruhen. Wesentliche Vertragspflichten sind solche, deren Erfüllung zur Erreichung des Ziels des Vertrags notwendig ist.</p>
+<p>Bei der Verletzung wesentlicher Vertragspflichten haftet das Planetarium Hamburg nur auf den vertragstypischen, vorhersehbaren Schaden, wenn dieser einfach fahrlässig verursacht wurde, es sei denn, es handelt sich um Schadensersatzansprüche des Kunden aus einer Verletzung des Lebens, des Körpers oder der Gesundheit.</p>
+<p>Die Einschränkungen der Absatz 1 und 2 gelten auch zugunsten der gesetzlichen Vertreter und Erfüllungsgehilfen des Planetarium Hamburg, wenn Ansprüche direkt gegen diese geltend gemacht werden.</p>
+<p>Die sich aus Absatz 1 und 2 ergebenden Haftungsbeschränkungen gelten nicht, soweit das Planetarium Hamburg den Mangel arglistig verschwiegen oder eine Garantie für die Beschaffenheit der Sache übernommen hat. Das gleiche gilt, soweit das Planetarium Hamburg und der Kunde eine Vereinbarung über die Beschaffenheit der Sache getroffen haben. Die Vorschriften des Produkthaftungsgesetzes bleiben unberührt.</p>
+<p>Bei Personen, die an<strong> </strong>photosensibler Epilepsie leiden, kann es durch schnell wechselnde Licht- und Lasereffekte im Sternensaal zu epileptischen Anfällen oder Bewusstseinsstörungen kommen. Das Planetarium Hamburg nimmt für daraus entstehende Schäden keine Haftung.</p>
+<p><strong>10. Bild- und Tonaufnahmen</strong></p>
+<p>Eine Aufnahme von Ton, Bild, Filmen, Beschreibungen oder sonstigen Bestandteilen von Veranstaltungen ist ohne vorherige schriftliche Zustimmung durch das Planetarium Hamburg nicht erlaubt. Auch eine Übertragung und Verbreitung dieser Inhalte mit Hilfe des Internets oder anderen Medien ist nicht gestattet.</p>
+<p>Bei schriftlicher Zustimmung durch das Planetarium Hamburg gemäß Absatz 1 dürfen die aufgezeichneten Inhalte lediglich für persönliche und nichtkommerzielle Zwecke genutzt werden. Für die kommerzielle Nutzung bedarf es einer gesonderten schriftlichen Zustimmung durch das Planetarium Hamburg mit Vereinbarung bezüglich der Vergütung.</p>
+<p>In Zusammenhang mit der Veranstaltung willigt der Karteninhaber ein, dass das Bild und die Stimme des Karteninhabers für alle gegenwärtigen und zukünftigen Medien in Form von Fotografien, Live-Übertragungen, Sendungen und/oder Aufzeichnungen von Bild und/oder Ton durch das Planetarium Hamburg und seine Beauftragten genutzt werden können. Unberührt bleibt dabei § 23 Absatz 2 Kunsturhebergesetz.</p>
+<p><strong>11. Anwendbares Recht</strong></p>
+<p>Auf Verträge zwischen dem Planetarium Hamburg und den Kunden findet das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts Anwendung. Die gesetzlichen Vorschriften zur Beschränkung der Rechtswahl und zur Anwendbarkeit zwingender Vorschriften insbesondere des Staates, in dem der Kunde als Verbraucher seinen gewöhnlichen Aufenthalt hat, bleiben unberührt.</p>
+<p>Sofern es sich beim Kunden um einen Kaufmann, eine juristische Person des öffentlichen Rechts oder um ein öffentlich-rechtliches Sondervermögen handelt, ist Gerichtsstand Hamburg.</p>
+<p><strong>12. Salvatorische Klausel</strong></p>
+<p style="font-weight: 400;">Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam oder undurchführbar sein oder werden, so werden hiervon die Wirksamkeit und Durchführbarkeit der Bestimmungen im Übrigen nicht berührt. Die Parteien verpflichten sich, an Stelle der nicht einbezogenen oder unwirksamen Vorschrift eine Regelung zu vereinbaren, die dem Inhalt der ursprünglichen Bestimmung möglichst nahekommt.</p>
+<p style="font-weight: 400;"><em>Stand: November 2023</em></p>
+</div>
+</div>
+</div>
+    );
+};
+
+export default AGB;

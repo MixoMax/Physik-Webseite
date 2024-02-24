@@ -44,12 +44,15 @@
   float: left;
   color: #f2f2f2;
   text-align: center;
+  text-shadow: none;
   margin: 15px 6px 13.5px 6px;
   padding: 5px 10px 7.5px 10px;
   text-decoration: none;
   font-size: 2vh;
   font-weight: bold;
   z-index: 1;
+  transition: 0.5s;
+
   border-radius: 2vb;
 }
 
@@ -67,9 +70,11 @@
 
 /* Account */
 .account-icon {
-  margin-right: 30%;
   max-width: 7.5%;
-  padding: 2.5%;
+  margin: 0 32.5% 0 2.5%;
+
+  border-radius: 100%;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.15), 5px 5px 15px rgba(0, 0, 0, 0.45);
 }
 
 .login-btn,
@@ -86,6 +91,8 @@
   margin-left: 2.5%;
   cursor: pointer;
   text-decoration: none;
+
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.15), 5px 5px 15px rgba(0, 0, 0, 0.45);
 }
 .login-btn:link:hover,
 .signup-btn:hover {
@@ -100,17 +107,21 @@
   background-color: #e1d15a;
   height:10px;
   width: 100%;
+
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.2), 5px 5px 15px rgba(0, 0, 0, 0.55);
 }
 
 .page-button-wrapper .page-button.active {
   color: black;
-  border-radius: 10vb 10vb 0 0;
+  /*border-radius: 10vb 10vb 0 0;*/
   background-color: #e1d15a;
-  margin: 0;
+  /*margin: 0;
   gap: 0;
   padding: 20px 16px 22px 16px;
-  border-color: #e1d15a;
-  transition: 0.3s ease-out;
+  border-color: #e1d15a;*/
+  transition: 0.5s;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.15), 5px 5px 15px rgba(0, 0, 0, 0.45);
+  transform: translateY(-5px);
 }
 
 #test {

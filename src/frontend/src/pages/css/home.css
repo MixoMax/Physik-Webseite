@@ -11,28 +11,45 @@ body {
   }
  
   /* first section */
+  .homepage-button-wrapper {
+    position: absolute;
+    width: 100%;
+    
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+
+    transform: translateY(100%);
+  }
+
   .homepage-button-left,
   .homepage-button-right {
-    background: lightgray;
+    background: #e1d15a;
     color: rgb(30, 30, 30);
-    
-    text-align: center;
-    text-transform: translate(-25, 0);
-    font-size: 50px;
-    font-weight: 900;
-    
-    width:30px;
-    height:30px;
-    padding: 25px;
-    margin: 25px;
-    border-radius: 100%;
+    position: relative;
 
-    position: absolute;
-    transform: translateY(400%);
+    align-items: center;
+
+    width:50px;
+    height:50px;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 100%;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.25), 5px 5px 15px rgba(0, 0, 0, 0.75),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
   }
-  .homepage-button-right {
-    transform: translateX(1950%);
+
+  .homepage-button-left-img,
+  .homepage-button-right-img {
+    width:100%;
+    height:100%;
+
+    padding:0;
+    margin: 0;
   }
+
+
 
   .header-image {
     color: white;

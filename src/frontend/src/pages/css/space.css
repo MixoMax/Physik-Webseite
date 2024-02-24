@@ -1,0 +1,11 @@
+.space {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.space-wrapper { 
+    max-width:60%;
+}
+.space p {
+    text-align: justify;
+}
