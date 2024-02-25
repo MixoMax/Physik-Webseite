@@ -1,0 +1,21 @@
+.space {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.space-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    
+    max-width:60%;
+}
+.solar-system-img {
+    min-width: 150%;
+    transform: translateX(-20%);
+}
+
+.space-wrapper p {
+    text-align: justify;
+}

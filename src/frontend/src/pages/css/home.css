@@ -11,6 +11,47 @@ body {
   }
  
   /* first section */
+  .homepage-button-wrapper {
+    position: absolute;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transform: translateY(150%);
+  }
+
+  .homepage-button-left,
+  .homepage-button-right {
+    background: #e1d15a;
+    color: rgb(30, 30, 30);
+    position: relative;
+
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 100%;
+    border: 6px solid #e1d15a;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.25), 5px 5px 15px rgba(0, 0, 0, 0.75),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.15), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  }
+
+  .homepage-button-left-img,
+  .homepage-button-right-img {
+    width:100%;
+    height:100%;
+
+    padding:0;
+    margin: 0;
+  }
+
+
+
   .header-image {
     color: white;
     text-align: left;
@@ -74,11 +115,27 @@ body {
   }
   
   /* second section */
-  .opening-hours,
-  .ticket-hotline {
-    margin: 20px 0;
+  .opening-hours {
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: right;
+
+    margin: 50px 0;
+    color:#fff;
+  }
+
+  .time-table {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 2vb;
   }
   
+  /* third section */
   .cards {
     display: flex;
     justify-content: space-between;
@@ -90,29 +147,5 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 2vb;
-  }
-  
-  .bottom-section {
-    text-align: center;
-  }
-  
-  .button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .social-media {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .social-media a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
   }
   

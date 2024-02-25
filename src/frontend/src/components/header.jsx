@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import './css/header.css'
 
 import logo from '../assets/images/planetariumicons/logoplanetariumweiß_outline.png';
-import user_icon from '../assets/images/icons/user-icon.png';
-import ufo from '../assets/images/icons/user-icon.png';
+import user_icon from '../assets/images/comp/user-icon.png';
+import ufo from '../assets/images/comp/user-icon.png';
 
 import {Link, NavLink, useLocation} from 'react-router-dom';
 
@@ -76,10 +76,10 @@ function Header() {
           <img className="logo" src={logo} alt="logo"></img>
           <div className="page-button-wrapper">
             <NavLink className="page-button" activeClassName="active" to="/">Home</NavLink>
+            <NavLink className="page-button" activeClassName="active" to="/space">Space</NavLink>
             <NavLink className="page-button" activeClassName="active" to="/events">Events</NavLink>
             <NavLink className="page-button" activeClassName="active" to="/history">History</NavLink>
             <NavLink className="page-button" activeClassName="active" to="/about">About</NavLink>
-            <NavLink className="page-button" activeClassName="active" to="/weltall">Weltall</NavLink>
           </div>
         </div>
         <div className="user-actions">
