@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 import uvicorn
 
-from classes import Event
+from classes import Event, DB, Filter
 
 import os
 import time
@@ -14,6 +14,8 @@ os.chdir(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 print(os.getcwd())
 
 app = FastAPI()
+
+db = DB()
 
 class RateLimit:
     __requests: dict[str, list[int]] #ip_address: [timestamp, timestamp, ...]
@@ -57,7 +59,33 @@ async def error(status_code: int):
     file_path = get_error_file_path(status_code)
     return FileResponse(file_path)
 
+@app.get("/search")
+async def search(q: str, request: Request) -> JSONResponse:
+    error_code = 200
 
+    ip_address = request.client.host
+
+    rate_limit.add_request(ip_address)
+
+    if rate_limit.check_rate_limit(ip_address):
+        error_code = 429
+        return JSONResponse({"error": "429 - Too many requests", "message": "You are sending too many requests! If you are a bot, please slow down. If you are a human and believe this is a mistake, contact me: <linus@linushorn.dev>."}, status_code=error_code)
+
+    events = db.get_events()
+
+    events_out: list[Event] = []
+
+    for event in events:
+        if any(q in str(val) for key, val in event.__dict__.items()):
+            events_out.append(event)
+    
+    json_out = []
+
+    for event in events_out:
+        json_out.append(event.to_json())
+    
+    
+    return JSONResponse(json_out, status_code=error_code)
 
 @app.get("/static/{file_path:path}")
 async def serve_static(file_path: str, request: Request):
@@ -94,8 +122,6 @@ async def serve_assets(file_path: str, request: Request):
     if rate_limit.check_rate_limit(ip_address):
         error_code = 429
         return FileResponse(get_error_file_path(error_code), status_code=error_code)
-        
-    
     
 
     fp = f"./src/frontend/assets/{file_path}"
@@ -136,6 +162,8 @@ async def serve_root(file_path: str, request: Request):
         fp = get_error_file_path(error_code)
 
     return FileResponse(fp, status_code=error_code)
-    
+
+
+
 
 uvicorn.run(app, host="0.0.0.0", port=8000)
