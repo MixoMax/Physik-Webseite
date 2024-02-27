@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './css/home.css'
 
 import arrow_left from '../assets/images/comp/arrow_left.png'
@@ -11,9 +11,108 @@ import cloud4 from '../assets/images/clouds/cloud_4.png';
 import cloud5 from '../assets/images/clouds/cloud_5.png';
 
 const Homepage = () => {
+
+  const backgroundImages = [
+    require("../assets/images/Planetarium_irl/planetarium_nacht.png"),
+    require("../assets/images/Planetarium_irl/planetarium-bild.jpg")
+  ]
+
+  const [backgroundImage, setBackgroundImage] = useState(backgroundImages[0]);
+
+  useEffect(() => {
+    let textNumber = 1;
+    const text1_html = document.getElementsByClassName('homepage-text-1')[0];
+    const text2_html = document.getElementsByClassName('homepage-text-2')[0];
+    const text3_html = document.getElementsByClassName('homepage-text-3')[0];
+    const buttonLeft_html = document.getElementsByClassName('homepage-button-left')[0];
+    const buttonRight_html = document.getElementsByClassName('homepage-button-right')[0];
+
+    const buttonLeftClick = () => {
+      if(textNumber === 1) {
+        textNumber = 3;
+      }
+      else {
+        textNumber = textNumber - 1;
+      }
+      switch(textNumber) {
+        case 1:
+          text1_html.style.opacity = 1;
+          text2_html.style.opacity = 0;
+          text1_html.style.left = "10%";
+          text2_html.style.left = "110%";
+          text3_html.style.left = "-90%";
+          setBackgroundImage(backgroundImages[1]);
+          break;
+        case 2:
+          text2_html.style.opacity = 1;
+          text3_html.style.opacity = 0;
+          text2_html.style.left = "10%";
+          text3_html.style.left = "110%";
+          text1_html.style.left = "-90%";
+          setBackgroundImage(backgroundImages[1]);
+          break;
+        case 3:
+          text3_html.style.opacity = 1;
+          text1_html.style.opacity = 0;
+          text3_html.style.left = "10%";
+          text1_html.style.left = "110%";
+          text2_html.style.left = "-90%";
+          setBackgroundImage(backgroundImages[1]);
+          break;
+        default:
+          break;
+      }
+    }
+
+    const buttonRightClick = () => {
+      if(textNumber === 3) {
+        textNumber = 1;
+      }
+      else {
+        textNumber = textNumber + 1;
+      }
+      switch(textNumber) {
+        case 1:
+          text1_html.style.opacity = 1;
+          text3_html.style.opacity = 0;
+          text1_html.style.left = "10%";
+          text2_html.style.left = "110%";
+          text3_html.style.left = "-90%";
+          setBackgroundImage(backgroundImages[0]);
+          break;
+        case 2:
+          text2_html.style.opacity = 1;
+          text1_html.style.opacity = 0;
+          text2_html.style.left = "10%";
+          text3_html.style.left = "110%";
+          text1_html.style.left = "-90%";
+          setBackgroundImage(backgroundImages[0]);
+          break;
+        case 3:
+          text3_html.style.opacity = 1;
+          text2_html.style.opacity = 0;
+          text3_html.style.left = "10%";
+          text1_html.style.left = "110%";
+          text2_html.style.left = "-90%";
+          setBackgroundImage(backgroundImages[0]);
+          break;
+        default:
+          break;
+      }
+    }
+
+    buttonLeft_html.addEventListener('click', buttonLeftClick);
+    buttonRight_html.addEventListener('click', buttonRightClick);
+    
+    return () => {
+      buttonLeft_html.removeEventListener('click', buttonLeftClick);
+      buttonRight_html.removeEventListener('click', buttonRightClick);
+    };
+  }, []);
+
   return (
     <div className="homepage">
-      <div className="header-image">
+      <div className="header-image" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="homepage-button-wrapper">
           <div className="homepage-button-left">
             <img className="homepage-button-left-img" src={arrow_left} alt="&lt;"></img>

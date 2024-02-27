@@ -49,6 +49,9 @@
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
     transition: 0.5s ease-in-out;
     outline: none;
+    position: relative;
+    z-index: 2;
+    background: transparent;
 }
 
 .sign-container .input-box span {
@@ -60,6 +63,7 @@
     transition: 0.5s;
     letter-spacing: 0.06em;
     color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
 }
 
 .sign-container .input-box input:valid ~ span,

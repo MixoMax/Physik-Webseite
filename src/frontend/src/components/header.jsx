@@ -5,7 +5,7 @@ import logo from '../assets/images/planetariumicons/logoplanetariumweiß_outline
 import user_icon from '../assets/images/comp/user-icon.png';
 import ufo from '../assets/images/comp/user-icon.png';
 
-import {Link, NavLink, useLocation} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 function Header() {
   

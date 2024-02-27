@@ -56,11 +56,10 @@ body {
     color: white;
     text-align: left;
 
-    background-image: url(../../assets/images/Planetarium_irl/planetarium_nacht.png);
     background-size: 140%;
 
     width: auto;
-    height:auto;
+    height: calc(100vh);
   }
 
   .header-wrapper {
@@ -68,6 +67,30 @@ body {
     width: 35%;
 
     background: linear-gradient(0.25turn, rgba(10, 10, 10, 0.75) 80%, rgba(30, 30, 30, 0));
+  }
+
+  .homepage-text-1 {
+    position: absolute;
+    left: 10%;
+    opacity: 1;
+    width: 666px;
+    transition: ease-in-out 0.5s all;
+  }
+
+  .homepage-text-2 {
+    position: absolute;
+    left: 110%;
+    opacity: 0;
+    width: 666px;
+    transition: ease-in-out 0.5s all;
+  }
+
+  .homepage-text-3 {
+    position: absolute;
+    left: -90%;
+    opacity: 0;
+    width: 666px;
+    transition: ease-in-out 0.7s all;
   }
 
   .headline {
@@ -87,7 +110,7 @@ body {
   }
 
   /* Deco */
-  .clouds {position: absolute;}
+  .clouds {position: absolute; top: calc(100vh + 40px);}
   .cloud-1 {
     position: absolute;
     transform: translate(-5%, -135%) scale(175%);
@@ -148,4 +171,6 @@ body {
     margin-bottom: 20px;
     border-radius: 2vb;
   }
+
+
   
