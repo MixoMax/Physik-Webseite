@@ -2,7 +2,7 @@ import React from "react";
 import './css/space.css';
 
 import solar_system from '../assets/images/comp/SolarSystem.svg';
-import jupiter from '../assets/images/planets/jupiter.svg';
+import saturn from '../assets/images/planets/jupiter.svg';
 import sun from '../assets/images/planets/sun.svg';
 import moon from '../assets/images/planets/moon.svg';
 import stars from '../assets/images/planets/stars.svg';
@@ -16,7 +16,7 @@ const Space = () => {
                 <span className="crater crater-1"></span>
                 <span className="crater crater-2"></span>
                 <div className="space-headline">
-                    <img src={jupiter} alt="Jupiter"></img>
+                    <img src={saturn} alt="Jupiter"></img>
                     <h1>Entdecke das Weltall!</h1>
                 </div>
                 <div>
