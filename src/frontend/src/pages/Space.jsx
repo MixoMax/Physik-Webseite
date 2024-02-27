@@ -2,14 +2,37 @@ import React from "react";
 import './css/space.css';
 
 import solar_system from '../assets/images/comp/SolarSystem.svg';
+import jupiter from '../assets/images/planets/jupiter.svg';
+import sun from '../assets/images/planets/sun.svg';
+import moon from '../assets/images/planets/moon.svg';
+import stars from '../assets/images/planets/stars.svg';
 
 const Space = () => {
 
     return (
     <div className="space">
         <div className="space-wrapper">
-            <h1>Entdecke das Weltall!</h1>
-            <h2>Sonne, Mond und Erde</h2>
+            <div className="space-header">
+                <span className="crater crater-1"></span>
+                <span className="crater crater-2"></span>
+                <div className="space-headline">
+                    <img src={jupiter} alt="Jupiter"></img>
+                    <h1>Entdecke das Weltall!</h1>
+                </div>
+                <div>
+                    <img src={sun} alt="Sonne" />
+                    <h2>Sonne</h2>
+                </div>
+                <div>
+                    <img src={moon} alt="Sonne" />
+                    <h2>Mond</h2>
+                </div>
+                <div>
+                    <img src={stars} alt="Sonne" />
+                    <h2>Sterne</h2>
+                </div>
+            </div>
+
             <p>Unser Sonnensystem ist voller faszinierender Himmelskörper, von denen die Erde, der Mond und die Sonne nur einige sind. Tauche ein in die Welt der Astronomie und entdecke die Geheimnisse und Wunder, die unseren Planeten und seine Begleiter ausmachen!</p>
             <p>Unsere Erde: Die Erde, unser Zuhause, ist der dritte Planet der Sonne und der einzige bekannte Ort im Universum, der Leben beherbergt. Mit einer Vielzahl an Ökosystemen, Landschaften, Klimazonen und einem einzigartigen Magnetfeld bietet die Erde eine unglaubliche Vielfalt an Lebensformen. Entdecke die erstaunlichen Phänomene wie die Jahreszeiten, Wetterphänomene, Ozeane und Kontinente, die unseren Planet so einzigartig machen.</p>
             <p>Der Mond: Unser treuer Begleiter, der Mond, ist der natürliche Satellit der Erde. Mit seiner beeindruckenden Oberfläche, die von Kratern und Bergen geprägt ist, fasziniert der Mond die Menschheit seit Jahrtausenden, unter anderem durch seine unterschiedlichen Phasen. Der einzige Himmelskörper, auf den die Menschen jemals hingereist sind, erzeugt gleichzeitig Ebbe und Flut.</p>

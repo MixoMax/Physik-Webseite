@@ -12,6 +12,7 @@ import ComingSoon from './pages/ComingSoon';
 import Login from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
 import Impressum from './pages/Impressum.jsx';
+import Hausordnung from './pages/Hausordnung.jsx';
 
 import './styles/App.css';
 //import './styles/scrollbar.css';
@@ -30,7 +31,7 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/impressum" element={<Hausordnung />} />
         </Routes>
       <Footer />
       </Router>  
