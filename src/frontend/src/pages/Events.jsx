@@ -6,11 +6,17 @@ import EventEntry from '../components/event-entry'
 
 function Events() {
 
-
     const events = [];
-    for (let i = 0; i < 100; i++) {
-        events.push({ title: "Event " + i, date: "01.01.1970", location: "Location 1", description: "This is a Placeholder text This is a Placeholder tex"});
-    }
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
+    events.push({ title: "", date: "xx.yy.zzzz", location: "_", description: "This is a Placeholder text This is a Placeholder tex"});
 
     return (
         <div>
