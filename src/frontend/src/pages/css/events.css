@@ -1,6 +1,31 @@
-#event-list {
+#events-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+
+#events-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+
+    height: 5vh;
+}
+
+
+#search-bar {
+    width: 70%;
+    height: 100%;
+    border-radius: 2.5vh;
+}
+
+#date-picker {
+    height: 100%;
+    border-radius: 2.5vh;
+}
+  

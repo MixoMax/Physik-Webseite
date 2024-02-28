@@ -2,14 +2,46 @@ import React from 'react'
 import './css/event-entry.css'
 
 function EventEntry({ event }) {
+
+  // event -> {"id": 2, "title": str, "description": str, "date": str, "img": str, price_normal: int, price_reduced: int, recommended_age: int, duration: int}
+  console.log(event);
+
+  // shorten description to 100 characters
+  var max_description_length = 750;
+  if (event.description.length > max_description_length) {
+    var word_array = event.description.split(" ");
+    var new_description = "";
+    var i = 0;
+    while (new_description.length < max_description_length) {
+      new_description += word_array[i] + " ";
+      i++;
+    }
+    event.description = new_description + "...";
+
+  }
+
   return (
-    <div>
-      <div id="event-component-wrapper">
-        <img id="event-image" src={event.img ? event.img : "https://m.media-amazon.com/images/I/81Bd9H3HP1L._AC_UF894,1000_QL80_.jpg"} alt="placeholder" />
-        <p id="event-title">{event.title}</p>
-        <p id="event-description">{event.description}</p>
-        <p id="event-date">{event.date}</p>
-        <button id="buy-ticket"><img alt="" id="ticket-icon" src='https://cdn-icons-png.flaticon.com/512/785/785581.png'/><p1 id="buy-text">Ticket Kaufen</p1></button>
+    <div id="event-component-wrapper" class="hbox">
+
+      <img class="event-image" src={event.img} alt="event"/>
+      
+      <div id="event-info" class="hbox">
+        <h2>{event.title}</h2>
+        <p>{event.description}</p>
+        
+        <div id="event-location-date" class="vbox">
+          <p>{event.date}</p>
+          <p>Ort: {event.location}</p>
+          <p>Empfohlenes Alter: {event.recommended_age}+</p>
+        
+        </div>
+
+        <div id="event-price" class="vbox">
+          <p>Normal: {event.price_normal}€</p>
+          <p>Ermäßigt: {event.price_reduced}€</p>
+          <button id="event-button">Tickets</button>
+        </div>
+
       </div>
     </div>
   )

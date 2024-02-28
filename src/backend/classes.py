@@ -45,6 +45,8 @@ class Event:
             if not hasattr(self, key):
                 setattr(self, key, "")
         
+        self.date = self.date.replace(".", "-")
+
         return self
     
     def to_json(self) -> dict:
@@ -72,6 +74,15 @@ class Event:
             json_out[key] = val
         
         return json_out
+
+    def clean(self):
+        y, m, d = self.date.split("-")
+        if len(d) == 4:
+            # ymd is reversed
+            y, d = d, y
+        self.date = f"{y}-{m}-{d}"
+
+        
         
         
 
@@ -174,7 +185,7 @@ class DB:
         for row in rows:
             event = Event()
             event.title = row[1]
-            event.date = row[2]
+            event.date = row[2].replace(".", "-")
             event.weekday = row[3]
             event.time = row[4]
             event.location = row[5]
@@ -183,6 +194,7 @@ class DB:
             event.price_reduced = row[8]
             event.duration = row[9]
             event.recommended_age = row[10]
+            event.clean()
             events.append(event)
         
         return events
@@ -226,6 +238,11 @@ class DB:
                     filtered.append(event)
         
         return filtered
+
+    def reset(self) -> None:
+        cmd = "DELETE FROM events"
+        self.cursor.execute(cmd)
+        self.conn.commit()
 
     def close(self):
         self.conn.close()
