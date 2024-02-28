@@ -26,6 +26,10 @@ const Homepage = () => {
     const text3_html = document.getElementsByClassName('homepage-text-3')[0];
     const buttonLeft_html = document.getElementsByClassName('homepage-button-left')[0];
     const buttonRight_html = document.getElementsByClassName('homepage-button-right')[0];
+    const backgroundImage_html = document.getElementsByClassName("header-image")[0]
+    const header_html = document.getElementById("wrapper-wrapper")
+
+    backgroundImage_html.style.height = `calc(110vh - ${header_html.offsetHeight}px)`
 
     const buttonLeftClick = () => {
       if(textNumber === 1) {
@@ -151,63 +155,46 @@ const Homepage = () => {
         <table className="time-table">
           <tr>
             <th>Tag</th>
-            <th>Montag</th>
-            <th>Dienstag</th>
-            <th>Mittwoch</th>
-            <th>Donnerstag</th>
-            <th>Freitag</th>
-            <th>Samstag</th>
+            <th>Zeiten</th>
           </tr>
           <tr>
-            <th>Zeiten</th>
-            <th>geschlossen</th>
-            <th>9:00 - 19:00 Uhr</th>
-            <th>9:00 - 17:00 Uhr</th>
-            <th>9:00 - 21:00 Uhr</th>
-            <th>12:00 - 22:30 Uhr</th>
-            <th>9:00 - 19:00 Uhr</th>
-            <th>10:00 - 19:00 Uhr</th>
-            <th>10:00 - 19:00 Uhr</th>
+            <td>Montag:</td>
+            <td>geschlossen</td>
+          </tr>
+          <tr>
+            <td>Dienstag:</td>
+            <td>9:00 - 19:00 Uhr</td>
+          </tr>
+          <tr>
+            <td>Mittwoch:</td>
+            <td>9:00 - 17:00 Uhr</td>
+          </tr>
+          <tr>
+            <td>Donnerstag:</td>
+            <td>9:00 - 21:00 Uhr</td>
+          </tr>
+          <tr>
+            <td>Freitag:</td>
+            <td>9:00 - 21:00 Uhr</td>
+          </tr>
+          <tr>
+            <td>Samstag:</td>
+            <td>12:00 - 22:30 Uhr</td>
+          </tr>
+          <tr>
+            <td>Sonntag:</td>
+            <td>10:00 - 19:00 Uhr</td>
+          </tr>
+          <tr>
+            <td>Feiertage:</td>
+            <td>10:00 - 19:00 Uhr</td>
           </tr>
         </table>
       </div>
 
-      <div className="ticket-hotline">
-        <h1>Tickethotline</h1>
-        <div>
-          <h4 class="h4">Service</h4><ul class="list-unstyled">
-            <li>
-              <a href="de/presse" class="">
-                <span>Presse</span>
-              </a>
-            </li>
-            <li>
-              <a href="de/distribution/deutsch" class="">
-                <span>Distribution</span>
-              </a>
-            </li>
-            <li>
-              <a href="de/newsletter" class="">
-                <span>Newsletter</span>
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="https://planetarium-hamburg.eventim-inhouse.de/webshop/webticket/coupon" class="">
-                <span>Gutscheinshop</span>
-              </a>
-            </li>
-            <li>
-              <a href="de/besuchsinformationen#faq" class="">
-                <span>Häufige Fragen</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
       <div className="cards">
         <div className="card">
-          <img className='card-img' src="" alt="event"></img>
           <h1 className='card-title'>Die nächsten Veranstaltungen</h1>
           <hr></hr>
           <p>Erleben Sie im Planetarium Hamburg eine faszinierende Reise zurück in die Vergangenheit, zu den Anfängen unseres Sonnensystems und entdecken Sie die unglaubliche Entstehungsgeschichte unseres Sonnensystems</p>
@@ -215,7 +202,6 @@ const Homepage = () => {
           <a href="#/events" type="button">WEITERLESEN</a>
         </div>
         <div className="card">
-          <img className='card-img' src="" alt="event"></img>
           <h1 className='card-title'>Horoskop</h1>
           <hr></hr>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ipsum numquam deserunt, accusantium praesentium minima iste veniam vel beatae adipisci!</p>

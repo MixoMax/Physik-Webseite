@@ -59,7 +59,6 @@ body {
     background-size: 140%;
 
     width: auto;
-    height: calc(100vh);
   }
 
   .header-wrapper {
@@ -110,7 +109,7 @@ body {
   }
 
   /* Deco */
-  .clouds {position: absolute; top: calc(100vh + 40px);}
+  .clouds {position: absolute; top: calc(110vh);}
   .cloud-1 {
     position: absolute;
     transform: translate(-5%, -135%) scale(175%);
@@ -139,37 +138,57 @@ body {
   
   /* second section */
   .opening-hours {
-    display:flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: right;
-
-    margin: 50px 0;
-    color:#fff;
-  }
-
-  .time-table {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    gap: 20px;
+    align-items: center;
+    margin: 50px 0;
+    color: #fff;
+  }
+  
+  .time-table {
+    width: max(450px, 20%); /* Adjust as required for your layout */
     border: 1px solid white;
     border-radius: 2vb;
+  }
+  
+  .time-table th, .time-table td {
+    width: 50%; /* Each cell takes up half the table's width */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+  }
+  
+  /* Optional: Add this if you want to ensure the table headers are aligned with the table data */
+  .time-table th {
+    text-align: center;
+  }
+  
+
+  .time-table td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
   }
   
   /* third section */
   .cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    
   }
   
   .card {
-    width: 48%;
+    width: calc(48% - 120px);
     border: 1px solid #ccc;
-    padding: 10px;
     margin-bottom: 20px;
-    border-radius: 2vb;
+
+    padding: 40px;
+    border-radius: 20px;
+    border: 8px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
   }
 
 
