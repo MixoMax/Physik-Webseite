@@ -1,25 +1,36 @@
-* {
-    border: 1px solid #fff;
-}
 
 .space {
     display: flex;
     align-items: start;
     justify-content: center;
-}
-.space-wrapper {
-    display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    
-    max-width:60%;
 }
+.space-wrapper p {
+    text-align: justify;
+}
+
+/* space header */
+.space-header {
+    position: relative;
+    width: 100%;
+}
+.space-header .crater {
+    position: absolute;
+    top: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);;
+}
+.crater-1 {
+    transform: translateX(-500%);
+}
+
+
+/* solar system */
 .solar-system-img {
     min-width: 150%;
     transform: translateX(-20%);
-}
-
-.space-wrapper p {
-    text-align: justify;
 }
