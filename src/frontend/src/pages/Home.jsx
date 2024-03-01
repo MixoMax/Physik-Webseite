@@ -28,8 +28,10 @@ const Homepage = () => {
     const buttonRight_html = document.getElementsByClassName('homepage-button-right')[0];
     const backgroundImage_html = document.getElementsByClassName("header-image")[0]
     const header_html = document.getElementById("wrapper-wrapper")
+    const headerwrapper_html = document.getElementsByClassName("header-wrapper")[0]
 
     backgroundImage_html.style.height = `calc(110vh - ${header_html.offsetHeight}px)`
+    headerwrapper_html.style.height = `calc(100vh - ${header_html.offsetHeight}px - 10%)`
 
     const buttonLeftClick = () => {
       if(textNumber === 1) {
@@ -42,25 +44,25 @@ const Homepage = () => {
         case 1:
           text1_html.style.opacity = 1;
           text2_html.style.opacity = 0;
-          text1_html.style.left = "10%";
-          text2_html.style.left = "110%";
-          text3_html.style.left = "-90%";
+          text1_html.style.left = "15%";
+          text2_html.style.left = "115%";
+          text3_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[1]);
           break;
         case 2:
           text2_html.style.opacity = 1;
           text3_html.style.opacity = 0;
-          text2_html.style.left = "10%";
-          text3_html.style.left = "110%";
-          text1_html.style.left = "-90%";
+          text2_html.style.left = "15%";
+          text3_html.style.left = "115%";
+          text1_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[1]);
           break;
         case 3:
           text3_html.style.opacity = 1;
           text1_html.style.opacity = 0;
-          text3_html.style.left = "10%";
-          text1_html.style.left = "110%";
-          text2_html.style.left = "-90%";
+          text3_html.style.left = "15%";
+          text1_html.style.left = "115%";
+          text2_html.style.left = "-95%";
           setBackgroundImage(backgroundImages[1]);
           break;
         default:
@@ -79,25 +81,25 @@ const Homepage = () => {
         case 1:
           text1_html.style.opacity = 1;
           text3_html.style.opacity = 0;
-          text1_html.style.left = "10%";
-          text2_html.style.left = "110%";
-          text3_html.style.left = "-90%";
+          text1_html.style.left = "15%";
+          text2_html.style.left = "115%";
+          text3_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[0]);
           break;
         case 2:
           text2_html.style.opacity = 1;
           text1_html.style.opacity = 0;
-          text2_html.style.left = "10%";
-          text3_html.style.left = "110%";
-          text1_html.style.left = "-90%";
+          text2_html.style.left = "15%";
+          text3_html.style.left = "115%";
+          text1_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[0]);
           break;
         case 3:
           text3_html.style.opacity = 1;
           text2_html.style.opacity = 0;
-          text3_html.style.left = "10%";
-          text1_html.style.left = "110%";
-          text2_html.style.left = "-90%";
+          text3_html.style.left = "15%";
+          text1_html.style.left = "115%";
+          text2_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[0]);
           break;
         default:
@@ -156,6 +158,9 @@ const Homepage = () => {
           <tr>
             <th>Tag</th>
             <th>Zeiten</th>
+          </tr>
+          <tr style={{height:  "1px"}}>
+            <td colspan="100%" style={{height:  "1px", borderTop:  "1px solid white"}}></td>
           </tr>
           <tr>
             <td>Montag:</td>
