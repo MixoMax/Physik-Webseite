@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse, JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
 from classes import Event, DB, Filter
@@ -15,6 +16,14 @@ os.chdir(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 print(os.getcwd())
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 db = DB()
 

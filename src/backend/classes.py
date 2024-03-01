@@ -19,6 +19,8 @@ class Event:
     duration: int   #in Minutes
     recommended_age: int    #years
 
+    img_url: str
+
     def __init__(self) -> None:
         pass
         
@@ -34,7 +36,8 @@ class Event:
             "price_normal",
             "price_reduced",
             "duration",
-            "recommended_age"
+            "recommended_age",
+            "img_url"
         ]
 
         for key, value in json_dict.items():
@@ -65,7 +68,7 @@ class Event:
 
         json_out = {}
 
-        for key in ["title", "date", "weekday", "time", "location", "description", "price_normal", "price_reduced", "duration", "recommended_age"]:
+        for key in ["title", "date", "weekday", "time", "location", "description", "price_normal", "price_reduced", "duration", "recommended_age", "img_url"]:
             try:
                 val = getattr(self, key)
             except:
@@ -81,10 +84,6 @@ class Event:
             # ymd is reversed
             y, d = d, y
         self.date = f"{y}-{m}-{d}"
-
-        
-        
-        
 
     def __str__(self) -> str:
         return f"{self.title} ({self.date} {self.time})"
@@ -148,7 +147,8 @@ class DB:
             price_normal INTEGER,
             price_reduced INTEGER,
             duration INTEGER,
-            recommended_age INTEGER
+            recommended_age INTEGER,
+            img_url TEXT
         )
         """
         self.cursor.execute(cmd)
@@ -166,8 +166,9 @@ class DB:
             price_normal,
             price_reduced,
             duration,
-            recommended_age
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            recommended_age,
+            img_url
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """
         self.cursor.execute(cmd, (
             list(event.to_json().values())
@@ -194,6 +195,7 @@ class DB:
             event.price_reduced = row[8]
             event.duration = row[9]
             event.recommended_age = row[10]
+            event.img_url = row[11]
             event.clean()
             events.append(event)
         

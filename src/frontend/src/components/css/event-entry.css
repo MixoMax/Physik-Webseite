@@ -37,14 +37,6 @@ make animation on start that lets the component fly in from the bottom
     left: 40%;
     background: rgb(30, 30, 30);
     overflow: hidden;
-    border-radius: 15px;
-
-    animation: slide_animation ease-in-out;
-    animation-range-start: -100px;
-    animation-range-end: 300px;
-    animation-timeline: view();
-
-    transform: translate(-50%, 0%);
 
     gap: 20px;
     margin-top: 20px;
@@ -54,33 +46,39 @@ make animation on start that lets the component fly in from the bottom
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+
 }
 
-.event-image {
-    width: 20%;
-    align-items: flex-start;
-    justify-content: flex-start;
-    left: 2%;
+#event-component-wrapper.hbox {
+    animation: slide_animation ease-in-out;
+    animation-range-start: -100px;
+    animation-range-end: 300px;
+    animation-timeline: view();
+
+    transform: translate(-50%, 0%);
 }
 
-#event-info > * {
-    height: 200px;
-    padding: 10px;
-    border-right: 2px solid #e1d15a;
+#event-component-wrapper > img {
+    position: absolute;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    
+    opacity: 20%;
 }
 
-#event-price {
-    width: 10%;
-    right: 2%;
+#event-component-wrapper > div > * {
+    width: 25%;
+    border-right: 1px solid white;
 }
 
-#event-location-date {
-    width: 30%;
-    right: 2%;
+#event-component-wrapper > div > h2 {
+    padding-left: 10%;
 }
 
 #event-info {
-    gap: 20px;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    z-index: 1;
 }
+

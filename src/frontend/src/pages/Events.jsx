@@ -20,7 +20,23 @@ function Events() {
                 });
 
                 const data = await response.json();
-                setEvents(data);
+                
+                var do_filter = true
+                var data_filtered = []
+                if (do_filter) {
+                    // filter out every data where img_url = "https://www.planetarium-hamburg.de/files/default/img/hamburg--logo.png"
+                for (let i = 0; i< data.length; i++) {
+                        if (data[i].img_url != "https://www.planetarium-hamburg.de/files/default/img/hamburg--logo.png") {
+                            data_filtered.push(data[i])
+                        }
+                    }
+                    console.log("data_filtered", data_filtered)
+                } else {
+                    data_filtered = data;
+                }
+
+
+                setEvents(data_filtered)
 
             } catch (error) {
                 console.error('Error fetching events:', error);
@@ -46,7 +62,7 @@ function Events() {
                 <input
                     id="search-bar"
                     type="text"
-                    placeholder=" Search for events"
+                    placeholder="🔭 Search for events"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
