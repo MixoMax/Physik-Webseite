@@ -62,7 +62,7 @@ function Events() {
                 <input
                     id="search-bar"
                     type="text"
-                    placeholder="🔭 Search for events"
+                    placeholder="       🔭 Search for events"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
