@@ -147,8 +147,13 @@ body {
   
   .time-table {
     width: max(450px, 20%); /* Adjust as required for your layout */
-    border: 1px solid white;
-    border-radius: 2vb;
+    
+    padding: 40px;
+    border-radius: 20px;
+    border: 8px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
   }
   
   .time-table th, .time-table td {
