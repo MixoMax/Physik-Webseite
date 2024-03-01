@@ -116,7 +116,6 @@ def get_description_and_more_data(event_name: str) -> dict:
     ]
 
     url = f"https://www.planetarium-hamburg.de/de/veranstaltungen-tickets/details/{title}/"
-    print(url)
 
 
     headers, cookies = get_headers_and_cookies()
@@ -197,6 +196,19 @@ def get_description_and_more_data(event_name: str) -> dict:
     
     data["description"] = description_text_cleaned
 
+    # scrape image_url
+    # class = "img-responsive zm-lazy"
+
+    img = soup.find("img", {"class": "img-responsive zm-lazy"})
+    # find the value for "data-img-src-xxlg"
+    img_url = img["data-img-src-xxlg"]
+
+    img_url = f"https://www.planetarium-hamburg.de/{img_url}"
+
+    print(img_url)
+
+    data["img_url"] = img_url
+
     return data
 
 
@@ -208,9 +220,11 @@ def scrape_data() -> list[Event]:
         event_data.update(more_data)
     
     events = []
-    for event_id, event_data in events_data.items():
+    for event_id, event_data in tqdm(events_data.items()):
         event = Event().from_json(event_data)
         events.append(event)
+
+        print(event, event_data.keys())
     
     return events
 

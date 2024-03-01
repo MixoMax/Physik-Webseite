@@ -10,22 +10,39 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     margin: 20px 0;
 
     height: 5vh;
+    width: 80%;
 }
 
-
-#search-bar {
-    width: 70%;
-    height: 100%;
-    border-radius: 2.5vh;
+input {
+    padding: 12px 10px 12px 0px;
+    border:none;
+    background: rgb(30, 30, 30);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s ease-in-out;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    background: transparent;
 }
 
 #date-picker {
-    height: 100%;
-    border-radius: 2.5vh;
+    width: 10%;
+    right: 10%;
+    left: 10%;
 }
-  
+
+#search-bar {
+    width: 80%;
+    right: 10%;
+    left: 10%;
+}
