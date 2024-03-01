@@ -186,13 +186,15 @@ body {
   /* third section */
   .cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px;
     align-items: center;
     
   }
   
   .card {
-    width: calc(48% - 120px);
+    width: calc(38% - 120px);
+    aspect-ratio: 1/1.2;
     border: 1px solid #ccc;
     margin-bottom: 20px;
 
@@ -202,6 +204,10 @@ body {
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  }
+
+  .card a {
+    color: #e1d15a
   }
 
 
