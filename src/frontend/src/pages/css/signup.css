@@ -66,6 +66,10 @@
     z-index: 1;
 }
 
+.sign-container .input-box input:valid,
+.sign-container .input-box input:focus {
+    border: 1px solid #e1d15a;
+}
 .sign-container .input-box input:valid ~ span,
 .sign-container .input-box input:focus ~ span {
     color: #e1d15a;
@@ -76,10 +80,6 @@
     padding: 0 8px;
     border-radius: 10px;
     letter-spacing: 0.1em;;
-}
-.sign-container .input-box input:valid,
-.sign-container .input-box input:focus {
-    border: 1px solid #e1d15a;
 }
 
 .sign-container .input-box input[type="submit"] {

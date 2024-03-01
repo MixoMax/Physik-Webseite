@@ -3,7 +3,7 @@ import './css/space.css';
 
 import solar_system from '../assets/images/comp/SolarSystem.svg';
 import saturn from '../assets/images/planets/saturn.svg';
-import sun from '../assets/images/planets/sun.svg';
+import sun from '../assets/images/galaxy/sun.webp';
 import moon from '../assets/images/planets/moon.svg';
 import stars from '../assets/images/planets/stars.svg';
 
@@ -14,8 +14,9 @@ const Space = () => {
         <div className="space-header">
             <span className="crater crater-1"></span>
             <span className="crater crater-2"></span>
+            <span className="crater crater-3"></span>
             <div className="space-circle space-headline">
-                <img src={saturn} alt="Jupiter"></img>
+                <img src={saturn} alt="saturn"></img>
                 <h1>Entdecke das Weltall!</h1>
             </div>
             <div className="space-circle space-sun">
@@ -23,14 +24,15 @@ const Space = () => {
                 <h2>Sonne</h2>
             </div>
             <div className="space-circle space-moon">
-                <img src={moon} alt="Sonne" />
+                <img src={moon} alt="Mond" />
                 <h2>Mond</h2>
             </div>
             <div className="space-circle space-stars">
-                <img src={stars} alt="Sonne" />
+                <img src={stars} alt="Sterne" />
                 <h2>Sterne</h2>
             </div>
         </div>
+        <hr className='space-line'/>
 
         <div className="space-wrapper-text">
             <p>Unser Sonnensystem ist voller faszinierender Himmelskörper, von denen die Erde, der Mond und die Sonne nur einige sind. Tauche ein in die Welt der Astronomie und entdecke die Geheimnisse und Wunder, die unseren Planeten und seine Begleiter ausmachen!</p>
