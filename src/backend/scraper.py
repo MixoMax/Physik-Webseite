@@ -104,10 +104,19 @@ def get_current_events() -> dict[str: str]:
 
     return events
 
-def get_description_and_more_data(event_name: str) -> str:
-    title = event_name.replace(" ", "-").lower().replace("-–-", "-")
+def get_description_and_more_data(event_name: str) -> dict:
+    title = event_name.replace(" ", "-").lower().replace("-–-", "-").replace("---", "-")
+
+    replacements = [
+        ("-–-", "-"),
+        ("---", "-"),
+        ("ä", "ae"),
+        ("ü", "ue"),
+        ("ö", "oe"),
+    ]
 
     url = f"https://www.planetarium-hamburg.de/de/veranstaltungen-tickets/details/{title}/"
+    print(url)
 
 
     headers, cookies = get_headers_and_cookies()
@@ -204,3 +213,13 @@ def scrape_data() -> list[Event]:
         events.append(event)
     
     return events
+
+
+if __name__ == "__name__":
+    events = scrape_data()
+    for idx, event in enumerate(events):
+        more_data = get_description_and_more_data(event.title)
+        events[idx] = event.from_json(more_data)
+    
+    print(events)
+    
