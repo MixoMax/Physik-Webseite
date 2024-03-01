@@ -1,13 +1,14 @@
 import React from 'React';
-import './css/dataprotection.css';
+import './css/Hausordnung.css';
 
 const AGB = () => {
     return ( 
-<div class="zb-i">
+<div id="hausordnung-wrapper">
     <div class="zb-nmg-wrapper row zm-fl">
         <div class="zb-ce zb-ce-text  ce-headline  zm-section-bottom-md   column ">
         <h1 class="h1">Datenschutzerklärung</h1>
         </div>
+            <hr className='hausordnung-line'/>
             <div class="zb-ce zb-ce-text  ce-text  zm-section-bottom-md   column ">
             <p>Die nachfolgende Datenschutzerklärung gilt für die Nutzung unseres Online-Angebots planetarium-hamburg.de (nachfolgend „Website“).</p>
             <p>Wir messen dem Datenschutz große Bedeutung bei. Die Erhebung und Verarbeitung Ihrer personenbezogenen Daten geschieht unter Beachtung der geltenden datenschutzrechtlichen Vorschriften, insbesondere der Datenschutzgrundverordnung (DSGVO).</p>

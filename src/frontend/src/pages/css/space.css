@@ -1,36 +1,242 @@
-
 .space {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-.space-wrapper p {
-    text-align: justify;
 }
 
 /* space header */
 .space-header {
     position: relative;
+    margin-top: 25px;
     width: 100%;
+    height: 1000px;
 }
 .space-header .crater {
     position: absolute;
-    top: 100px;
-    width: 50px;
-    height: 50px;
+
+    background-color: rgb(30, 30, 30);
+
     border-radius: 100%;
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);;
 }
 .crater-1 {
-    transform: translateX(-500%);
+    border: 16px solid rgb(30, 30, 30);
+    top: 50px;
+    left: 500px;
+    width: 100px;
+    height: 100px;
+}
+.crater-2 {
+    border: 16px solid rgb(30, 30, 30);
+    top: 650px;
+    left: 75%;
+    width: 150px;
+    height: 150px;
+}
+.crater-3 {
+    border: 8px solid rgb(30, 30, 30);
+    top: 815px;
+    left: 64%;
+    width: 125px;
+    height: 125px;
 }
 
+.space-circle {
+    border-radius: 100%;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
 
-/* solar system */
+/* staturn */
+.space-headline {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(30, 30, 30);
+    border: 20px solid rgb(30, 30, 30);
+
+    top: 150px;
+    left: calc(50% - 325px);
+    width: 650px;
+    height: 650px;
+}
+.space-headline img,
+.space-headline h1 {
+    position: absolute;
+    transform: translate(-1.25%, 3%);
+}
+.space-headline img {
+    min-width: 135%;
+}
+.space-headline h1 {
+    padding: 5px 15px 10px 15px;
+    background-color: rgba(30, 30, 30, 0.9);
+    font-size: 48px;
+
+    border-radius: 10em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* sun */
+.space-sun {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(30, 30, 30);
+    border: 16px solid rgb(30, 30, 30);
+
+    top: 35px;
+    left: 72.5%;
+    width: 400px;
+    height: 400px;
+}
+.space-sun img,
+.space-sun h2 {
+    position: absolute;
+}
+.space-sun img {
+    max-width: 90%;
+}
+.space-sun h2 {
+    padding: 5px 15px 10px 15px;
+    background-color: rgba(30, 30, 30, 0.9);
+    font-size: 38px;
+    z-index: 2;
+
+    border-radius: 10em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* moon */
+.space-moon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(30, 30, 30);
+    border: 16px solid rgb(30, 30, 30);
+
+    top: 200px;
+    left: 100px;
+    width: 300px;
+    height: 300px;
+}
+.space-moon img,
+.space-moon h2 {
+    position: absolute;
+}
+.space-moon img {
+    min-width: 275%;
+}
+.space-moon h2 {
+    padding: 5px 15px 10px 15px;
+    background-color: rgba(30, 30, 30, 0.9);
+    font-size: 38px;
+    z-index: 2;
+
+    border-radius: 10em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* stars */
+.space-stars {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(30, 30, 30);
+    border: 16px solid rgb(30, 30, 30);
+
+    top: 600px;
+    left: 225px;
+    width: 350px;
+    height: 350px;
+}
+.space-stars img,
+.space-stars h2 {
+    position: absolute;
+    transform: translateY(-2.5%);
+}
+.space-stars img {
+    max-width: 95%;
+}
+.space-stars h2 {
+    padding: 5px 15px 10px 15px;
+    background-color: rgba(30, 30, 30, 0.9);
+    font-size: 38px;
+    z-index: 2;
+
+    border-radius: 10em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------------------------------------------------------------- */
+.space-line {
+    width: 95%;
+    height: 0px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    background-color: rgb(30, 30, 30);
+    border-radius: 10em;
+    border: 4px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* text parapraph */
+.space-wrapper-text p {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+
+    text-align: justify;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* ------------ solar system ------------ */
+.space h2{
+    font-size: 38px;
+}
+
+.solar-system {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: realtive;
+}
+.solar-system-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
 .solar-system-img {
-    min-width: 150%;
-    transform: translateX(-20%);
+    min-width: 100%;
+    transform: translateY(-7.5%);
+}
+
+.space-info-card {
+    position: absolute;
+    width: 750px;
+
+    background: rgba(30, 30, 30, 0.9);
+
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+
+    text-align: justify;
+    font-size: 24px;
+    font-weight: 300;
 }

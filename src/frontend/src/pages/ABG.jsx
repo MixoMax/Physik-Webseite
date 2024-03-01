@@ -1,13 +1,14 @@
 import React from 'React';
-import './css/agb.css';
+import './css/Hausordnung.css';
 
 const AGB = () => {
     return (
-        <div class="zb-i">
+        <div id="hausordnung-wrapper">
             <div class="zb-nmg-wrapper row zm-fl">
                 <div class="zb-ce zb-ce-text  ce-headline  zm-section-bottom-md   column ">
                     <h1 class="h1">Allgemeine Geschäftsbedingungen (AGB) des Planetarium Hamburg</h1>
                 </div>
+                <hr className='hausordnung-line'/>
             <div class="zb-ce zb-ce-text  ce-text  zm-section-bottom-md   column ">
                 <p style="font-weight: 400;"><strong>INHALT </strong></p>
                 <p><strong>1. Geltungsbereich<br/>2. </strong><strong>Vertragsschluss und Rückgabe von Eintrittskarten<br/></strong><strong>3. Widerrufsrecht des Verbrauchers<br/>4. </strong><strong>Veranstaltungen<br/>5. E</strong><strong>intrittspreise und Zahlungsmöglichkeiten<br/></strong><strong>6. Gutscheine<br/></strong><strong>7. Preise und Lieferung von anderen Waren<br/></strong><strong>8. Eigentumsvorbehalt<br/></strong><strong>9. Haftung<br/></strong><strong>10. Bild- und Tonaufnahmen<br/></strong><strong>11. Anwendbares Recht<br/></strong><strong>12. Salvatorische Klausel</strong></p>

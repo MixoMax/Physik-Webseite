@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './css/header.css'
 
 import logo from '../assets/images/planetariumicons/logoplanetariumweiß_outline.png';
@@ -85,6 +85,7 @@ function Header() {
         <div className="user-actions">
           <Link className="login-btn" to="/login">Login</Link>
           <Link className="signup-btn" to="/sign-up">Sign Up</Link>
+          <h1 style={{display: "none"}}>Yannick Braune</h1>
           <img className="account-icon" src={user_icon} alt="account"></img>
         </div>
       </div>
