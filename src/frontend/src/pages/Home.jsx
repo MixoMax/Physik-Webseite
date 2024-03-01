@@ -207,11 +207,10 @@ const Homepage = () => {
           <a href="#/events" type="button">WEITERLESEN</a>
         </div>
         <div className="card">
-          <br></br>
-          <br></br>
           <h1 className='card-title'>Horoskop</h1>
           <hr></hr>
-          <p>Entdecke, was die Sterne für dich bereithalten! Finde heraus, welche Geheimnisse in deinem Sternzeichen stecken und erhalte wertvolle Einblicke in deine Persönlichkeit, Liebe, Karriere und vieles mehr! Welche Charaktereigenschaften besitzt du? Wie solltest du das Leben leben? Egal ob du neugierig bist oder du mehr über deine astrologischen Eigenschaften erfahren möchtest:</p>
+          <p>Entdecke, was die Sterne für dich bereithalten! Finde heraus, welche Geheimnisse in deinem Sternzeichen stecken und erhalte wertvolle Einblicke in deine Persönlichkeit, Liebe, Karriere und vieles mehr! Welche Charaktereigenschaften besitzt du? Wie solltest du das Leben leben?</p>
+          <p>Egal ob du neugierig bist oder du mehr über deine astrologischen Eigenschaften erfahren möchtest:</p>
           <p>Wage einen Blick in deine kosmische Zukunft und finde dich selbst mit unserem</p>
           <a href="#/horoskop" type="button">Horoskop-Test!</a>
         </div>
