@@ -28,8 +28,10 @@ const Homepage = () => {
     const buttonRight_html = document.getElementsByClassName('homepage-button-right')[0];
     const backgroundImage_html = document.getElementsByClassName("header-image")[0]
     const header_html = document.getElementById("wrapper-wrapper")
+    const headerwrapper_html = document.getElementsByClassName("header-wrapper")[0]
 
     backgroundImage_html.style.height = `calc(110vh - ${header_html.offsetHeight}px)`
+    headerwrapper_html.style.height = `calc(100vh - ${header_html.offsetHeight}px - 10%)`
 
     const buttonLeftClick = () => {
       if(textNumber === 1) {
@@ -156,6 +158,9 @@ const Homepage = () => {
           <tr>
             <th>Tag</th>
             <th>Zeiten</th>
+          </tr>
+          <tr style={{height:  "1px"}}>
+            <td colspan="100%" style={{height:  "1px", borderTop:  "1px solid white"}}></td>
           </tr>
           <tr>
             <td>Montag:</td>

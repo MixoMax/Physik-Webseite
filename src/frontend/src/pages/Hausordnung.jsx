@@ -1,14 +1,16 @@
 import React from "react";
+import "./css/Hausordnung.css";
 
 const Hausordnung = () => {
 
     return (
-        <div>
+        <div id="hausordnung-wrapper">
             <div class="zb-i">
                 <div class="zb-nmg-wrapper row zm-fl">
                     <div class="zb-ce zb-ce-text  ce-headline  zm-section-bottom-md   column ">
                         <h1 class="h1">Hausordnung für das Planetarium Hamburg</h1>
                     </div>
+                    <hr className='hausordnung-line'/>
                 <div class="zb-ce zb-ce-text  ce-text  zm-section-bottom-md   column ">
                 <p><strong>Liebe Besucherinnen und Besucher,</strong></p>
                 <p><strong>wir begrüßen Sie herzlich im Planetarium Hamburg und wünschen Ihnen einen angenehmen Aufenthalt. Damit der Besuch im Planetarium für alle Besucherinnen und Besucher eine schöne Erfahrung wird, gelten hier die folgenden Regeln, um deren Einhaltung wir Sie freundlich bitten möchten.</strong></p>

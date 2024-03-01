@@ -62,7 +62,9 @@ body {
   }
 
   .header-wrapper {
-    padding: 5% 15% 25% 10%;
+    padding-right: 15%;
+    padding-left: 10%;
+    top: 10%;
     width: 35%;
 
     background: linear-gradient(0.25turn, rgba(10, 10, 10, 0.75) 80%, rgba(30, 30, 30, 0));
