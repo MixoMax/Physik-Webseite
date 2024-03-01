@@ -3,6 +3,7 @@ from fastapi.responses import FileResponse, JSONResponse
 import uvicorn
 
 from classes import Event, DB, Filter
+from scraper import scrape_data
 
 import os
 import time
@@ -19,7 +20,7 @@ db = DB()
 
 class RateLimit:
     __requests: dict[str, list[int]] #ip_address: [timestamp, timestamp, ...]
-    __requests_per_second: int = 10
+    __requests_per_second: int = 1e100
 
     def __init__(self):
         self.__requests = {}
@@ -54,13 +55,18 @@ def get_error_file_path(error_code: int):
     else:
         return f"{file_path}404.html"
 
+
+
+
+
 @app.get("/error/{status_code}")
 async def error(status_code: int):
     file_path = get_error_file_path(status_code)
     return FileResponse(file_path)
 
+
 @app.get("/search")
-async def search(q: str, request: Request) -> JSONResponse:
+async def search(q: str, request: Request, date: str = "") -> JSONResponse:
     error_code = 200
 
     ip_address = request.client.host
@@ -79,6 +85,19 @@ async def search(q: str, request: Request) -> JSONResponse:
         if any(q in str(val) for key, val in event.__dict__.items()):
             events_out.append(event)
     
+    # date is in format "YYYY-MM-DD"
+    events = events_out
+    events_out = []
+    if date != "":
+        for event in events:
+            if event.date == date:
+                events_out.append(event)
+            else:
+                print(event.date, date)
+    else:
+        events_out = events
+
+    
     json_out = []
 
     for event in events_out:
@@ -86,6 +105,72 @@ async def search(q: str, request: Request) -> JSONResponse:
     
     
     return JSONResponse(json_out, status_code=error_code)
+
+
+@app.get("/scrape_events")
+async def scrape_events() -> JSONResponse:
+    t_start = time.time()
+
+    events = scrape_data()
+    
+    db.reset()
+    
+    for event in events:
+        db.add_event(event)
+    
+    return JSONResponse({"message": "Scraped events and added to database", "time_taken": time.time() - t_start})
+
+
+@app.post("/filter_events")
+async def filter_events(request: Request) -> JSONResponse:
+    error_code = 200
+
+    ip_address = request.client.host
+
+    rate_limit.add_request(ip_address)
+
+    if rate_limit.check_rate_limit(ip_address):
+        error_code = 429
+        return JSONResponse({"error": "429 - Too many requests", "message": "You are sending too many requests! If you are a bot, please slow down. If you are a human and believe this is a mistake, contact me: <linus@linushorn.dev>."}, status_code=error_code)
+    
+    data = await request.json()
+
+    # data ->
+    # [
+    #       {     
+    #       "mode": "AND" | "OR" | float,
+    #       },
+    #       "filters": [
+    #           filter_json,
+    #           filter_json,
+    #           ...
+    #       ]}
+    # ]
+
+    filters = []
+    for filter_json in data["filters"]:
+        
+        filters.append(Filter(filter_json["key"], filter_json["value_s"], filter_json["comparison_mode"]))
+
+    mode = data["mode"]
+
+    events = db.get_events_filtered(filters, mode)
+
+    json_out = []
+    for event in events:
+        json_out.append(event.to_json())
+    
+    return JSONResponse(json_out, status_code=error_code)
+
+
+
+
+
+
+
+# Wildcard route to serve all files from the frontend
+# at the very bottom, else it would override all other routes
+
 
 @app.get("/static/{file_path:path}")
 async def serve_static(file_path: str, request: Request):

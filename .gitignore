@@ -5,3 +5,4 @@ some_NASE_data.zip
 node_modules/
 src/frontend/build/
 __pycache__/
+*.pyc

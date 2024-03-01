@@ -15,11 +15,26 @@ make animation on start that lets the component fly in from the bottom
     }
 }
 
+.hbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.vbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 #event-component-wrapper {
     position: relative;
-    height: 400px;
-    width: 900px;
-    left: 50%;
+    height: 200px;
+    width: 80%;
+    left: 40%;
     background: rgb(30, 30, 30);
     overflow: hidden;
     border-radius: 15px;
@@ -41,82 +56,31 @@ make animation on start that lets the component fly in from the bottom
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
-
-#event-image {
-    position: absolute;
-    left: 0px;
-    height: 400px;
-    width: 225px;
+.event-image {
+    width: 20%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    left: 2%;
 }
 
-#event-title {
-    margin: 10px;
-    position: absolute;
-    left: 225px;
-    width: 675px;
-    font-size: xx-large;
-    font-weight: 800;
-    text-align: center;
-    line-height: 72px;
+#event-info > * {
+    height: 200px;
+    padding: 10px;
+    border-right: 2px solid #e1d15a;
 }
 
-#event-description {
-    margin: 0px;
-    position: absolute;
-    left: 225px;
-    top: 100px;
-    width: 675px;
-    font-size: xx-large;
-    font-weight: 500;
-    text-align: center;
-    line-height: 36px;
+#event-price {
+    width: 10%;
+    right: 2%;
 }
 
-#event-date {
-    margin: 0px;
-    position: absolute;
-    left: 235px;
-    bottom: 10px;
-    width: 675px;
-    font-size: xx-large;
-    font-weight: 600;
-    text-align: left;
-    line-height: 36px;
+#event-location-date {
+    width: 30%;
+    right: 2%;
 }
 
-#buy-ticket {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    height: 50px;
-    width: 200px;
-    background: rgb(46, 206, 56);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: large;
-    font-weight: 600;
-    cursor: pointer;
-    align-items: center;
-}
-
-#buy-ticket:hover {
-    background: rgb(56, 226, 66);
-    color: white;
-}
-
-#buy-text {
-    position: static;
-    margin-left: 45px;
-}
-
-
-#ticket-icon {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    width: 40px;
-    height: 40px;
-    margin: 0;
-    color: #FFF;
+#event-info {
+    gap: 20px;
+    width: 100%;
+    height: 100%;
 }
