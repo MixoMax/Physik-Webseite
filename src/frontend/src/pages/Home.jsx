@@ -44,25 +44,25 @@ const Homepage = () => {
         case 1:
           text1_html.style.opacity = 1;
           text2_html.style.opacity = 0;
-          text1_html.style.left = "10%";
-          text2_html.style.left = "110%";
-          text3_html.style.left = "-90%";
+          text1_html.style.left = "15%";
+          text2_html.style.left = "115%";
+          text3_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[1]);
           break;
         case 2:
           text2_html.style.opacity = 1;
           text3_html.style.opacity = 0;
-          text2_html.style.left = "10%";
-          text3_html.style.left = "110%";
-          text1_html.style.left = "-90%";
+          text2_html.style.left = "15%";
+          text3_html.style.left = "115%";
+          text1_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[1]);
           break;
         case 3:
           text3_html.style.opacity = 1;
           text1_html.style.opacity = 0;
-          text3_html.style.left = "10%";
-          text1_html.style.left = "110%";
-          text2_html.style.left = "-90%";
+          text3_html.style.left = "15%";
+          text1_html.style.left = "115%";
+          text2_html.style.left = "-95%";
           setBackgroundImage(backgroundImages[1]);
           break;
         default:
@@ -81,25 +81,25 @@ const Homepage = () => {
         case 1:
           text1_html.style.opacity = 1;
           text3_html.style.opacity = 0;
-          text1_html.style.left = "10%";
-          text2_html.style.left = "110%";
-          text3_html.style.left = "-90%";
+          text1_html.style.left = "15%";
+          text2_html.style.left = "115%";
+          text3_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[0]);
           break;
         case 2:
           text2_html.style.opacity = 1;
           text1_html.style.opacity = 0;
-          text2_html.style.left = "10%";
-          text3_html.style.left = "110%";
-          text1_html.style.left = "-90%";
+          text2_html.style.left = "15%";
+          text3_html.style.left = "115%";
+          text1_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[0]);
           break;
         case 3:
           text3_html.style.opacity = 1;
           text2_html.style.opacity = 0;
-          text3_html.style.left = "10%";
-          text1_html.style.left = "110%";
-          text2_html.style.left = "-90%";
+          text3_html.style.left = "15%";
+          text1_html.style.left = "115%";
+          text2_html.style.left = "-85%";
           setBackgroundImage(backgroundImages[0]);
           break;
         default:
