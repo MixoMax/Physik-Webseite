@@ -202,6 +202,12 @@
     font-size: 24px;
     font-weight: 300;
 }
+.space-text-left {
+    transform: translateX(-10%);
+}
+.space-text-right {
+    transform: translateX(10%);
+}
 
 /* ------------ solar system ------------ */
 .space h2{
@@ -214,21 +220,12 @@
     justify-content: center;
     position: realtive;
 }
-.solar-system-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
 .solar-system-img {
-    min-width: 100%;
-    transform: translateY(-7.5%);
+    min-width: 165%;
 }
-
 .space-info-card {
     position: absolute;
-    width: 750px;
+    width: 600px;
 
     background: rgba(30, 30, 30, 0.9);
 
@@ -237,6 +234,54 @@
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
 
     text-align: justify;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300;
+}
+
+.solar-system-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.solar-system-text .card-merkur {
+    transform: translate(22em, -40em);
+}
+.solar-system-text .card-venus {
+    transform: translate(-22em, -34.5em);
+}
+.solar-system-text .card-earth {
+    transform: translate(25em, -20em);
+    width: 550px;
+}
+.solar-system-text .card-mars {
+    transform: translate(-23em, -14em);
+}
+.solar-system-text .card-jupiter {
+    transform: translate(25em, 2em);
+    width: 550px;
+}
+.solar-system-text .card-saturn {
+    transform: translate(-24em, 9em);
+    width:500px;
+}
+.solar-system-text .card-uranus {
+    transform: translate(23.5em, 24.5em);
+}
+.solar-system-text .card-neptune {
+    transform: translate(-22em, 29em);
+}
+.solar-system-text .card-pluto {
+    transform: translate(21em, 44.5em);
+}
+.solar-system-text .space-cloud-3 {
+    position: absolute;
+    min-width: 60em;
+    transform: translate(-50em, 62em);
+}
+.solar-system-text .space-cloud-4 {
+    position: absolute;
+    min-width: 50em;
+    transform: translate(-30em, 65em);
 }
