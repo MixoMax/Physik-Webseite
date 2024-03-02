@@ -208,6 +208,11 @@
 .space-text-right {
     transform: translateX(10%);
 }
+.space-text-small {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
 
 /* ------------ solar system ------------ */
 .space h2{

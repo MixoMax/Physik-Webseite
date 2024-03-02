@@ -105,7 +105,7 @@ const Space = () => {
         </div>
         <hr className='space-line'/>  
 
-        <div className="space-wrapper-text">   
+        <div className="space-wrapper-text space-text-small">   
             <h1>Das Universum:</h1>
             <p>Das Universum beschreibt die G&auml;nze von Raum, Zeit und aller aller Materie und Energie darin.&nbsp; Das beobachtbare Universum beschreibt dahingehend den Teil des Universums der von der Erde durch Beobachtungen erschlossen werden kann. Das Universum ist eines der gro&szlig;en Mysterien, die wir Menschen versuchen zu entschl&uuml;sseln und zu studieren. Aufgrund dessen erschufen wir das physikalische Teilgebiet der Kosmologie.</p>
             <p>Zur Beschreibung der gro&szlig;r&auml;umigen Struktur des Universums nutzt man das Standardmodell der Kosmologie. Dieses sogenannte Lambda-CDM-Modell, beschreibt anhand weniger (in seiner Grundform sechs) Parameter die Entwicklung des Universums seit dem Urknall. Bei den sechs Parametern handelt es sich um:&nbsp;</p>
