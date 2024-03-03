@@ -35,6 +35,12 @@ function Events() {
                     data_filtered = data;
                 }
 
+                if (data_filtered.length === 0) {
+                    data_filtered = [
+                        {"title":"No events found","date":"00.00.0000","weekday":"Mon.","time":"00:00","location":"Planetarium Hamburg","description":"No events found, may try change the search prompt","price_normal":0,"price_reduced":0,"duration":0,"recommended_age":0, "img": "https://via.placeholder.com/600"},
+                    ];
+                }
+
 
                 setEvents(data_filtered)
 
