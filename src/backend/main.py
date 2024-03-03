@@ -173,6 +173,20 @@ async def filter_events(request: Request) -> JSONResponse:
 
 
 
+@app.post("/github_webhook")
+async def github_webhook(request: Request) -> JSONResponse:
+    data = await request.json()
+    
+    commands = [
+        "git fetch && git pull",
+        "cd ~/Physik-Webseite/src/frontend"
+        "npm run build"
+    ]
+
+    for command in commands:
+        os.system(command)
+
+    return JSONResponse({"message": "Received webhook"})
 
 
 
