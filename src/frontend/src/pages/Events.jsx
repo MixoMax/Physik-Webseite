@@ -10,7 +10,7 @@ function Events() {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                var url = "http://localhost:8000/search?q=" + searchQuery;
+                var url = "/search?q=" + searchQuery;
                 
                 if (date) {
                     url += "&date=" + date;
