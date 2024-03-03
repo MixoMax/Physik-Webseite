@@ -260,4 +260,4 @@ async def serve_root(file_path: str, request: Request):
 
 
 
-uvicorn.run(app, host="0.0.0.0", port=8000)
+uvicorn.run(app, host="0.0.0.0", port=80)
