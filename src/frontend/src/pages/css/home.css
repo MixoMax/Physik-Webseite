@@ -20,7 +20,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    transform: translateY(150%);
+    transform: translateY(180%);
   }
 
   .homepage-button-left,
@@ -60,6 +60,11 @@ body {
     background-size: 140%;
 
     width: auto;
+
+    border-bottom: 16px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.9),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.5), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.9);
   }
 
   .header-wrapper {
@@ -116,7 +121,7 @@ body {
     margin: 1vb 0 0 0;
   }
 
-  /* Deco */
+  /* ---------- Deco ---------- */
   .clouds {position: absolute; top: calc(110vh);}
   .cloud-1 {
     position: absolute;
@@ -142,6 +147,17 @@ body {
     position: absolute;
     transform: translate(125%, -110%) scale(200%);
     z-index: 0;
+  }
+
+  .home-earth {
+    position: absolute;
+    max-width: 25em;
+    transform: translate(25em, 12.5em);
+  }
+  .home-uranus {
+    position: absolute;
+    max-width: 25em;
+    transform: translate(-50em, 12.5em);
   }
   
   /* second section */
