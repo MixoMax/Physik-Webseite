@@ -184,7 +184,8 @@ async def github_webhook(request: Request) -> JSONResponse:
     ]
 
     for command in commands:
-        os.system(command)
+        print(f"Executing command: {command}")
+        os.system(command, shell=True)
 
     return JSONResponse({"message": "Received webhook"})
 
