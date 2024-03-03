@@ -58,11 +58,11 @@ function Events() {
 
     return (
         <div>
-            <div id="events-header">
+            <div id="events-header" class="hbox">
                 <input
                     id="search-bar"
                     type="text"
-                    placeholder="       🔭 Search for events"
+                    placeholder="      🔭 Search for events"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -75,6 +75,7 @@ function Events() {
                     <EventEntry key={event.id} event={event} />
                 ))}
             </div>
+            <input type="button" value="⌅" id="back-to-top" onClick={() => window.scrollTo(0, 0)}></input>
         </div>
     );
 }
