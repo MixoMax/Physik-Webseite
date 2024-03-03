@@ -21,13 +21,6 @@
     background: url(../../assets/images/Himmelssteine/moon-surface.png);
     background-size: cover;
 }
-.footer-button-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-    margin-top: 125px;
-}
 
 /* elements */
 @keyframes spin {
@@ -91,28 +84,53 @@
     max-height: 100%;
 }
 
-
-
 .footer-button-wrapper {
-    display: felx;
+    display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
+    margin-top: 120px;
 }
+
+.footer-button-wrapper > div:first-child { /* Target the first row specifically */
+    display: flex;
+    justify-content: space-between; /* This will space out the three links */
+    width: 100%; /* Ensure the row takes the full width */
+}
+
 .footer-button {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.5), 5px 5px 15px rgba(0, 0, 0, 0.75);
-    color:#fff;
+    color: #fff;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 0.1em;
-    width:100%;
-    padding: 25px;
-    margin: 10px;
-    text-decoration: None;
+    padding: 20px;
+    text-decoration: none;
+    flex-grow: 1; /* Allow each button to grow and fill the space */
+    margin: 0 10px; /* Add some margin to separate the buttons */
 }
-.footer-button-long {
+
+.footer-button:first-child, .footer-button:last-child {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.long-geo-wrapper {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
-  
+
+.footer-button-long {
+    flex-grow: 1;
+    text-align: center; /* Center the text for the long button if you want */
+}
+
+/* If .footer-button.address is taking full width and you want to center the text */
+.footer-button.address {
+    text-align: center;
+}
