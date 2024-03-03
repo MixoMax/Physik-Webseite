@@ -12,7 +12,7 @@
     width: 100%;
     height: 1000px;
 }
-.space-header .crater {
+.crater {
     position: absolute;
 
     background-color: rgb(30, 30, 30);
@@ -202,6 +202,11 @@
     font-size: 24px;
     font-weight: 300;
 }
+/* .space p:first-of-type:first-letter { 
+    font-size: 250%;
+    line-height: 1;
+    float: left;
+} */
 .space-text-left {
     transform: translateX(-10%);
 }
@@ -212,6 +217,112 @@
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
+}
+
+/* ------------ deco images ------------- */
+.space-passage-1 .space-cloud-1 {
+    position: absolute;
+    min-width: 50em;
+    transform: translate(25.75em,-42em);
+}
+.space-passage-1 .space-stars-2 {
+    position: absolute;
+    max-width: 20em;
+    rotate: -20deg;
+    transform: translate(48em,-43em);
+}
+
+.solar-system-text .crater-4 {
+    border: 4px solid rgb(30, 30, 30);
+    top: -80em;
+    left: -54em;
+    width: 150px;
+    height: 150px;
+}
+.solar-system-text .space-cloud-3 {
+    position: absolute;
+    min-width: 60em;
+    transform: translate(-50em, 62em);
+}
+.solar-system-text .space-cloud-4 {
+    position: absolute;
+    min-width: 50em;
+    transform: translate(-30em, 65em);
+}
+
+.space-passage-3 .space-star-dots {
+    position: absolute;
+    max-width: 35em;
+    transform: translate(36em, -45em);
+}
+.space-passage-3 .space-cloud-2 {
+    position: absolute;
+    min-width: 50em;
+    transform: translate(38em, -17em);
+}
+
+.space-passage-4 .space-galaxy-4 {
+    position: absolute;
+    min-width: 50em;
+    left: -16.667%;
+    top: 0;
+}
+
+.space-passage-5 .crater-5 {
+    border: 4px solid rgb(30, 30, 30);
+    transform: translate(42em, 10em);
+    width: 200px;
+    height: 200px;
+}
+.space-passage-5 .crater-6 {
+    border: 12px solid rgb(30, 30, 30);
+    transform: translate(57em, 5em);
+    width: 100px;
+    height: 100px;
+}
+.space-passage-5 .space-stars-3 {
+    position: absolute;
+    max-width: 20em;
+    right:-7.5%;
+    top:30%;
+}
+.space-passage-5 .space-planet-system {
+    position: absolute;
+    max-width: 20em;
+    right:0%;
+    top:55%;
+}
+.space-passage-5 .space-cloud-5 {
+    position: absolute;
+    min-width: 50em;
+    right:-25%;
+    top: 82.5%;
+}
+
+.space-passage-6 .space-stars-1 {
+    position: absolute;
+    max-width: 25em;
+    transform: translate(-73em, -45em);
+}
+.space-passage-6 .space-stars-2 {
+    position: absolute;
+    max-width: 20em;
+    transform: translate(-63em, -67em);
+}
+.space-passage-6 .space-stars-3 {
+    position: absolute;
+    max-width: 20em;
+    transform: translate(-57em, -54.25em);
+}
+.space-passage-6 .space-cloud-1 {
+    position: absolute;
+    min-width: 50em;
+    transform: translate(-95em, -20em);
+}
+.space-passage-6 .space-cloud-4 {
+    position: absolute;
+    min-width: 40em;
+    transform: translate(-77em, -12em);
 }
 
 /* ------------ solar system ------------ */
@@ -279,14 +390,4 @@
 }
 .solar-system-text .card-pluto {
     transform: translate(21em, 44.5em);
-}
-.solar-system-text .space-cloud-3 {
-    position: absolute;
-    min-width: 60em;
-    transform: translate(-50em, 62em);
-}
-.solar-system-text .space-cloud-4 {
-    position: absolute;
-    min-width: 50em;
-    transform: translate(-30em, 65em);
 }

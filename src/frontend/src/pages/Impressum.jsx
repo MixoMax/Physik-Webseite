@@ -8,7 +8,7 @@ const Impressum = () => {
                 <div class="zb-ce zb-ce-text  ce-headline  zm-section-bottom-md   column ">
                     <h1 class="h1">Impressum</h1>
                 </div>
-                    <hr className='hausordnung-line'/>
+                <hr className='hausordnung-line'/>
                 <div class="zb-ce zb-ce-text  ce-text  zm-section-bottom-md   column ">
                     <p><strong>Planetarium Hamburg</strong><br/>Landesbetrieb der Freien und Hansestadt Hamburg (Kulturbehörde)<br/>Linnering 1 (Stadtpark)<br/>22299 Hamburg</p>
                     <p>Direktor: Dr. Björn Voss<br/>Kaufmännischer Geschäftsführer: Thorsten Pück</p>

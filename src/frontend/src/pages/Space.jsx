@@ -6,8 +6,16 @@ import saturn from '../assets/images/planets/saturn.svg';
 import sun from '../assets/images/galaxy/sun.webp';
 import moon from '../assets/images/planets/moon.svg';
 import stars from '../assets/images/planets/stars.svg';
+import stars_2 from '../assets/images/planets/stars_2.svg';
+import stars_3 from '../assets/images/planets/stars_3.svg';
+import cloud_1 from '../assets/images/clouds/cloud_1.png';
+import cloud_2 from '../assets/images/clouds/cloud_2.png';
 import cloud_3 from '../assets/images/clouds/cloud_3.png';
 import cloud_4 from '../assets/images/clouds/cloud_4.png';
+import cloud_5 from '../assets/images/clouds/cloud_5.png';
+import star_dots from '../assets/images/galaxy/stars_5.svg';
+import galaxy_4 from '../assets/images/galaxy/galaxy_4.png';
+import planet_system from '../assets/images/planets/planet_system_light.svg';
 
 const Space = () => {
 
@@ -36,12 +44,13 @@ const Space = () => {
         </div>
         <hr className='space-line'/>
 
-        <div className="space-wrapper-text">
+        <div className="space-wrapper-text space-passage-1">
             <div className="space-text-left">
                 <p>Unser Sonnensystem ist voller faszinierender Himmelskörper, von denen die Erde, der Mond und die Sonne nur einige sind. Tauche ein in die Welt der Astronomie und entdecke die Geheimnisse und Wunder, die unseren Planeten und seine Begleiter ausmachen!</p>
                 <p>Unsere Erde: Die Erde, unser Zuhause, ist der dritte Planet der Sonne und der einzige bekannte Ort im Universum, der Leben beherbergt. Mit einer Vielzahl an Ökosystemen, Landschaften, Klimazonen und einem einzigartigen Magnetfeld bietet die Erde eine unglaubliche Vielfalt an Lebensformen. Entdecke die erstaunlichen Phänomene wie die Jahreszeiten, Wetterphänomene, Ozeane und Kontinente, die unseren Planet so einzigartig machen.</p>
                 <p>Der Mond: Unser treuer Begleiter, der Mond, ist der natürliche Satellit der Erde. Mit seiner beeindruckenden Oberfläche, die von Kratern und Bergen geprägt ist, fasziniert der Mond die Menschheit seit Jahrtausenden, unter anderem durch seine unterschiedlichen Phasen. Der einzige Himmelskörper, auf den die Menschen jemals hingereist sind, erzeugt gleichzeitig Ebbe und Flut.</p>
                 <p>Die Sonne: Die Sonne, der strahlende Stern in unserem Sonnensystem, ist die Quelle allen Lebens und Lichts. Die unglaubliche Größe und Hitze der Sonne begrüßt uns Tag für Tag mit warmem Licht. Durch das Gegenspiel von der Sonne und dem Mond entstehen Sonnen- und Mondfinsternisse. Erfahre mehr über ihre Zusammensetzung, Energieerzeugung und die Auswirkungen auf das Leben auf der Erde!</p>
+                <br/>
             </div>
             <hr className='space-line'/>
             
@@ -49,6 +58,9 @@ const Space = () => {
                 <h2>Unser Sonnensystem</h2>
                 <p>Unser Sonnensystem ist ein System, das die Sonne, acht Planeten, zahlreiche Zwergplaneten, Monde und andere Himmelskörper umfasst. Die Sonne ist der Mittelpunkt des Sonnensystems und übt eine gravitative Anziehungskraft auf die um sie umkreisenden Objekte aus. Jeder Planet hat seine eigenen einzigartigen Eigenschaften, Umlaufbahnen und Monde. Um sich die Planeten unseres Sonnensystems zu merken, hilft folgender Spruch: “<b>M</b>ein <b>V</b>ater <b>E</b>rklärt <b>M</b>ir <b>J</b>eden <b>S</b>onntag <b>U</b>nseren <b>N</b>achthimmel”</p>
             </div>
+
+            <img className="space-stars-2" src={stars_2} alt="Stars" />
+            <img className="space-cloud-1" src={cloud_1} alt="Cloud" />
         </div>
 
         <div className="solar-system">
@@ -62,22 +74,28 @@ const Space = () => {
                 <p className="space-info-card card-saturn"><b>S</b>aturn: Er ist der sechste Planet in unserem Sonnensystem und sticht durch seine beeindruckenden Ringe heraus, die ihn umgeben. Diese Ringe bestehen hauptsächlich aus Eis und Gesteinsbrocken in verschiedenen Größen. Saturn ist ein Gasriese und besitzt eine dichte Atmosphäre, die hauptsächlich aus Wasserstoff und Helium besteht. Er ist der zweitgrößte Planet im Sonnensystem und hat eine markante goldene Farbe. Saturn hat auch eine Vielzahl von Monden, darunter Titan, welcher die einzig bekannte Atmosphäre auf einem Mond besitzt.</p>
                 <p className="space-info-card card-uranus"><b>U</b>ranus: Der drittgrößte Planet nach Durchmesser ist ein Eisriese und besteht hauptsächlich aus Wasserstoff und Helium, jedoch mit einem hohen Anteil an Methan, der ihm die charakteristische blau-grüne Farbe verleiht. Seine ungewöhnliche Achsenneigung führt dazu, dass Uranus auf seiner Seite rollt. Auch der Uranus besitzt ein Ringsystem und außerdem 27 Monde</p>
                 <p className="space-info-card card-neptune"><b>N</b>eptun: Benannt nach dem römischen Gott des Meeres, ist Neptun der achte und äußerste Planet unseres Sonnensystems. Wie Uranus ist Neptun ein Eisriese, jedoch dichter und massereicher. Seine Umlaufbahn um die Sonne dauert etwa 165 Jahre und befindet sich ca. 4,5 Mrd. Kilometer von der Sonne entfernt. Der größte seiner 14 Mode heißt Triton, der rückläufig um den Planet kreist.</p>
-                <p className="space-info-card card-pluto"><b>P</b>luto: Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit numquam molestiae dolores incidunt dicta. Ex iusto, dolore nobis voluptatum id commodi nesciunt facilis sint ab? Aut cum molestiae esse id voluptatum! Repellendus saepe consectetur sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ad modi deleniti distinctio consectetur excepturi?</p>
+                <p className="space-info-card card-pluto"><b>P</b>luto: Der ehemals neunte Planet ist benannt nach dem römischen Gott der Unterwelt. Nachdem, um die 2000 Wende, viele ähnlich große Himmelskörper in unserem Sonnensystems entdeckt wurden, wurde Plutos Planetenstatus fraglich. Pluto ist zwar groß genug, um eine Kugelform auszubilden, aber nicht groß genug, um eine Bahn-Dominanz auszuüben. Deshalb wurde ihm 2006 von der IAU vom Planeten zum Zwergplaneten abgestuft.</p>
+                
+                <span className="crater crater-4"></span>
                 <img className="space-cloud-3" src={cloud_3} alt="Cloud" />
                 <img className="space-cloud-4" src={cloud_4} alt="Cloud" />
             </div>
         </div>
         <hr className='space-line'/>
 
-        <div className="space-wrapper-text space-text-left">
+        <div className="space-wrapper-text space-text-left space-passage-3">
             <h2>Die Milchstraße </h2>
             <p>Die Milchstraße ist unsere galaktische Heimat, ein riesiges System aus Milliarden von Sternen, Gas, Staub und Dunkler Materie. Als Spiralgalaxie hat sie einen Durchmesser von etwa 100.000 Lichtjahren und eine Masse von ungefähr 1,5 Billionen Sonnenmassen. Die Milchstraße gehört zu den Balkengalaxien. Sie besitzt im Zentrum einen Bulge. Dieser wirkt aufgrund seiner hohen Dichte heller. Um diesen Bulge befinden sich vier Spiralarme, die sich primär durch junge Sterne und Gaswolken abzeichnen, wobei sich in zwei Armen auch ältere Sterne befinden. Unsere Sonne liegt in einem der äußeren Arme, etwa 25.000 Lichtjahre vom galaktischen Zentrum entfernt.</p>
             <p>Im Zentrum der Milchstraße existiert ein supermassives schwarzes Loch namens Sagittarius A*, welches sich im Sternbild Schütze befindet. Sie ist 4,15 Mio. massereicher als unsere Sonne und wurde in den 1990er Jahren entdeckt. Erste Aufnahmen wurden 2017 durch das Event Horizon Telescope gemacht.</p>
             <p>Die Erforschung der Milchstraße ist eine der Hauptaufgaben der modernen Astronomie. Astronomen nutzen Teleskope auf der Erde und im Weltraum, um die Struktur, Zusammensetzung und Entwicklung unserer Galaxie zu untersuchen. Durch die Analyse von Sternbewegungen, interstellarem Gas und anderen galaktischen Eigenschaften können Wissenschaftler wichtige Erkenntnisse über die Entstehung und Evolution von Galaxien gewinnen.</p>
+            <br />
+
+            <img className="space-star-dots" src={star_dots} alt="Cloud" />
+            <img className="space-cloud-2" src={cloud_2} alt="Cloud" />
         </div>
         <hr className='space-line'/>
 
-        <div className="space-wrapper-text space-text-right">
+        <div className="space-wrapper-text space-text-right space-passage-4">
             <h2>Ferne Galaxien</h2>
             <p>Ferne Galaxien sind faszinierende kosmische Objekte, die oft weit entfernt von unserer Milchstraße liegen. Diese riesigen Ansammlungen von Sternen, Gas, Staub und Dunkler Materie bieten einen faszinierenden Einblick in die Vielfalt und die Entwicklung des Universums.</p>
             <p>Eine der bemerkenswertesten Eigenschaften ferner Galaxien ist ihre Vielfalt. Es gibt verschiedene Arten von Galaxien, darunter elliptische Galaxien, Spiralgalaxien und irreguläre Galaxien. Jede dieser Galaxientypen hat ihre eigenen charakteristischen Merkmale, die durch ihre Form, Struktur und Sternbildungsraten bestimmt werden.</p>
@@ -86,10 +104,16 @@ const Space = () => {
             <p>Darüber hinaus dienen ferne Galaxien als Laboratorien für die Erforschung verschiedener astrophysikalischer Phänomene, darunter Supernovaexplosionen, aktive galaktische Kerne und die Entstehung von Schwarzen Löchern. Durch die Beobachtung und Analyse ferner Galaxien können Wissenschaftler wichtige Erkenntnisse über die Physik und die fundamentalen Kräfte des Universums gewinnen.</p>
             <p>Insgesamt bieten ferne Galaxien einen faszinierenden Einblick in die Natur des Universums und spielen eine entscheidende Rolle bei unserem Streben, die Geheimnisse des Kosmos zu entschlüsseln. Ihre Untersuchung und Erforschung wird weiterhin dazu beitragen, unser Verständnis des Universums und unsere eigene Position darin zu vertiefen.</p>
             <p>Ferne Galaxien, die sich weit außerhalb unserer Milchstraße befinden, faszinieren Wissenschaftler und Amateurastronomen gleichermaßen. Besonders interessant für Wissenschaftler ist die Andromedagalaxie. Ihre Nähe zur Milchstraße ermöglicht ihnen die umfangreiche Erforschung, die auch Rückschlüsse über die Geschichte der Milchstraße ermöglicht. Mit einer Entfernung von 2,5 Mio. Lichtjahren ist sie das entfernteste Objekt, das mit bloßem Auge am Nachthimmel beobachtet werden kann. Ihre Masse wird auf 0,7 bis 2,5 Billionen Sonnenmassen geschätzt und damit etwas so massereich wie die Milchstraße, während der Durchmesser der Andromedagalaxie doppelt so groß ist.</p>
+            <br />
+
+            <img className="space-galaxy-4" src={galaxy_4} alt="Galaxy" />
         </div> 
         <hr className='space-line'/>
 
-        <div className="space-wrapper-text space-text-left">
+        <div className="space-wrapper-text space-text-left space-passage-5">
+            <span className="crater crater-5"></span>
+            <span className="crater crater-6"></span>
+
             <h2>Ferne Sterne(nsysteme)</h2>
             <p>Ferne Sterne und Sternensysteme: Eine Reise durch die Weiten des Universums</p>
             <p>Im unendlichen Kosmos, der &uuml;ber uns ausgebreitet ist, existiert eine unvorstellbare Vielfalt an Sternen und Sternensystemen, die uns faszinieren und zum Staunen bringen. Diese fernen Himmelsk&ouml;rper sind nicht nur Gegenstand astronomischer Beobachtungen, sondern auch wichtige Bausteine f&uuml;r unser Verst&auml;ndnis des Universums und seiner Entwicklung. In diesem wissenschaftlichen Text werden wir eine Reise durch die Welt der fernen Sterne und Sternensysteme unternehmen, um ihre Eigenschaften, ihre Entstehung und ihre Bedeutung zu erkunden.</p>
@@ -102,10 +126,15 @@ const Space = () => {
             <p>Bedeutung von fernen Sternen und Sternensystemen f&uuml;r die Astronomie und Kosmologie</p>
             <p>Die Erforschung ferner Sterne und Sternensysteme ist von entscheidender Bedeutung f&uuml;r unser Verst&auml;ndnis des Universums und seine Entwicklung. Durch die Untersuchung ihrer Eigenschaften k&ouml;nnen Astronomen Einblicke in die Physik von Sternen, die Entstehung von Planeten und sogar die Entwicklung von Galaxien gewinnen. Dar&uuml;ber hinaus helfen uns ferne Sterne und Sternensysteme, die fundamentale Frage nach unserer kosmischen Herkunft und unserem Platz im Universum zu beantworten.</p>
             <p>Insgesamt sind ferne Sterne und Sternensysteme faszinierende Objekte, die uns einen Einblick in die Sch&ouml;nheit und Komplexit&auml;t des Universums bieten. Ihre Erforschung treibt die Grenzen unseres Wissens immer weiter voran und inspiriert Generationen von Wissenschaftlern und Weltraumbegeisterten, sich weiterhin den Geheimnissen des Kosmos zu widmen.</p>
+            <br />
+
+            <img className="space-stars-3" src={stars_3} alt="Stars" />
+            <img className="space-planet-system" src={planet_system} alt="Planet System" />
+            <img className="space-cloud-5" src={cloud_3} alt="Cloud" />
         </div>
         <hr className='space-line'/>  
 
-        <div className="space-wrapper-text space-text-small">   
+        <div className="space-wrapper-text space-text-right space-passage-6">   
             <h1>Das Universum:</h1>
             <p>Das Universum beschreibt die G&auml;nze von Raum, Zeit und aller aller Materie und Energie darin.&nbsp; Das beobachtbare Universum beschreibt dahingehend den Teil des Universums der von der Erde durch Beobachtungen erschlossen werden kann. Das Universum ist eines der gro&szlig;en Mysterien, die wir Menschen versuchen zu entschl&uuml;sseln und zu studieren. Aufgrund dessen erschufen wir das physikalische Teilgebiet der Kosmologie.</p>
             <p>Zur Beschreibung der gro&szlig;r&auml;umigen Struktur des Universums nutzt man das Standardmodell der Kosmologie. Dieses sogenannte Lambda-CDM-Modell, beschreibt anhand weniger (in seiner Grundform sechs) Parameter die Entwicklung des Universums seit dem Urknall. Bei den sechs Parametern handelt es sich um:&nbsp;</p>
@@ -120,6 +149,13 @@ const Space = () => {
             <p>Das Lambda-CDM-Modell stimmt gut mit den drei wichtigsten Klassen von Beobachtungen ein, die uns Aufschluss &uuml;ber das fr&uuml;he Universum geben. So der Vermessung der Anisotropie (Richtungsabh&auml;ngigkeit) der Hintergrundstrahlung, der Bestimmung der Ausdehnungsgeschwindigkeit und ihrer zeitlichen Ver&auml;nderung durch Beobachtungen von Supernovae in fernen Galaxien, sowie den Daten &uuml;ber Superstrukturen im Kosmos.&nbsp;</p>
             <p>Urknalltheorie:</p>
             <p>Die Urknalltheorie beschreibt den heutzutage weithin anerkannten Sachverhalt, dass das Universum in einem Augenblick, dem Urknall, aus einer Singularit&auml;t entstanden ist und sich seitdem stetig ausdehnt. Aus dem wird geschlossen, dass Zeit, Raum und Materie mit dem Urknall entstanden sind.&nbsp; Zeit, Raum vor dem Urknall und Raum au&szlig;erhalb des Universums sind laut dieser Theorie physikalisch nicht definierbar.</p>
+            <br />
+            
+            <img className="space-stars-1" src={stars} alt="Stars" />
+            <img className="space-stars-2" src={stars_2} alt="Stars" />
+            <img className="space-stars-3" src={stars_3} alt="Stars" />
+            <img className="space-cloud-1" src={cloud_1} alt="Cloud" />
+            <img className="space-cloud-4" src={cloud_4} alt="Cloud" />
         </div>
     </div>
     );
