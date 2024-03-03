@@ -7,7 +7,7 @@ function EventEntry({ event }) {
   console.log(event);
 
   // shorten description to 100 characters
-  var max_description_length = 75;
+  var max_description_length = 300;
   if (event.description.length > max_description_length) {
     var word_array = event.description.split(" ");
     var new_description = "";
@@ -25,9 +25,10 @@ function EventEntry({ event }) {
 
       <img className="event-image" src={event.img_url} alt="event"/>
       
-      <div id="event-info" className="hbox">
+      <div id="event-info" className="hbox-grid">
+        <div id="left-border"></div>
         <h2>{event.title}</h2>
-        <p>{event.description}</p>
+        <p id="event-description">{event.description}</p>
         
         <div id="event-location-date" class="vbox">
           <p>{event.date}</p>

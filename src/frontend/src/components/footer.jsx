@@ -34,12 +34,16 @@ function Footer() {
         <div className="footer-button-wrapper">
           <div>
             <Link className="footer-button" to="/impressum">Impressum</Link>
-            <Link className="footer-button" to="/contact">Contact us</Link>
+            <Link className="footer-button" to="/hausordnung">Hausordnung</Link>
             <Link className="footer-button" to="/info">Info</Link>
+            <Link className="footer-button" to="/agb">AGB</Link>
+            <Link className="footer-button" to="/dataprotection">Dataprotection</Link>
           </div>
-          <div className="footer-button footer-button-long">☎ +49 (40) 428 86 52 - 10</div>
           <div className="footer-button address"><strong>Planetarium Hamburg</strong> // Linnering 1 (Stadtpark) // 22299 Hamburg // Deutschland</div>
-          <div className='footer-button geo'>53° 35' 50'' N // 10° 0' 33" O</div>
+          <div className="long-geo-wrapper">
+            <div className="footer-button footer-button-long">☎ +49 (40) 428 86 52 - 10</div>
+            <div className='footer-button geo'>53° 35' 50'' N // 10° 0' 33" O</div>
+          </div>
         </div>
       </div>
     </div>
