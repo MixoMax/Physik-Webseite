@@ -188,6 +188,7 @@ async def github_webhook(request: Request) -> JSONResponse:
     print(data)
     
     commands = [
+        "git reset --hard HEAD",
         "git fetch && git pull",
         "cd ~/Physik-Webseite/src/frontend"
         "npm run build"
