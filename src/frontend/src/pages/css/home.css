@@ -13,7 +13,7 @@ body {
   /* first section */
   .homepage-button-wrapper {
     position: absolute;
-    width: 100%;
+    width: 92.5%;
     z-index: 1;
     
     display: flex;
@@ -60,10 +60,12 @@ body {
     background-size: 140%;
 
     width: auto;
+    margin:2.5%;
 
-    border-bottom: 16px solid rgb(30, 30, 30);
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.9),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.5), 
+    border-radius: 50px;
+    border: 16px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.55),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.25), 
     inset 5px 5px 15px rgba(0, 0, 0, 0.9);
   }
 
@@ -74,7 +76,7 @@ body {
     width: 35%;
     padding-top: 10%;
     z-index: 0;
-
+    border-radius: 50px;
     background: linear-gradient(0.25turn, rgba(10, 10, 10, 0.75) 80%, rgba(30, 30, 30, 0));
   }
 
@@ -125,39 +127,39 @@ body {
   .clouds {position: absolute; top: calc(110vh);}
   .cloud-1 {
     position: absolute;
-    transform: translate(-5%, -135%) scale(175%);
+    transform: translate(-5%, -95%) scale(175%);
     z-index: 0;
   }
   .cloud-2 {
     position: absolute;
-    transform: translate(67%, -115%) scale(200%);
+    transform: translate(67%, -75%) scale(200%);
     z-index: 2;
   }
   .cloud-3 {
     position: absolute;
-    transform: translate(-15%, -105%) scale(175%);
+    transform: translate(-15%, -65%) scale(175%);
     z-index: 1;
   }
   .cloud-4 {
     position: absolute;
-    transform: translate(150%, -135%) scale(175%);
+    transform: translate(150%, -95%) scale(175%);
     z-index: 0;
   }
   .cloud-5 {
     position: absolute;
-    transform: translate(125%, -110%) scale(200%);
+    transform: translate(125%, -50%) scale(200%);
     z-index: 0;
   }
 
   .home-earth {
     position: absolute;
     max-width: 25em;
-    transform: translate(34em, 9em);
+    transform: translate(34em, 5em);
   }
   .home-uranus {
     position: absolute;
     max-width: 25em;
-    transform: translate(-59em, 9em);
+    transform: translate(-59em, 5em);
   }
   
   /* second section */
