@@ -55,6 +55,16 @@ function Events() {
         fetchEvents();
     }, [searchQuery, date]);
 
+    function get_last_update_time() {
+        var url = "/last_update"
+        fetch(url, {
+        }).then(response => response.json())
+        .then(data => {
+            console.log("last_update", data)
+            return data.last_scrape + " | " + data.last_webhook
+        })
+    }
+
     return (
         <div className="events">
             <div id="events-header" class="hbox">
@@ -84,6 +94,7 @@ function Events() {
                 )
             }
             <input type="button" value="⌅" id="back-to-top" onClick={() => window.scrollTo(0, 0)}></input>
+            <div id="last-update">Last update: {get_last_update_time()}</div>
         </div>
     );
 }

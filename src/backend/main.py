@@ -8,6 +8,7 @@ from scraper import scrape_data
 
 import os
 import time
+import datetime
 
 # project_folder/src/backend/main.py
 
@@ -65,7 +66,12 @@ def get_error_file_path(error_code: int):
         return f"{file_path}404.html"
 
 
+def get_human_readable_time() -> str:
+    return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+
+last_scrape = get_human_readable_time()
+last_webhook = get_human_readable_time()
 
 
 @app.get("/error/{status_code}")
@@ -126,8 +132,10 @@ async def scrape_events() -> JSONResponse:
     
     for event in events:
         db.add_event(event)
+
+    last_scrape = get_human_readable_time()
     
-    return JSONResponse({"message": "Scraped events and added to database", "time_taken": time.time() - t_start})
+    return JSONResponse({"message": "Scraped events and added to database", "time_taken": time.time() - t_start, "events_added": len(events)})
 
 
 @app.post("/filter_events")
@@ -176,6 +184,7 @@ async def filter_events(request: Request) -> JSONResponse:
 @app.post("/github_webhook")
 async def github_webhook(request: Request) -> JSONResponse:
     data = await request.json()
+    print(data)
     
     commands = [
         "git fetch && git pull",
@@ -186,8 +195,14 @@ async def github_webhook(request: Request) -> JSONResponse:
     for command in commands:
         print(f"Executing command: {command}")
         os.system(command, shell=True)
+    
+    last_webhook = get_human_readable_time()
 
     return JSONResponse({"message": "Received webhook"})
+
+@app.get("/last_update")
+async def last_update() -> JSONResponse:
+    return JSONResponse({"last_scrape": last_scrape, "last_webhook": last_webhook})
 
 
 
@@ -275,4 +290,4 @@ async def serve_root(file_path: str, request: Request):
 
 
 
-uvicorn.run(app, host="0.0.0.0", port=8000)
+uvicorn.run(app, host="0.0.0.0", port=1890)
