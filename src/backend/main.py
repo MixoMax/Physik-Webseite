@@ -190,7 +190,7 @@ async def github_webhook(request: Request) -> JSONResponse:
     commands = [
         "git reset --hard HEAD",
         "git fetch && git pull",
-        "cd ~/Physik-Webseite/src/frontend"
+        "cd /home/server-obeli/Physik-Webseite/src/frontend",
         "npm run build"
     ]
 
