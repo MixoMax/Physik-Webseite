@@ -61,7 +61,11 @@ function Events() {
         }).then(response => response.json())
         .then(data => {
             console.log("last_update", data)
-            return data.last_scrape + " | " + data.last_webhook
+            // {"last_scrape": YYYY-MM-DD HH:MM:SS, "last_webhook": YYYY-MM-DD HH:MM:SS}
+            var last_scrape = data.last_scrape
+            var last_webhook = data.last_webhook
+
+            return "Scrape: " + last_scrape + " | Webhook: " + last_webhook
         })
     }
 
