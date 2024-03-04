@@ -46,8 +46,23 @@ function Footer() {
           </div>
         </div>
       </div>
+      <div class="zb-i">
+        <div class="zb-nmg-wrapper row zm-fl">
+          <div class="zb-ce zb-ce-text  ce-text     ">
+            <p><em>Das Planetarium Hamburg ist Landesbetrieb der <a href="http://www.hamburg.de/" target="_blank">Freien und Hansestadt Hamburg</a>.<br/></em></p>
+            <p>Weitere Informationen finden Sie unter <a href="http://www.hamburg.de/planetarium" target="_blank">www.hamburg.de/planetarium</a>.</p>
+          </div>
+          <div class="zb-ce zb-ce-text  ce-image     ">
+            <figure class="obj-image ">
+              <div class="zb-i">
+                <img src="files/default/img/hamburg--logo.png" class="img-responsive  zm-lazy" data-img-src-xxlg="files/default/img/hamburg--logo.png"/>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Footer

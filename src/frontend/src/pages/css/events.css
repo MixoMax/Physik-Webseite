@@ -17,8 +17,8 @@
     margin-top: 1.5vh;
 }
 
-input {
-    padding: 12px 10px 12px 0px;
+.events input {
+    padding: 12px 10px 12px 10px;
     background: rgb(30, 30, 30);
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: #fff;
@@ -43,6 +43,16 @@ input {
     width: 100%;
     padding-left: 20px;
     margin-right: 20px;
+}
+
+.events input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #e1d15a;
+    border-radius: 10px;
+    padding: 5px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
 }
 
 #back-to-top {

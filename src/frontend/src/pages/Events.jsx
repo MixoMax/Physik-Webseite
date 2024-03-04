@@ -56,7 +56,7 @@ function Events() {
     }, [searchQuery, date]);
 
     return (
-        <div>
+        <div className="events">
             <div id="events-header" class="hbox">
                 <input
                     id="search-bar"
