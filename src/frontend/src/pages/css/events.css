@@ -14,7 +14,7 @@
 
 #events-header {
     height: 5vh;
-    margin-top: 1.5vh;
+    margin-top: 2.5vh;
 }
 
 .events input {
@@ -34,26 +34,24 @@
 }
 
 #date-picker {
-    padding: 15px 10px 12px 15px;
-    width: max(5%, 115px);
+    padding:7px 30px 10px 30px;
+    width: 10%;
     font-weight: 600;
 }
 
 #search-bar {
-    padding: 15px 10px 12px 15px;
+    padding: 15px 10px 12px 30px;
     width: 100%;
-    padding-left: 20px;
-    margin-right: 20px;
+    padding-left: 30px;
+    margin-right: 25px;
 }
 
 .events input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #e1d15a;
     border-radius: 10px;
     padding: 5px;
-    display: block;
     width: 20px;
     height: 20px;
-    border-width: thin;
 }
 
 #back-to-top {
