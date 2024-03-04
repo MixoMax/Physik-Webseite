@@ -60,6 +60,8 @@
     padding: 12px 10px 12px 48px;
     font-weight: 300;
 
+    background-color: rgb(30, 30, 30);
+
     transition: 0.5s;
     letter-spacing: 0.06em;
     color: rgba(255, 255, 255, 0.5);
@@ -68,13 +70,15 @@
 
 .sign-container .input-box input:valid,
 .sign-container .input-box input:focus {
+    background-color: rgb(30, 30, 30);
     border: 1px solid #e1d15a;
+    z-index: 1;
 }
 .sign-container .input-box input:valid ~ span,
 .sign-container .input-box input:focus ~ span {
+    background: rgb(30, 30, 30);
     color: #e1d15a;
     border: 1px solid #e1d15a;
-    background: rgb(30, 30, 30);
     transform: translateX(25px) translateY(-5px);
     font-size: 0.6em;
     padding: 0 8px;

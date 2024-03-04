@@ -13,6 +13,8 @@ import Login from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
 import Impressum from './pages/Impressum.jsx';
 import Hausordnung from './pages/Hausordnung.jsx';
+import AGB from './pages/ABG.jsx';
+import Dataprotaction from './pages/Dataprotection.jsx'
 
 import './styles/App.css';
 //import './styles/scrollbar.css';
@@ -32,6 +34,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/impressum" element={<Impressum />} />
+          <Route path="/hausordnung" element={<Hausordnung />} />
+          <Route path="/agb" element={<AGB />} />
+          <Route path="/dataprotection" element={<Dataprotaction />} />
         </Routes>
       <Footer />
       </Router>  

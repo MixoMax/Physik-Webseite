@@ -10,6 +10,9 @@ import cloud3 from '../assets/images/clouds/cloud_3.png';
 import cloud4 from '../assets/images/clouds/cloud_4.png';
 import cloud5 from '../assets/images/clouds/cloud_5.png';
 
+import earth from '../assets/images/planets/earth.svg';
+import uranus from '../assets/images/planets/uranus.svg';
+
 const Homepage = () => {
 
   const backgroundImages = [
@@ -151,6 +154,9 @@ const Homepage = () => {
           <img className="cloud-5" src={cloud5} alt="cloud5"></img>
         </div>
       </div>
+
+      <img className="home-earth" src={earth} alt="Earth" />
+      <img className="home-uranus" src={uranus} alt="Uranus" />
 
       <div className="opening-hours">
         <h1>Öffnungszeiten</h1>

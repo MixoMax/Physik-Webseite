@@ -1,7 +1,7 @@
-import React from 'React';
+import React from 'react';
 import './css/Hausordnung.css';
 
-const AGB = () => {
+const Dataprotaction = () => {
     return ( 
 <div id="hausordnung-wrapper">
     <div class="zb-nmg-wrapper row zm-fl">
@@ -89,7 +89,7 @@ const AGB = () => {
             <p>- E-Mail Adresse<br/>- Name<br/>- Anschrift<br/>- Geburtsdatum (zur Altersüberprüfung)</p>
             <p>Die Daten werden, abhängig vom Gewinnspiel, ggf. an Dienstleister, die im Auftrag des Planetariums Hamburg Leistungen erbringen (Auftragsverarbeitung, Art. 28 DSGVO) übermittelt. Sofern sich ein Dienstleister in einem Drittland befindet, wird durch geeignete Maßnahmen gewährleistet, dass die Rechte des Teilnehmers als betroffene Person gewahrt sind.</p>
             <p>Für den Fall, dass die Auslieferung bzw. Bereitstellung bestimmter Preise über Dritte (z.B. Ticket–Anbieter) abgewickelt wird, übermitteln wir im erforderlichen Umfang die Kontaktdaten des Gewinners an den jeweiligen Kooperationspartner.</p>
-            <p>Weitere Informationen zur Gewinnspielteilnahme erhalten Sie hier: <a href="de/rechtliches/teilnahmebedingungen" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">http://www.planetarium-hamburg.de/de/rechtliches/teilnahmebedingungen</a></p>
+            <p>Weitere Informationen zur Gewinnspielteilnahme erhalten Sie hier: <a href="de/rechtliches/teilnahmebedingungen">http://www.planetarium-hamburg.de/de/rechtliches/teilnahmebedingungen</a></p>
             <h2>5. Informationen zu eingesetzten Dienstleistern</h2>
             <p>Zum Betrieb dieser Website binden wir externe Dienste ein, um unsere Website nutzerfreundlicher, effektiver und sicherer zu machen. Hierin liegt unser berechtigtes Interesse gemäß Art 6 Abs. 1 S. 1 f) DSGVO.</p>
             <h3>5.1 YouTube</h3>
@@ -122,7 +122,7 @@ const AGB = () => {
             <p>Wir haben die IP-Anonymisierung auf dieser Website aktiviert (anonymizeIp). Dadurch wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. In unserem Auftrag wird Google diese Informationen benutzen, um die Nutzung der Website durch Sie auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen uns gegenüber zu erbringen.</p>
             <p>Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.</p>
             <p>Sie können darüber hinaus die Übertragung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren:&nbsp;<a href="http://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="nofollow">http://tools.google.com/dlpage/gaoptout?hl=de</a>.</p>
-            <p>Alternativ zum Browser-Plugin oder innerhalb von Browsern auf mobilen Geräten können Sie auf den folgenden Link klicken, um ein Opt-Out-Cookie zu setzen, der die Erfassung durch Google Analytics innerhalb dieser Website zukünftig verhindert (dieses Opt-Out-Cookie funktioniert nur in diesem Browser und nur für diese Domain. Löschen Sie die Cookies in Ihrem Browser, müssen Sie diesen Link erneut klicken):&nbsp;<a href="#" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Google Analytics deaktivieren</a></p>
+            <p>Alternativ zum Browser-Plugin oder innerhalb von Browsern auf mobilen Geräten können Sie auf den folgenden Link klicken, um ein Opt-Out-Cookie zu setzen, der die Erfassung durch Google Analytics innerhalb dieser Website zukünftig verhindert (dieses Opt-Out-Cookie funktioniert nur in diesem Browser und nur für diese Domain. Löschen Sie die Cookies in Ihrem Browser, müssen Sie diesen Link erneut klicken):&nbsp;<a href="#">Google Analytics deaktivieren</a></p>
             <h2>7. Speicherdauer</h2>
             <p>Sofern nicht spezifisch angegeben speichern wir personenbezogene Daten nur so lange, wie dies zur Erfüllung der verfolgten Zwecke notwendig ist.</p>
             <p>In einigen Fällen sieht der Gesetzgeber die Aufbewahrung von personenbezogenen Daten vor, etwa im Steuer- oder Handelsrecht. In diesen Fällen werden die Daten von uns lediglich für diese gesetzlichen Zwecke weiter gespeichert, aber nicht anderweitig verarbeitet und nach Ablauf der gesetzlichen Aufbewahrungsfrist gelöscht.</p>
@@ -215,4 +215,4 @@ const AGB = () => {
      );
 };
 
-export default AGB;
+export default Dataprotaction;

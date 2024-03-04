@@ -1,43 +1,18 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
+import { UserContext } from '../contexts/UserContext';
 import './css/header.css'
 
 import logo from '../assets/images/planetariumicons/logoplanetariumweiß_outline.png';
 import user_icon from '../assets/images/comp/user-icon.png';
-import ufo from '../assets/images/comp/user-icon.png';
 
 import {Link, NavLink} from 'react-router-dom';
 
 function Header() {
+
+  const { user } = useContext(UserContext);
   
   const [lastScrollPosition, setLastScrollPosition] = React.useState(0);
   const [lastScrollDirection, setLastScrollDirection] = React.useState("up");
-
-  /* let location = useLocation();
-
-  React.useEffect(() => {
-    const ufo = document.getElementById('ufo');
-    switch (location.pathname) {
-      case '/':
-        ufo.style.left = "256px";
-        ufo.style.backgroundColor = "red";
-        break;
-      case '/events':
-        ufo.style.backgroundColor = "blue";
-        break;
-      case '/history':
-        ufo.style.backgroundColor = "green";
-        break;
-      case '/about':
-        ufo.style.backgroundColor = "yellow";
-        break;
-      case '/weltall':
-        ufo.style.backgroundColor = "purple";
-        break;
-      default:
-        ufo.style.backgroundColor = "white";
-        break;
-    }
-  }, [location]); */
 
   useEffect(() => {
     const bar = document.getElementById("wrapper-wrapper");
@@ -83,11 +58,19 @@ function Header() {
           </div>
         </div>
         <div className="user-actions">
-          <Link className="login-btn" to="/login">Login</Link>
-          <Link className="signup-btn" to="/sign-up">Sign Up</Link>
-          <h1 style={{display: "none"}}>Yannick Braune</h1>
-          <img className="account-icon" src={user_icon} alt="account"></img>
-        </div>
+        {user ? (
+          <React.Fragment>
+            <h1>{user.username}</h1>
+            <img className="account-icon" src={user_icon} alt="account"></img>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <Link className="login-btn" to="/login">Login</Link>
+            <Link className="signup-btn" to="/sign-up">Sign Up</Link>
+            <img className="account-icon" src={user_icon} alt="account"></img>
+          </React.Fragment>
+        )}
+      </div>
       </div>
       <div class="down"></div>
     </div>

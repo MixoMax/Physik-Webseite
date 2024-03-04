@@ -17,9 +17,8 @@
     margin-top: 1.5vh;
 }
 
-input {
-    padding: 12px 10px 12px 0px;
-    border:none;
+.events input {
+    padding: 12px 10px 12px 10px;
     background: rgb(30, 30, 30);
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: #fff;
@@ -35,22 +34,26 @@ input {
 }
 
 #date-picker {
-    width: 10%;
-    right: 10%;
-
-    right: 10%;
-    margin-left: 2%;
-
-    padding-left: 15px;
-    padding-right: 0px;
-    /*set width to max(5%, 115px)*/
+    padding: 15px 10px 12px 15px;
     width: max(5%, 115px);
+    font-weight: 600;
 }
 
 #search-bar {
-    margin-left: 18%;
-    right: 10%;
-    width: 70%;
+    padding: 15px 10px 12px 15px;
+    width: 100%;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+.events input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #e1d15a;
+    border-radius: 10px;
+    padding: 5px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
 }
 
 #back-to-top {
@@ -60,4 +63,27 @@ input {
     z-index: 1000;
     width: 50px;
     padding-left: 10px;
+}
+
+#no-events {
+    position: relative;
+    font-size: 2em;
+    left: 10%;
+    width: 80%;
+    color: #fff;
+    padding: 12px 0px 12px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 25px;
+}
+
+#events-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: calc(10% - 16px);
+    width: calc(80% + 16px);
 }
