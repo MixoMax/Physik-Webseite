@@ -26,7 +26,7 @@ function Events() {
                 if (do_filter) {
                     // filter out every data where img_url = "https://www.planetarium-hamburg.de/files/default/img/hamburg--logo.png"
                 for (let i = 0; i< data.length; i++) {
-                        if (data[i].img_url != "https://www.planetarium-hamburg.de/files/default/img/hamburg--logo.png") {
+                        if (data[i].img_url !== "https://www.planetarium-hamburg.de/files/default/img/hamburg--logo.png") {
                             data_filtered.push(data[i])
                         }
                     }
@@ -34,13 +34,6 @@ function Events() {
                 } else {
                     data_filtered = data;
                 }
-
-                if (data_filtered.length === 0) {
-                    data_filtered = [
-                        {"title":"No events found","date":"00.00.0000","weekday":"Mon.","time":"00:00","location":"Planetarium Hamburg","description":"No events found, may try change the search prompt","price_normal":0,"price_reduced":0,"duration":0,"recommended_age":0, "img": "https://via.placeholder.com/600"},
-                    ];
-                }
-
 
                 setEvents(data_filtered)
 
@@ -62,6 +55,20 @@ function Events() {
         fetchEvents();
     }, [searchQuery, date]);
 
+    function get_last_update_time() {
+        var url = "/last_update"
+        fetch(url, {
+        }).then(response => response.json())
+        .then(data => {
+            console.log("last_update", data)
+            // {"last_scrape": YYYY-MM-DD HH:MM:SS, "last_webhook": YYYY-MM-DD HH:MM:SS}
+            var last_scrape = data.last_scrape
+            var last_webhook = data.last_webhook
+
+            return "Scrape: " + last_scrape + " | Webhook: " + last_webhook
+        })
+    }
+
     return (
         <div className="events">
             <div id="events-header" class="hbox">
@@ -75,13 +82,23 @@ function Events() {
 
                 <input id="date-picker" type="date" value={date} onChange={(e) => setDate(e.target.value)} />
             </div>
-
-            <div id="events-wrapper">
-                {events.map(event => (
-                    <EventEntry key={event.id} event={event} />
-                ))}
-            </div>
+            {events.length === 0 ? 
+                (
+                    <React.Fragment>
+                        <p id="no-events">Sorry, wir haben keine Events gefunden die zu deiner Suche passen.</p>
+                    </React.Fragment>
+                ) : (
+                    <React.Fragment>
+                        <div id="events-wrapper">
+                            {events.map(event => (
+                                <EventEntry key={event.id} event={event} />
+                            ))}
+                        </div>
+                    </React.Fragment>
+                )
+            }
             <input type="button" value="⌅" id="back-to-top" onClick={() => window.scrollTo(0, 0)}></input>
+            <div id="last-update">Last update: {get_last_update_time()}</div>
         </div>
     );
 }

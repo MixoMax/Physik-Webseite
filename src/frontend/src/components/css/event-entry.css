@@ -74,3 +74,28 @@ make animation on start that lets the component fly in from the bottom
     
     opacity: 20%;
 }
+
+#event-button {
+    bottom: 0;
+    right: 0;
+    padding: 10px 20px 10px 20px;
+    background: #252525;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+    outline: none;
+    z-index: 2;
+    font-weight: 500;
+
+}
+
+#event-button:hover {
+    background: #e1d15a;
+    color: #000;
+    transition: 0.2s ease-in-out;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+}
