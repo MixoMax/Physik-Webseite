@@ -7,6 +7,7 @@ from classes import Event, DB, Filter
 from scraper import scrape_data
 
 import os
+import subprocess
 import time
 import datetime
 
@@ -194,7 +195,7 @@ async def github_webhook(request: Request) -> JSONResponse:
 
     for command in commands:
         print(f"Executing command: {command}")
-        os.system(command, shell=True)
+        subprocess.run(command, shell=True)
     
     last_webhook = get_human_readable_time()
 
