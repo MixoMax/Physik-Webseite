@@ -74,11 +74,16 @@ const Horoskope = () => {
         <div id="horoskope-wrapper">
             <h1>Horoskope</h1>
             <p id="haftungsausschluss">Die auf dieser Website bereitgestellten Horoskope und astrologischen Inhalte dienen lediglich der Unterhaltung und stellen keine professionelle Beratung oder Entscheidungshilfe dar; die Betreiber übernehmen keinerlei Haftung für Handlungen, die auf Basis dieser Inhalte getroffen werden.</p>
+              
               <div className="horoskope">
                 {horoskope.map(horoskop => <HoroskopEntry key={horoskop.id} horoskop={horoskop} />)}
+              </div>
+
+            <div id="Quellen">
+                <p>Quelle: {source === "Mixtral-8x7b-32768 + Llama2-70b-4096 AI Models" ? <a href="https://huggingface.co/mistralai/Mixtral-8x7B-v0.1" target="_blank" rel="noreferrer">MistralAI Mixtral-8x7B-v0.1</a> : source}</p>
             </div>
-            <p>Quelle: {source}</p>
-        </div>
+
+          </div>
     );
 }
 
