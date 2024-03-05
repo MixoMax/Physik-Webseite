@@ -12,7 +12,8 @@ const Horoskope = () => {
             fetch(url)
                 .then(res => res.json())
                 .then(data => setHoroskope(data.horoscopes))
-                .then(data => setSource(data.source));
+                .then(data => setSource(data.source))
+                .then(data => console.log(data));
         // -> {horoscopes: [{zodiac_sign: str, horoscope: str}, ...], source: str}
         } catch (error) {
             console.error("Error fetching horoscopes: ", error);
@@ -69,8 +70,7 @@ const Horoskope = () => {
                   ]
             )
         }
-    }
-    , []);
+    }, []);
 
     return (
         <div id="horoskope-wrapper">
