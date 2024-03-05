@@ -1,0 +1,37 @@
+#quellen-wrapper {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    width: 60%;
+    left: 20%;
+    background: rgb(30, 30, 30);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 60px;
+
+    border-radius: 25px;
+    border: 8px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.quelle {
+    font-size: 2vh;
+    font-weight: bold;
+    color: #f2f2f2;
+    text-align: center;
+    text-shadow: none;
+    padding: 5px 10px 7.5px 10px;
+    text-decoration: none;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.quelle a {
+    color: #e1d15a;
+    text-decoration: none;
+}

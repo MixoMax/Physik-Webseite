@@ -16,6 +16,7 @@ import Hausordnung from './pages/Hausordnung.jsx';
 import AGB from './pages/ABG.jsx';
 import Dataprotaction from './pages/Dataprotection.jsx'
 import Team from './pages/Team.jsx';
+import Quellen from './pages/Quellen.jsx';
 
 import './styles/App.css';
 //import './styles/scrollbar.css';
@@ -39,6 +40,7 @@ function App() {
           <Route path="/agb" element={<AGB />} />
           <Route path="/dataprotection" element={<Dataprotaction />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/quellen" element={<Quellen />} />
         </Routes>
         <Footer />
       </Router>  
