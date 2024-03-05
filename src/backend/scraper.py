@@ -141,6 +141,12 @@ def get_description_and_more_data(event_name: str, log: bool = False) -> dict:
     }
 
     r = requests.get(url, headers=headers, cookies=cookies)
+
+    if log:
+        with open("response.html", "w") as f:
+            f.write(r.text)
+            
+
     soup = BeautifulSoup(r.content, "html.parser")
 
     div_classes = ["zb-ce", "zb-ce-text", "ce-text", "column"]

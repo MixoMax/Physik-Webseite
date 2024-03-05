@@ -283,6 +283,8 @@ async def horoscopes(request: Request) -> JSONResponse:
             if tup[0] == "choices":
                 for choice in tup[1]:
                     out_str += choice.message.content
+        
+        print(out_str)
 
 
         
