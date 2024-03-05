@@ -27,6 +27,7 @@ const Homepage = () => {
 
   useEffect(() => {
     let textNumber = 1;
+    let manualButtonClick = false;
     const text1_html = document.getElementsByClassName('homepage-text-1')[0];
     const text2_html = document.getElementsByClassName('homepage-text-2')[0];
     const text3_html = document.getElementsByClassName('homepage-text-3')[0];
@@ -40,6 +41,7 @@ const Homepage = () => {
     headerwrapper_html.style.height = `calc(90vh - ${header_html.offsetHeight}px - 10%)`
 
     const buttonLeftClick = () => {
+      manualButtonClick = true;
       if(textNumber === 1) {
         textNumber = 3;
       }
@@ -77,6 +79,7 @@ const Homepage = () => {
     }
 
     const buttonRightClick = () => {
+      manualButtonClick = true;
       if(textNumber === 3) {
         textNumber = 1;
       }
@@ -113,6 +116,53 @@ const Homepage = () => {
       }
     }
 
+    const autoRightClick = () => {
+      if(textNumber === 3) {
+        textNumber = 1;
+      }
+      else {
+        textNumber = textNumber + 1;
+      }
+      switch(textNumber) {
+        case 1:
+          text1_html.style.opacity = 1;
+          text3_html.style.opacity = 0;
+          text1_html.style.left = "15%";
+          text2_html.style.left = "115%";
+          text3_html.style.left = "-85%";
+          setBackgroundImage(backgroundImages[0]);
+          break;
+        case 2:
+          text2_html.style.opacity = 1;
+          text1_html.style.opacity = 0;
+          text2_html.style.left = "15%";
+          text3_html.style.left = "115%";
+          text1_html.style.left = "-85%";
+          setBackgroundImage(backgroundImages[0]);
+          break;
+        case 3:
+          text3_html.style.opacity = 1;
+          text2_html.style.opacity = 0;
+          text3_html.style.left = "15%";
+          text1_html.style.left = "115%";
+          text2_html.style.left = "-85%";
+          setBackgroundImage(backgroundImages[0]);
+          break;
+        default:
+          break;
+      }
+    }
+    
+    setInterval(() => {
+      if (manualButtonClick) {
+        console.log("Manual button click detected, skipping auto click");
+        manualButtonClick = false;
+      } else {
+        console.log("Auto click");
+        autoRightClick();
+      }
+    }, 20000)
+
     buttonLeft_html.addEventListener('click', buttonLeftClick);
     buttonRight_html.addEventListener('click', buttonRightClick);
     
@@ -120,6 +170,7 @@ const Homepage = () => {
       buttonLeft_html.removeEventListener('click', buttonLeftClick);
       buttonRight_html.removeEventListener('click', buttonRightClick);
     };
+
   }, []);
 
   return (
