@@ -6,6 +6,7 @@ function Events() {
     const [events, setEvents] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
     const [date, setDate] = useState('');
+    const [lastUpdate, setLastUpdate] = useState("");
 
     useEffect(() => {
         const fetchEvents = async () => {
@@ -53,9 +54,8 @@ function Events() {
         };
 
         fetchEvents();
-    }, [searchQuery, date]);
 
-    function get_last_update_time() {
+        function get_last_update_time() {
         var url = "/last_update"
         fetch(url, {
         }).then(response => response.json())
@@ -65,9 +65,12 @@ function Events() {
             var last_scrape = data.last_scrape
             var last_webhook = data.last_webhook
 
-            return "Scrape: " + last_scrape + " | Webhook: " + last_webhook
+            setLastUpdate("Scrape: " + last_scrape + " | Webhook: " + last_webhook);
         })
     }
+        get_last_update_time()
+        
+    }, [searchQuery, date, lastUpdate]);
 
     return (
         <div className="events">
@@ -98,7 +101,7 @@ function Events() {
                 )
             }
             <input type="button" value="⌅" id="back-to-top" onClick={() => window.scrollTo(0, 0)}></input>
-            <div id="last-update">Last update: {get_last_update_time()}</div>
+            <div id="last-update">Last update: {lastUpdate}</div>
         </div>
     );
 }
