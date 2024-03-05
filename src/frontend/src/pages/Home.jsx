@@ -161,7 +161,7 @@ const Homepage = () => {
         console.log("Auto click");
         autoRightClick();
       }
-    }, 20000)
+    }, 5000)
 
     buttonLeft_html.addEventListener('click', buttonLeftClick);
     buttonRight_html.addEventListener('click', buttonRightClick);
@@ -317,6 +317,8 @@ const Homepage = () => {
         </div>
       </div>
 
+      <hr className='history-line'/>  
+
       <div className="cards">
         <div className="card">
           <img className="card-img" src={card_1} alt="card-img" />
@@ -331,8 +333,7 @@ const Homepage = () => {
           <h1 className='card-title'>Horoskop</h1>
           <hr></hr>
           <p>Entdecke, was die Sterne für dich bereithalten! Finde heraus, welche Geheimnisse in deinem Sternzeichen stecken und erhalte wertvolle Einblicke in deine Persönlichkeit, Liebe, Karriere und vieles mehr! Welche Charaktereigenschaften besitzt du? Wie solltest du das Leben leben?</p>
-          <p>Egal ob du neugierig bist oder du mehr über deine astrologischen Eigenschaften erfahren möchtest:</p>
-          <p>Wage einen Blick in deine kosmische Zukunft und finde dich selbst mit unserem</p>
+          <p>Egal ob du neugierig bist oder du mehr über deine astrologischen Eigenschaften erfahren möchtest. Das wöchentlich aktualisierte Horoskop unserer Sternenleser hält vielleicht eine Antwort für dich bereit!<br />Wage einen Blick in deine kosmische Zukunft und finde dich selbst mit unserem </p>
           <a href="#/horoskop" type="button">HOROSKOP</a>
         </div>
       </div>
