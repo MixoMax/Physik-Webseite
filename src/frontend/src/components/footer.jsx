@@ -3,7 +3,7 @@ import './css/footer.css'
 
 import youtube from "../assets/images/Socialmedias/YouTube_full-color_icon_(2017).svg.png"
 import instagram from "../assets/images/Socialmedias/Instagram_logo.webp";
-import facebook from "../assets/images/Socialmedias/Facebook_icon.svg.png";
+import facebook from "../assets/images/Socialmedias/Facebook_icon.svg.webp";
 import line from "../assets/images/comp/line.png";
 import hamburg_logo from "../assets/images/comp/hamburg-logo.png";
 

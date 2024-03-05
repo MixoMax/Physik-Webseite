@@ -13,13 +13,13 @@ import cloud5 from '../assets/images/clouds/cloud_5.png';
 import earth from '../assets/images/planets/earth.svg';
 import uranus from '../assets/images/planets/uranus.svg';
 
-import card_1 from '../assets/images/comp/card_1.png';
+import card_1 from '../assets/images/comp/card_1.webp';
 import card_2 from '../assets/images/comp/card_2.webp';
 
 const Homepage = () => {
 
   const backgroundImages = [
-    require("../assets/images/Planetarium_irl/planetarium_nacht.png"),
+    require("../assets/images/Planetarium_irl/planetarium_nacht.png.jpg"),
     require("../assets/images/Planetarium_irl/planetarium-bild.jpg")
   ]
 
