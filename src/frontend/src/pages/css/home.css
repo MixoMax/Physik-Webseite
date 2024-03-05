@@ -13,7 +13,7 @@ body {
   /* first section */
   .homepage-button-wrapper {
     position: absolute;
-    width: 92.5%;
+    width: 93.5%;
     z-index: 1;
     
     display: flex;
@@ -127,27 +127,27 @@ body {
   .clouds {position: absolute; top: calc(110vh);}
   .cloud-1 {
     position: absolute;
-    transform: translate(-5%, -95%) scale(175%);
+    transform: translate(100%, -110%) scale(150%);
     z-index: 0;
   }
   .cloud-2 {
     position: absolute;
-    transform: translate(67%, -75%) scale(200%);
-    z-index: 2;
+    transform: translate(67%, -140%) scale(200%);
+    z-index: 4;
   }
   .cloud-3 {
     position: absolute;
-    transform: translate(-15%, -65%) scale(175%);
+    transform: translate(-20%, -170%) scale(215%);
     z-index: 1;
   }
   .cloud-4 {
     position: absolute;
-    transform: translate(150%, -95%) scale(175%);
-    z-index: 0;
+    transform: translate(-50%, -120%) scale(200%);
+    z-index: 3;
   }
   .cloud-5 {
     position: absolute;
-    transform: translate(125%, -50%) scale(200%);
+    transform: translate(125%, -150%) scale(200%);
     z-index: 0;
   }
 
@@ -202,16 +202,20 @@ body {
     align-items: start;
     justify-content: space-between;
     font-size: large;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   .service li {
     font-size: large;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     text-align: left;
     color:#e1d15a;
+    transition: 0.25s;
+  }
+  .service ul {
+    transform: translateY(-0.5em);
   }
   .service a {
     color: #fff;
@@ -219,7 +223,12 @@ body {
     padding-left: 1em;
   }
   .service a:hover {
-    text-decoration: underline;
+    color: #e1d15a;
+    transition: 0.25s;
+  }
+  .service a:hover ~ li {
+    transform: translateX(1em);
+    transition: 0.25s;
   }
   
   /* third section */
@@ -233,11 +242,9 @@ body {
   
   .card {
     width: calc(38% - 120px);
-    aspect-ratio: 1/1.2;
-    border: 1px solid #ccc;
     margin-bottom: 20px;
 
-    padding: 40px;
+    padding: 2.5%;
     border-radius: 20px;
     border: 8px solid rgb(30, 30, 30);
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
@@ -245,8 +252,22 @@ body {
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);
   }
 
+  .card .card-img {
+    width: 60%;
+    border-radius: 20px;
+    border: 8px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.5), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.75);
+  }
+
   .card a {
-    color: #e1d15a
+    color: #e1d15a;
+    font-size: 22px;
+  }
+
+  .card p {
+    font-size: 18px;
   }
 
 

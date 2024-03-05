@@ -13,6 +13,9 @@ import cloud5 from '../assets/images/clouds/cloud_5.png';
 import earth from '../assets/images/planets/earth.svg';
 import uranus from '../assets/images/planets/uranus.svg';
 
+import card_1 from '../assets/images/comp/card_1.png';
+import card_2 from '../assets/images/comp/card_2.webp';
+
 const Homepage = () => {
 
   const backgroundImages = [
@@ -33,8 +36,8 @@ const Homepage = () => {
     const header_html = document.getElementById("wrapper-wrapper")
     const headerwrapper_html = document.getElementsByClassName("header-wrapper")[0]
 
-    backgroundImage_html.style.height = `calc(110vh - ${header_html.offsetHeight}px)`
-    headerwrapper_html.style.height = `calc(100vh - ${header_html.offsetHeight}px - 10%)`
+    backgroundImage_html.style.height = `calc(100vh - ${header_html.offsetHeight}px)`
+    headerwrapper_html.style.height = `calc(90vh - ${header_html.offsetHeight}px - 10%)`
 
     const buttonLeftClick = () => {
       if(textNumber === 1) {
@@ -173,6 +176,7 @@ const Homepage = () => {
                         <span>geschlossen </span>
                       </dd>
                     </dl>
+                    <hr />
                     <dl>
                       <dt>Dienstag</dt>
                       <dd itemprop="openingHours" content="We 09:00-17:00">
@@ -181,6 +185,7 @@ const Homepage = () => {
                         <span>19:00 </span>
                       </dd>
                     </dl>
+                    <hr />
                     <dl>
                       <dt>Mittwoch</dt>
                       <dd itemprop="openingHours" content="We 09:00-17:00">
@@ -189,6 +194,7 @@ const Homepage = () => {
                         <span>17:00 </span>
                       </dd>
                     </dl>
+                    <hr />
                     <dl>
                       <dt>Donnerstag - Freitag</dt>
                       <dd itemprop="openingHours" content="Th,Fr 09:00-21:00">
@@ -197,6 +203,7 @@ const Homepage = () => {
                         <span>21:00 </span>
                       </dd>
                     </dl>
+                    <hr />
                     <dl>
                       <dt>Samstag</dt>
                       <dd itemprop="openingHours" content="Sa 12:00-22:30">
@@ -205,6 +212,7 @@ const Homepage = () => {
                         <span>22:30 </span>
                       </dd>
                     </dl>
+                    <hr />
                     <dl>
                       <dt>Sonn- und Feiertage</dt>
                       <dd itemprop="openingHours" content="Su 10:00-19:00">
@@ -213,48 +221,54 @@ const Homepage = () => {
                         <span>19:00 </span>
                       </dd>
                     </dl>
+                    <hr />
                   </div>
                 </div>
               </div>
             </section>
             <div class="service">
               <h2 class="h2">Service</h2>
-              <hr />
+              <hr className="fixed-line"/>
               <ul class="list-unstyled">
                 <li>
                   <a href="https://www.planetarium-hamburg.de/de/presse" class="">
                     <span>Presse</span>
                   </a>
                 </li>
+                <hr />
                 <li>
                   <a href="https://www.planetarium-hamburg.de/de/distribution/deutsch" class="">
                     <span>Distribution</span>
                   </a>
                 </li>
+                <hr />
                 <li>
                   <a href="https://www.planetarium-hamburg.dede/newsletter" class="">
                     <span>Newsletter</span>
                   </a>
                 </li>
+                <hr />
                 <li>
                   <a target="_blank" href="https://planetarium-hamburg.eventim-inhouse.de/webshop/webticket/coupon" class="">
                     <span>Gutscheinshop</span>
                   </a>
                 </li>
+                <hr />
                 <li>
                   <a href="https://www.planetarium-hamburg.dede/besuchsinformationen#faq" class="">
                     <span>Häufige Fragen</span>
                   </a>
                 </li>
+                <hr />
               </ul>
             </div>
-
           </div>
         </div>
       </div>
 
       <div className="cards">
         <div className="card">
+          <img className="card-img" src={card_1} alt="card-img" />
           <h1 className='card-title'>Die nächsten Veranstaltungen</h1>
           <hr></hr>
           <p>Erleben Sie im Planetarium Hamburg eine faszinierende Reise zurück in die Vergangenheit, zu den Anfängen unseres Sonnensystems und entdecken Sie die unglaubliche Entstehungsgeschichte unseres Sonnensystems</p>
@@ -262,12 +276,13 @@ const Homepage = () => {
           <a href="#/events" type="button">WEITERLESEN</a>
         </div>
         <div className="card">
+          <img className="card-img" src={card_2} alt="card-img" />
           <h1 className='card-title'>Horoskop</h1>
           <hr></hr>
           <p>Entdecke, was die Sterne für dich bereithalten! Finde heraus, welche Geheimnisse in deinem Sternzeichen stecken und erhalte wertvolle Einblicke in deine Persönlichkeit, Liebe, Karriere und vieles mehr! Welche Charaktereigenschaften besitzt du? Wie solltest du das Leben leben?</p>
           <p>Egal ob du neugierig bist oder du mehr über deine astrologischen Eigenschaften erfahren möchtest:</p>
           <p>Wage einen Blick in deine kosmische Zukunft und finde dich selbst mit unserem</p>
-          <a href="#/horoskop" type="button">Horoskop-Test!</a>
+          <a href="#/horoskop" type="button">HOROSKOP</a>
         </div>
       </div>
     </div>
