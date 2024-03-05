@@ -264,7 +264,7 @@ async def horoscopes(request: Request) -> JSONResponse:
         
         #translate to german
                     
-        llm_prompt = "Übersetze die folgenden Horoskope ins Deutsche." + out_str + "\nÜbersetzte bitte auch die Sternzeichen ins Deutsche."
+        llm_prompt = "Übersetze die folgenden Horoskope ins Deutsche." + out_str + "\nÜbersetzte bitte auch die Sternzeichen ins Deutsche. Antworte nicht auf Englisch, sondern nur auf Deutsch. Das einzige, was du auf Englisch schreiben sollst, ist das Wort 'horoscope' und das Wort 'zodiac_sign'."
 
         completion = groq_client.chat.completions.create(
             model="llama2-70b-4096",
