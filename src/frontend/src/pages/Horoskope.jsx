@@ -11,9 +11,7 @@ const Horoskope = () => {
             var url = "/horoscopes";
             fetch(url)
                 .then(res => res.json())
-                .then(data => setHoroskope(data.horoscopes))
-                .then(data => setSource(data.source))
-                .then(data => console.log(data));
+                .then(data => {setHoroskope(data.horoscopes); setSource(data.source); console.log(data)})
         // -> {horoscopes: [{zodiac_sign: str, horoscope: str}, ...], source: str}
         } catch (error) {
             console.error("Error fetching horoscopes: ", error);
@@ -75,7 +73,8 @@ const Horoskope = () => {
     return (
         <div id="horoskope-wrapper">
             <h1>Horoskope</h1>
-            <div className="horoskope">
+            <p id="haftungsausschluss">Die auf dieser Website bereitgestellten Horoskope und astrologischen Inhalte dienen lediglich der Unterhaltung und stellen keine professionelle Beratung oder Entscheidungshilfe dar; die Betreiber übernehmen keinerlei Haftung für Handlungen, die auf Basis dieser Inhalte getroffen werden.</p>
+              <div className="horoskope">
                 {horoskope.map(horoskop => <HoroskopEntry key={horoskop.id} horoskop={horoskop} />)}
             </div>
             <p>Quelle: {source}</p>

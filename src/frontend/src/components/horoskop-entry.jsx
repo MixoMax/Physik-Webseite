@@ -3,6 +3,7 @@ import './css/horoskop-entry.css'
 
 function HoroskopEntry({ horoskop }) {
     // {zodiac_sign: str, horoscope: str}
+    console.log(horoskop)
 
     return (
         <div id="horoskop-component-wrapper" class="hbox">

@@ -1,5 +1,4 @@
 #horoskop-component-wrapper {
-    padding: 10px; /* Optional: Add padding */
 
     width: 30vw;
     height: 20vh;
@@ -22,10 +21,6 @@
     width: 5px; /* Width of left border */
     background-color: blue; /* Color of left border */
     margin-right: 10px; /* Margin between border and content */
-}
-
-#horoskop-description {
-    margin: 0; /* Remove default margins */
 }
 
 .zodiac-sign-image {
