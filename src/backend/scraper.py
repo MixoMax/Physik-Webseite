@@ -104,8 +104,8 @@ def get_current_events() -> dict[str: str]:
 
     return events
 
-def get_description_and_more_data(event_name: str) -> dict:
-    title = event_name.replace(" ", "-").lower().replace("-–-", "-").replace("---", "-")
+def get_description_and_more_data(event_name: str, log: bool = False) -> dict:
+    title = event_name.replace(" ", "-").lower()
 
     replacements = [
         ("-–-", "-"),
@@ -114,6 +114,9 @@ def get_description_and_more_data(event_name: str) -> dict:
         ("ü", "ue"),
         ("ö", "oe"),
     ]
+
+    for replacement in replacements:
+        title = title.replace(replacement[0], replacement[1])
 
     url = f"https://www.planetarium-hamburg.de/de/veranstaltungen-tickets/details/{title}/"
 
