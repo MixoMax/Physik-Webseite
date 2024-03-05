@@ -307,12 +307,14 @@ async def horoscopes(request: Request) -> JSONResponse:
         json_out = [json.loads(j) for j in json_out]
 
         global_vars["last_horoscopes"] = json_out
+        source = "Mixtral-8x7b-32768 + Llama2-70b-4096 AI Models"
     
     except Exception as e:
         print(e)
         json_out = global_vars["last_horoscopes"]
+        source = "Cache"
 
-    return JSONResponse(json_out, status_code=error_code)
+    return JSONResponse({"source": source, "horoscopes": json_out}, status_code=error_code)
 
 
 

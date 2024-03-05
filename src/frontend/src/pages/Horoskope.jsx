@@ -4,14 +4,16 @@ import HoroskopEntry from '../components/horoskop-entry';
 
 const Horoskope = () => {
     const [horoskope, setHoroskope] = useState([]);
+    const [source, setSource] = useState("");
     
     useEffect(() => {
         try {
             var url = "/horoscopes";
             fetch(url)
                 .then(res => res.json())
-                .then(data => setHoroskope(data));
-        // -> [{zodiac_sign: str, horoscope: str}, ...]
+                .then(data => setHoroskope(data.horoscopes))
+                .then(data => setSource(data.source));
+        // -> {horoscopes: [{zodiac_sign: str, horoscope: str}, ...], source: str}
         } catch (error) {
             console.error("Error fetching horoscopes: ", error);
             setHoroskope(
@@ -76,6 +78,7 @@ const Horoskope = () => {
             <div className="horoskope">
                 {horoskope.map(horoskop => <HoroskopEntry key={horoskop.id} horoskop={horoskop} />)}
             </div>
+            <p>Quelle: {source}</p>
         </div>
     );
 }
