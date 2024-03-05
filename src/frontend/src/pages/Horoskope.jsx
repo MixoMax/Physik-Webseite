@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './css/Horoskope.css';
 import HoroskopEntry from '../components/horoskop-entry';
 
-const Horoskope = () => {
+const Horoskop = () => {
     const [horoskope, setHoroskope] = useState([]);
     const [source, setSource] = useState("");
     
@@ -91,4 +91,4 @@ const Horoskope = () => {
     );
 }
 
-export default Horoskope;
+export default Horoskop;
