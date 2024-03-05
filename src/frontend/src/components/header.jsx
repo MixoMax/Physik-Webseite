@@ -53,6 +53,7 @@ function Header() {
             <NavLink className="page-button" activeClassName="active" to="/">Home</NavLink>
             <NavLink className="page-button" activeClassName="active" to="/space">Space</NavLink>
             <NavLink className="page-button" activeClassName="active" to="/events">Events</NavLink>
+            <NavLink className="page-button" activeClassName="active" to="/horoskope">Horoskope</NavLink>
             <NavLink className="page-button" activeClassName="active" to="/history">History</NavLink>
             <NavLink className="page-button" activeClassName="active" to="/team">Team</NavLink>
           </div>
