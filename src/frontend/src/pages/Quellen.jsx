@@ -25,6 +25,8 @@ const Quellen = () => {
             <div className="quelle"><a href="https://lambda.gsfc.nasa.gov/education/graphic_history/univ_evol.html">NASA: “Lambda - Education & Graphics”</a> [01.03.2024]</div>
             <div className="quelle"><a href="https://science.nasa.gov/universe/the-big-bang/">NASA: “Explore cosmic History”</a> [01.03.2024]</div>
             <div className="quelle"><a href="https://de.wikipedia.org/wiki/Planetarium_Hamburg">Wikipedia: "Planetarium Hamburg”</a> [01.03.2024]</div>
+            <div className="quelle"><a href="https://huggingface.co/mistralai/Mixtral-8x7B-v0.1">MistralAI Mixtral-8x7B-v0.1 AI Model</a> [05.03.2024]</div>
+            <div className="quelle"><a href="https://huggingface.co/meta-llama/Llama-2-70b">Meta AI Llama2-70B AI Model</a> [05.03.2024]</div>
         </div>
     );
 };
