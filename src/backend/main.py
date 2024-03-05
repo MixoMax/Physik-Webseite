@@ -229,7 +229,9 @@ async def horoscopes(request: Request) -> JSONResponse:
     month = date.month
     year = date.year
 
-    llm_prompt = f"Todays date is {weekday}, the {day} of {month} {year}." + """
+    HH_MM = date.strftime("%H:%M")
+
+    llm_prompt = f"Todays date is {weekday}, the {day} of {month} {year}. It is currently {HH_MM}." + """
     Think about some arbitrary things that could happend to a person and give me 12 examples of them after thinking about those. formulate these final results in a very unclear and unprecise way s that they pretty much apply to every person. format them at the end into jsonl format:
     {"zodiac_sign": ZODIAC_SIGN, "horoscope": HOROSCOPE}
     {...}
