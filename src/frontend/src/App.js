@@ -17,6 +17,7 @@ import AGB from './pages/ABG.jsx';
 import Dataprotaction from './pages/Dataprotection.jsx'
 import Team from './pages/Team.jsx';
 import Quellen from './pages/Quellen.jsx';
+import Horoskope from './pages/Horoskope.jsx';
 
 import './styles/App.css';
 //import './styles/scrollbar.css';
@@ -33,6 +34,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/history" element={<History />} />
+          <Route path="/horoskope" element={<Horoskope />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/impressum" element={<Impressum />} />

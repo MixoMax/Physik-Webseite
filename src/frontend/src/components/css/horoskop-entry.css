@@ -1,0 +1,22 @@
+#horoskop-component-wrapper {
+    background-color: #f0f0f0; /* Optional: Add background color */
+    padding: 10px; /* Optional: Add padding */
+    border-radius: 5px; /* Optional: Add border radius */
+}
+
+#horoskop-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#left-border {
+    width: 5px; /* Width of left border */
+    background-color: blue; /* Color of left border */
+    margin-right: 10px; /* Margin between border and content */
+}
+
+#horoskop-description {
+    margin: 0; /* Remove default margins */
+}

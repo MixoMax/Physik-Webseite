@@ -76,8 +76,11 @@ def get_human_readable_time() -> str:
     return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
-last_scrape = get_human_readable_time()
-last_webhook = get_human_readable_time()
+global_vars = {
+    "last_scrape": get_human_readable_time(),
+    "last_webhook": get_human_readable_time(),
+    "last_horoscopes": []
+}
 
 
 @app.get("/error/{status_code}")
@@ -130,6 +133,7 @@ async def search(q: str, request: Request, date: str = "") -> JSONResponse:
 
 @app.get("/scrape_events")
 async def scrape_events() -> JSONResponse:
+    global global_vars
     t_start = time.time()
 
     events = scrape_data()
@@ -139,7 +143,7 @@ async def scrape_events() -> JSONResponse:
     for event in events:
         db.add_event(event)
 
-    last_scrape = get_human_readable_time()
+    global_vars["last_scrape"] = get_human_readable_time()
     
     return JSONResponse({"message": "Scraped events and added to database", "time_taken": time.time() - t_start, "events_added": len(events)})
 
@@ -189,8 +193,8 @@ async def filter_events(request: Request) -> JSONResponse:
 
 @app.post("/github_webhook")
 async def github_webhook(request: Request) -> JSONResponse:
+    global global_vars
     data = await request.json()
-    print(data)
     
     commands = [
         "git reset --hard HEAD",
@@ -202,13 +206,14 @@ async def github_webhook(request: Request) -> JSONResponse:
         print(f"Executing command: {command}")
         subprocess.run(command, shell=True)
     
-    last_webhook = get_human_readable_time()
+    global_vars["last_webhook"] = get_human_readable_time()
 
     return JSONResponse({"message": "Received webhook"})
 
 @app.get("/last_update")
 async def last_update() -> JSONResponse:
-    return JSONResponse({"last_scrape": last_scrape, "last_webhook": last_webhook})
+    global global_vars
+    return JSONResponse({"last_scrape": global_vars["last_scrape"], "last_webhook": global_vars["last_webhook"]})
 
 
 @app.get("/horoscopes")
@@ -238,69 +243,74 @@ async def horoscopes(request: Request) -> JSONResponse:
     please make sure to follow the format exactly and to not include any other information than the zodiac sign and the horoscope.
     do not write "any" as a zodiac sign, but the actual zodiac sign.
     """
+    try:
+        completion = groq_client.chat.completions.create(
+            model="mixtral-8x7b-32768",
+            messages=[
+                {
+                    "role": "user",
+                    "content": llm_prompt
+                }
+            ],
+            temperature=0.5,
+            stream=False
+        )
 
-    completion = groq_client.chat.completions.create(
-        model="mixtral-8x7b-32768",
-        messages=[
-            {
-                "role": "user",
-                "content": llm_prompt
-            }
-        ],
-        temperature=0.5,
-        stream=False
-    )
-
-    out_str = ""
-    for tup in completion:
-        if tup[0] == "choices":
-            for choice in tup[1]:
-                out_str += choice.message.content
-
-    
-    #translate to german
-                
-    llm_prompt = "Übersetze die folgenden Horoskope ins Deutsche." + out_str
-
-    completion = groq_client.chat.completions.create(
-        model="llama2-70b-4096",
-        messages=[
-            {
-                "role": "user",
-                "content": llm_prompt
-            }
-        ],
-        temperature=0.5,
-        stream=False
-    )
-
-    out_str = ""
-    for tup in completion:
-        if tup[0] == "choices":
-            for choice in tup[1]:
-                out_str += choice.message.content
-
-
-    
-    json_out = []
-
-    sub_str = ""
-    currently_parsing = False
-    
-    for char in out_str:
-        if char == "{":
-            currently_parsing = True
-            sub_str = "{"
-        elif char == "}":
-            sub_str += "}"
-            json_out.append(sub_str)
-            sub_str = ""
-            currently_parsing = False
+        out_str = ""
+        for tup in completion:
+            if tup[0] == "choices":
+                for choice in tup[1]:
+                    out_str += choice.message.content
         
-        elif currently_parsing:
-            sub_str += char
+        #translate to german
+                    
+        llm_prompt = "Übersetze die folgenden Horoskope ins Deutsche." + out_str
+
+        completion = groq_client.chat.completions.create(
+            model="llama2-70b-4096",
+            messages=[
+                {
+                    "role": "user",
+                    "content": llm_prompt
+                }
+            ],
+            temperature=0.5,
+            stream=False
+        )
+
+        out_str = ""
+        for tup in completion:
+            if tup[0] == "choices":
+                for choice in tup[1]:
+                    out_str += choice.message.content
+
+
+        
+        json_out = []
+
+        sub_str = ""
+        currently_parsing = False
+        
+        for char in out_str:
+            if char == "{":
+                currently_parsing = True
+                sub_str = "{"
+            elif char == "}":
+                sub_str += "}"
+                json_out.append(sub_str)
+                sub_str = ""
+                currently_parsing = False
+            
+            elif currently_parsing:
+                sub_str += char
+        
+        json_out = [json.loads(j) for j in json_out]
+
+        global_vars["last_horoscopes"] = json_out
     
-    json_out = [json.loads(j) for j in json_out]
+    except Exception as e:
+        print(e)
+        json_out = global_vars["last_horoscopes"]
 
     return JSONResponse(json_out, status_code=error_code)
 
