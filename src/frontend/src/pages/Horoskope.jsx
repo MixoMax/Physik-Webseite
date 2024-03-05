@@ -7,7 +7,6 @@ const Horoskope = () => {
     
     useEffect(() => {
         try {
-            throw new Error("This is an error");
             var url = "/horoscopes";
             fetch(url)
                 .then(res => res.json())
