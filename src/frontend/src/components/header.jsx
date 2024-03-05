@@ -54,7 +54,7 @@ function Header() {
             <NavLink className="page-button" activeClassName="active" to="/space">Space</NavLink>
             <NavLink className="page-button" activeClassName="active" to="/events">Events</NavLink>
             <NavLink className="page-button" activeClassName="active" to="/history">History</NavLink>
-            <NavLink className="page-button" activeClassName="active" to="/about">About</NavLink>
+            <NavLink className="page-button" activeClassName="active" to="/team">Team</NavLink>
           </div>
         </div>
         <div className="user-actions">

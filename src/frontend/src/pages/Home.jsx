@@ -55,7 +55,7 @@ const Homepage = () => {
           text1_html.style.left = "15%";
           text2_html.style.left = "115%";
           text3_html.style.left = "-85%";
-          setBackgroundImage(backgroundImages[1]);
+          setBackgroundImage(backgroundImages[0]);
           break;
         case 2:
           text2_html.style.opacity = 1;
@@ -63,7 +63,7 @@ const Homepage = () => {
           text2_html.style.left = "15%";
           text3_html.style.left = "115%";
           text1_html.style.left = "-85%";
-          setBackgroundImage(backgroundImages[1]);
+          setBackgroundImage(backgroundImages[0]);
           break;
         case 3:
           text3_html.style.opacity = 1;
@@ -71,7 +71,7 @@ const Homepage = () => {
           text3_html.style.left = "15%";
           text1_html.style.left = "115%";
           text2_html.style.left = "-95%";
-          setBackgroundImage(backgroundImages[1]);
+          setBackgroundImage(backgroundImages[0]);
           break;
         default:
           break;
