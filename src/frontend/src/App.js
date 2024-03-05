@@ -15,6 +15,7 @@ import Impressum from './pages/Impressum.jsx';
 import Hausordnung from './pages/Hausordnung.jsx';
 import AGB from './pages/ABG.jsx';
 import Dataprotaction from './pages/Dataprotection.jsx'
+import Team from './pages/Team.jsx';
 
 import './styles/App.css';
 //import './styles/scrollbar.css';
@@ -23,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Header />
+        <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="*" element={<ComingSoon />} />
@@ -37,8 +38,9 @@ function App() {
           <Route path="/hausordnung" element={<Hausordnung />} />
           <Route path="/agb" element={<AGB />} />
           <Route path="/dataprotection" element={<Dataprotaction />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
-      <Footer />
+        <Footer />
       </Router>  
     </div>
   );
