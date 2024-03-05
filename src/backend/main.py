@@ -6,10 +6,13 @@ import uvicorn
 from classes import Event, DB, Filter
 from scraper import scrape_data
 
+from groq import Groq
+
 import os
 import subprocess
 import time
 import datetime
+import json
 
 # project_folder/src/backend/main.py
 
@@ -28,6 +31,8 @@ app.add_middleware(
 )
 
 db = DB()
+
+groq_client = Groq(api_key=open("./src/backend/groq.token").read().strip())
 
 class RateLimit:
     __requests: dict[str, list[int]] #ip_address: [timestamp, timestamp, ...]
@@ -204,6 +209,98 @@ async def github_webhook(request: Request) -> JSONResponse:
 @app.get("/last_update")
 async def last_update() -> JSONResponse:
     return JSONResponse({"last_scrape": last_scrape, "last_webhook": last_webhook})
+
+
+@app.get("/horoscopes")
+async def horoscopes(request: Request) -> JSONResponse:
+    error_code = 200
+
+    ip_address = request.client.host
+
+    rate_limit.add_request(ip_address)
+
+    if rate_limit.check_rate_limit(ip_address):
+        error_code = 429
+        return JSONResponse({"error": "429 - Too many requests", "message": "You are sending too many requests! If you are a bot, please slow down. If you are a human and believe this is a mistake, contact me: <linus@linushorn.dev>."}, status_code=error_code)
+    
+    date = datetime.datetime.now()
+    weekday = date.weekday()
+    day = date.day
+    month = date.month
+    year = date.year
+
+    llm_prompt = f"Todays date is {weekday}, the {day} of {month} {year}." + """
+    Think about some arbitrary things that could happend to a person and give me 12 examples of them after thinking about those. formulate these final results in a very unclear and unprecise way s that they pretty much apply to every person. format them at the end into jsonl format:
+    {"zodiac_sign": ZODIAC_SIGN, "horoscope": HOROSCOPE}
+    {...}
+    please make sure to follow the format exactly and to not include any other information than the zodiac sign and the horoscope.
+    do not write "any" as a zodiac sign, but the actual zodiac sign.
+    """
+
+    completion = groq_client.chat.completions.create(
+        model="mixtral-8x7b-32768",
+        messages=[
+            {
+                "role": "user",
+                "content": llm_prompt
+            }
+        ],
+        temperature=0.5,
+        stream=False
+    )
+
+    out_str = ""
+    for tup in completion:
+        if tup[0] == "choices":
+            for choice in tup[1]:
+                out_str += choice.message.content
+
+    
+    #translate to german
+                
+    llm_prompt = "Übersetze die folgenden Horoskope ins Deutsche." + out_str
+
+    completion = groq_client.chat.completions.create(
+        model="llama2-70b-4096",
+        messages=[
+            {
+                "role": "user",
+                "content": llm_prompt
+            }
+        ],
+        temperature=0.5,
+        stream=False
+    )
+
+    out_str = ""
+    for tup in completion:
+        if tup[0] == "choices":
+            for choice in tup[1]:
+                out_str += choice.message.content
+
+
+    
+    json_out = []
+
+    sub_str = ""
+    currently_parsing = False
+    
+    for char in out_str:
+        if char == "{":
+            currently_parsing = True
+            sub_str = "{"
+        elif char == "}":
+            sub_str += "}"
+            json_out.append(sub_str)
+            sub_str = ""
+            currently_parsing = False
+        
+        elif currently_parsing:
+            sub_str += char
+    
+    json_out = [json.loads(j) for j in json_out]
+
+    return JSONResponse(json_out, status_code=error_code)
 
 
 
