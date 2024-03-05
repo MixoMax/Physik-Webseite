@@ -6,7 +6,7 @@ const Horoskope = () => {
     const [horoskope, setHoroskope] = useState([]);
     
     useEffect(() => {
-        var url = "http://localhost:1890/horoscopes";
+        var url = "/horoscopes";
         fetch(url)
             .then(res => res.json())
             .then(data => setHoroskope(data));
