@@ -2,11 +2,7 @@ import React from 'react'
 import './css/event-entry.css'
 
 function EventEntry({ event }) {
-
-  // event -> {"id": 2, "title": str, "description": str, "date": str, "img": str, price_normal: int, price_reduced: int, recommended_age: int, duration: int, img_url: str}
-  console.log(event);
-
-  // shorten description to 100 characters
+  // shorten description to X characters
   var max_description_length = 300;
   if (event.description.length > max_description_length) {
     var word_array = event.description.split(" ");

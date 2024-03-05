@@ -13,7 +13,7 @@ body {
   /* first section */
   .homepage-button-wrapper {
     position: absolute;
-    width: 100%;
+    width: 93.5%;
     z-index: 1;
     
     display: flex;
@@ -60,10 +60,12 @@ body {
     background-size: 140%;
 
     width: auto;
+    margin:2.5%;
 
-    border-bottom: 16px solid rgb(30, 30, 30);
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.9),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.5), 
+    border-radius: 50px;
+    border: 16px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.55),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.25), 
     inset 5px 5px 15px rgba(0, 0, 0, 0.9);
   }
 
@@ -74,7 +76,7 @@ body {
     width: 35%;
     padding-top: 10%;
     z-index: 0;
-
+    border-radius: 50px;
     background: linear-gradient(0.25turn, rgba(10, 10, 10, 0.75) 80%, rgba(30, 30, 30, 0));
   }
 
@@ -125,39 +127,39 @@ body {
   .clouds {position: absolute; top: calc(110vh);}
   .cloud-1 {
     position: absolute;
-    transform: translate(-5%, -135%) scale(175%);
+    transform: translate(100%, -110%) scale(150%);
     z-index: 0;
   }
   .cloud-2 {
     position: absolute;
-    transform: translate(67%, -115%) scale(200%);
-    z-index: 2;
+    transform: translate(67%, -140%) scale(200%);
+    z-index: 4;
   }
   .cloud-3 {
     position: absolute;
-    transform: translate(-15%, -105%) scale(175%);
+    transform: translate(-20%, -170%) scale(215%);
     z-index: 1;
   }
   .cloud-4 {
     position: absolute;
-    transform: translate(150%, -135%) scale(175%);
-    z-index: 0;
+    transform: translate(-50%, -120%) scale(200%);
+    z-index: 3;
   }
   .cloud-5 {
     position: absolute;
-    transform: translate(125%, -110%) scale(200%);
+    transform: translate(125%, -150%) scale(200%);
     z-index: 0;
   }
 
   .home-earth {
     position: absolute;
     max-width: 25em;
-    transform: translate(25em, 12.5em);
+    transform: translate(34em, 5em);
   }
   .home-uranus {
     position: absolute;
     max-width: 25em;
-    transform: translate(-50em, 12.5em);
+    transform: translate(-59em, 5em);
   }
   
   /* second section */
@@ -170,33 +172,63 @@ body {
   }
   
   .time-table {
-    width: max(450px, 20%); /* Adjust as required for your layout */
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+
     padding: 40px;
+    margin: 40px;
     border-radius: 20px;
     border: 8px solid rgb(30, 30, 30);
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);
   }
-  
-  .time-table th, .time-table td {
-    width: 50%; /* Each cell takes up half the table's width */
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
+  .time-table-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-evenly;
   }
-  
-  /* Optional: Add this if you want to ensure the table headers are aligned with the table data */
-  .time-table th {
-    text-align: center;
+  .öffnungszeiten,
+  .service {
+    padding: 0px 40px 0px 40px;
+    width: 25em;
   }
-  
+  .öffnungszeiten dl {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    font-size: large;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
 
-  .time-table td {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
+  .service li {
+    font-size: large;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: left;
+    color:#e1d15a;
+    transition: 0.25s;
+  }
+  .service ul {
+    transform: translateY(-0.5em);
+  }
+  .service a {
+    color: #fff;
+    text-decoration: None;
+    padding-left: 1em;
+  }
+  .service a:hover {
+    color: #e1d15a;
+    transition: 0.25s;
+  }
+  .service a:hover ~ li {
+    transform: translateX(1em);
+    transition: 0.25s;
   }
   
   /* third section */
@@ -210,11 +242,9 @@ body {
   
   .card {
     width: calc(38% - 120px);
-    aspect-ratio: 1/1.2;
-    border: 1px solid #ccc;
     margin-bottom: 20px;
 
-    padding: 40px;
+    padding: 2.5%;
     border-radius: 20px;
     border: 8px solid rgb(30, 30, 30);
     box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
@@ -222,8 +252,22 @@ body {
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);
   }
 
+  .card .card-img {
+    width: 60%;
+    border-radius: 20px;
+    border: 8px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.5), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.75);
+  }
+
   .card a {
-    color: #e1d15a
+    color: #e1d15a;
+    font-size: 22px;
+  }
+
+  .card p {
+    font-size: 18px;
   }
 
 

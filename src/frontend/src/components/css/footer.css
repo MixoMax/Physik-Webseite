@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     
-    padding-bottom: 125px;
+    padding-bottom: 100px;
 
     background: url(../../assets/images/Himmelssteine/moon-surface.png);
     background-size: cover;
@@ -133,4 +133,59 @@
 /* If .footer-button.address is taking full width and you want to center the text */
 .footer-button.address {
     text-align: center;
+}
+
+/* hamburg ending */
+.footer-hamburg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 16em;
+    background-color: #003063;
+}
+.footer-hamburg a:hover {
+    text-decoration: underline
+}
+.footer-hamburg .yellow-thing {
+    padding: 10em 50% 0% 50%;
+
+    font-size: 10px;
+    background-color: #e1d15a;
+}
+
+.footer-hamburg-wrapper {
+    width: 60%;
+    height: 100%;
+    padding: 2% 20% 2% 20%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+.footer-hamburg:before {
+    content: " ";
+    position: absolute;
+    top: 7.5em;
+    left: 0;
+    height: 4em;
+    width: 14.2em;
+    background-image: url('../../assets/images/comp/path.png');
+    font-size: 10px;
+    background-size: cover
+}
+.footer-hamburg-text {
+    line-height: 1em;
+}
+.footer-hamburg-text h3 {
+    font-weight: 900;
+}
+.footer-hamburg-text h3 a,
+.footer-hamburg-text p a {
+    color: #fff;
+    text-decoration: None;
 }

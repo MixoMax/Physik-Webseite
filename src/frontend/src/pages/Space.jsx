@@ -123,7 +123,7 @@ const Space = () => {
             <span className="crater crater-5"></span>
             <span className="crater crater-6"></span>
 
-            <h2>Ferne Sterne(nsysteme)</h2>
+            <h2>Ferne Sterne</h2>
             <p>Ferne Sterne und Sternensysteme: Eine Reise durch die Weiten des Universums</p>
             <p>Im unendlichen Kosmos, der &uuml;ber uns ausgebreitet ist, existiert eine unvorstellbare Vielfalt an Sternen und Sternensystemen, die uns faszinieren und zum Staunen bringen. Diese fernen Himmelsk&ouml;rper sind nicht nur Gegenstand astronomischer Beobachtungen, sondern auch wichtige Bausteine f&uuml;r unser Verst&auml;ndnis des Universums und seiner Entwicklung. In diesem wissenschaftlichen Text werden wir eine Reise durch die Welt der fernen Sterne und Sternensysteme unternehmen, um ihre Eigenschaften, ihre Entstehung und ihre Bedeutung zu erkunden.</p>
             <p>Sterne: Die leuchtenden Grundbausteine des Universums</p>
