@@ -39,6 +39,7 @@ function Footer() {
             <Link className="footer-button" to="/info">Info</Link>
             <Link className="footer-button" to="/agb">AGB</Link>
             <Link className="footer-button" to="/dataprotection">Dataprotection</Link>
+            <Link className="footer-button" to="/quellen">Quellen</Link>
           </div>
           <div className="footer-button address"><strong>Planetarium Hamburg</strong> // Linnering 1 (Stadtpark) // 22299 Hamburg // Deutschland</div>
           <div className="long-geo-wrapper">
