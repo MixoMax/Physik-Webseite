@@ -358,9 +358,10 @@ async def serve_assets(file_path: str, request: Request):
         return FileResponse(get_error_file_path(error_code), status_code=error_code)
     
 
-    fp = f"./src/frontend/assets/{file_path}"
+    fp = f"./src/frontend/src/assets/{file_path}"
     
     if not os.path.exists(fp):
+        print(os.path.abspath(fp))
         error_code = 404
 
     if error_code != 200:

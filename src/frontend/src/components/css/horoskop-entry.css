@@ -1,7 +1,14 @@
 #horoskop-component-wrapper {
-    background-color: #f0f0f0; /* Optional: Add background color */
     padding: 10px; /* Optional: Add padding */
-    border-radius: 5px; /* Optional: Add border radius */
+
+    width: 30vw;
+    height: 20vh;
+
+    border-radius: 25px;
+    border: 8px solid rgb(30, 30, 30);
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1), 
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 #horoskop-info {
@@ -19,4 +26,10 @@
 
 #horoskop-description {
     margin: 0; /* Remove default margins */
+}
+
+.zodiac-sign-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
