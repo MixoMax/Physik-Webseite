@@ -34,7 +34,7 @@ function EventEntry({ event }) {
         <div id="event-location-date" class="vbox">
           <p>{event.date}</p>
           <p>Ort: {event.location}</p>
-          <p>Empfohlenes Alter: {event.recommended_age}+</p>
+          <p>Empfohlenes Alter: {event.recommended_age ? event.recommended_age : 0}+</p>
         
         </div>
 
