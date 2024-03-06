@@ -3,7 +3,7 @@ import './css/event-entry.css'
 
 function EventEntry({ event }) {
   // shorten description to X characters
-  var max_description_length = 300;
+  var max_description_length = 200;
   if (event.description.length > max_description_length) {
     var word_array = event.description.split(" ");
     var new_description = "";
@@ -15,6 +15,11 @@ function EventEntry({ event }) {
     event.description = new_description + "...";
 
   }
+
+  const random_number = Math.floor(Math.random() * 5)
+
+  const prices = ["10", "12", "15", "13.5", "8"]
+  const red_prices = ["6", "7", "10", "9", "5"]
 
   return (
     <div id="event-component-wrapper" class="hbox">
@@ -34,8 +39,8 @@ function EventEntry({ event }) {
         </div>
 
         <div id="event-price" class="vbox">
-          <p>Normal: {event.price_normal}€</p>
-          <p>Ermäßigt: {event.price_reduced}€</p>
+          <p>Normal: {prices[random_number]}€</p>
+          <p>Ermäßigt: {red_prices[random_number]}€</p>
           <button id="event-button">Tickets</button>
         </div>
 
