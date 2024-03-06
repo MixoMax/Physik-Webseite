@@ -16,7 +16,7 @@ function EventEntry({ event }) {
 
   }
 
-  const random_number = Math.floor(Math.random() * 5)
+  const random_number = event.title.length % 5
 
   const prices = ["10", "12", "15", "13.5", "8"]
   const red_prices = ["6", "7", "10", "9", "5"]
