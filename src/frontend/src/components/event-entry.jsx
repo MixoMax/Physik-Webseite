@@ -3,7 +3,7 @@ import './css/event-entry.css'
 
 function EventEntry({ event }) {
   // shorten description to X characters
-  var max_description_length = 200;
+  var max_description_length = 300;
   if (event.description.length > max_description_length) {
     var word_array = event.description.split(" ");
     var new_description = "";
