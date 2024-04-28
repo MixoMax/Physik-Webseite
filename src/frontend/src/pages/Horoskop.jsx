@@ -81,8 +81,10 @@ const Horoskop = () => {
 
             <div id="Quellen">
                 <p>Quelle: {
-                source === "Mixtral-8x7b-32768 + Llama2-70b-4096 AI Models" ?
-                <div><a href="https://huggingface.co/mistralai/Mixtral-8x7B-v0.1" target="_blank" rel="noreferrer">MistralAI Mixtral-8x7B-v0.1</a> + <a href="https://huggingface.co/meta-llama/Llama-2-70b" target="_blank" rel="noreferrer">Meta AI Llama2-70B</a> AI Models</div>
+                source === "LlaMa3-70b-8192" ?
+                <div>
+                    <a href="https://ai.meta.com/blog/meta-llama-3/" target="_blank"></a>
+                </div>
                 : source
                 }</p>
             </div>
