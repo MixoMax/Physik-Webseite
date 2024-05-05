@@ -343,7 +343,7 @@ async def generate_sitemap(p: str):
 """)
         for path in paths:
             f.write(f"""<url>
-    <loc>{base_domain}{path}</loc>
+    <loc>{base_domain}/#{path}</loc>
 </url>
 """)
         f.write("</urlset>")
