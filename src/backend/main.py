@@ -36,7 +36,7 @@ groq_client = Groq(api_key=open("./src/backend/groq.token").read().strip())
 
 class RateLimit:
     __requests: dict[str, list[int]] #ip_address: [timestamp, timestamp, ...]
-    __requests_per_second: int = 1e100
+    __requests_per_second: int = 35
 
     def __init__(self):
         self.__requests = {}
@@ -320,6 +320,37 @@ async def horoscopes(request: Request) -> JSONResponse:
 
 
 
+@app.get("/generate_sitemap")
+async def generate_sitemap(p: str):
+    if p != "password":
+        return JSONResponse({"message": "Invalid password"})
+    
+    base_domain = "https://planetarium.linus-minus-sinus.org"
+
+    with open("./src/frontend/src/App.js", "r") as f:
+        app_js = f.read()
+    
+    paths = []
+    for line in app_js.split("\n"):
+        if "path" in line:
+            path = line.split("path=")[1].split("element")[0].replace('"', "").replace(",", "").strip()
+            if "*" not in path:
+                paths.append(path)
+            
+    with open("./src/frontend/html/sitemap.xml", "w") as f:
+        f.write(f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+""")
+        for path in paths:
+            f.write(f"""<url>
+    <loc>{base_domain}{path}</loc>
+</url>
+""")
+        f.write("</urlset>")
+
+    return JSONResponse({"message": "Sitemap generated", "num_paths": len(paths), "paths": paths})
+
+
 
 # Wildcard route to serve all files from the frontend
 # at the very bottom, else it would override all other routes
@@ -392,7 +423,21 @@ async def serve_root(file_path: str, request: Request):
 
     if file_path == "":
         file_path = "index.html"
-    fp = f"./src/frontend/build/{file_path}"
+
+    match file_path:
+        case "":
+            file_path = "index.html"
+            dir = "./src/frontend/build/"
+        case "/":
+            file_path = "index.html"
+            dir = "./src/frontend/build/"
+        case "sitemap.xml":
+            file_path = "sitemap.xml"
+            dir = "./src/frontend/html/"
+        case _:
+            dir = "./src/frontend/build/"
+
+    fp = f"{dir}{file_path}"
     
     if not os.path.exists(fp):
         error_code = 404
